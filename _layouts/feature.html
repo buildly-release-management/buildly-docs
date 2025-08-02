@@ -1,0 +1,105 @@
+---
+layout: default
+---
+
+<div class="feature-page">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ "/" | relative_url }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ "/features/" | relative_url }}">Features</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+        </ol>
+    </nav>
+    
+    <div class="row">
+        <div class="col-lg-9">
+            <header class="feature-header mb-4">
+                <h1 class="display-4">{{ page.title }}</h1>
+                {% if page.description %}
+                <p class="lead">{{ page.description }}</p>
+                {% endif %}
+                
+                <div class="feature-meta">
+                    {% if page.category %}
+                    <span class="badge bg-primary me-2">{{ page.category }}</span>
+                    {% endif %}
+                    {% if page.version %}
+                    <span class="badge bg-secondary me-2">v{{ page.version }}</span>
+                    {% endif %}
+                    {% if page.ai_powered %}
+                    <span class="badge bg-success me-2"><i class="fas fa-robot"></i> AI Powered</span>
+                    {% endif %}
+                </div>
+            </header>
+            
+            <div class="feature-content">
+                {{ content }}
+            </div>
+            
+            {% if page.screenshots %}
+            <section class="screenshots mt-5">
+                <h3>Screenshots</h3>
+                <div class="row">
+                    {% for screenshot in page.screenshots %}
+                    <div class="col-md-6 mb-3">
+                        <img src="{{ screenshot.url | relative_url }}" 
+                             alt="{{ screenshot.alt }}" 
+                             class="img-fluid rounded shadow">
+                        {% if screenshot.caption %}
+                        <p class="text-muted mt-2">{{ screenshot.caption }}</p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+            
+            {% if page.related_features %}
+            <section class="related-features mt-5">
+                <h3>Related Features</h3>
+                <div class="row">
+                    {% for feature in page.related_features %}
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ feature.title }}</h5>
+                                <p class="card-text">{{ feature.description }}</p>
+                                <a href="{{ feature.url | relative_url }}" class="btn btn-outline-primary btn-sm">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+        </div>
+        
+        <div class="col-lg-3">
+            <div class="sticky-top">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="card-title mb-0">On This Page</h6>
+                    </div>
+                    <div class="card-body">
+                        <div id="toc"></div>
+                    </div>
+                </div>
+                
+                {% if page.documentation_links %}
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h6 class="card-title mb-0">Documentation</h6>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        {% for link in page.documentation_links %}
+                        <a href="{{ link.url }}" class="list-group-item list-group-item-action">
+                            <i class="fas fa-external-link-alt me-2"></i>{{ link.title }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
