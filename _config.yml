@@ -1,8 +1,8 @@
 # GitHub Pages Jekyll Configuration
 title: "Buildly Product Labs Documentation"
 description: "Comprehensive documentation for the AI-powered product management platform"
-baseurl: ""
-url: "https://buildly-release-management.github.io/buildly-docs"
+baseurl: "/buildly-docs"
+url: "https://buildly-release-management.github.io"
 
 # Theme
 theme: minima
