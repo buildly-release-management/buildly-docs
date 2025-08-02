@@ -1,0 +1,57 @@
+{
+  "main": [
+    {
+      "title": "Getting Started",
+      "url": "/getting-started/"
+    },
+    {
+      "title": "Features",
+      "url": "/features/"
+    },
+    {
+      "title": "API Reference",
+      "url": "/api/"
+    },
+    {
+      "title": "Guides",
+      "url": "/guides/"
+    }
+  ],
+  "features": [
+    {
+      "title": "Dashboard",
+      "url": "/features/dashboard/",
+      "description": "Your central command center providing personalized overview of products, tasks, and deadlines"
+    },
+    {
+      "title": "Product Portfolio",
+      "url": "/features/product_portfolio/",
+      "description": "Centralized management of all products with comprehensive tracking tools"
+    },
+    {
+      "title": "Product Roadmap",
+      "url": "/features/product_roadmap/",
+      "description": "Plan features, track issues, and collaborate using Kanban or tabular views"
+    },
+    {
+      "title": "Release Management",
+      "url": "/features/releases/",
+      "description": "Comprehensive release planning, creation, and tracking with AI assistance"
+    },
+    {
+      "title": "Insights & Analytics",
+      "url": "/features/insights/",
+      "description": "Deep analytics with AI-powered recommendations and team assistance"
+    },
+    {
+      "title": "AI Assistant (Chatbot)",
+      "url": "/features/ai_assistant/",
+      "description": "Personal AI assistant for navigation, questions, and contextual guidance"
+    },
+    {
+      "title": "Form AI Helper",
+      "url": "/features/form_ai_helper/",
+      "description": "Smart assistance for form completion throughout the platform"
+    }
+  ]
+}

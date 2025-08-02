@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildly Product Labs Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet">
+    <style>
+        .feature-card { transition: transform 0.2s; }
+        .feature-card:hover { transform: translateY(-2px); }
+        .ai-feature { border-left: 4px solid #28a745; }
+        .new-feature { border-left: 4px solid #007bff; }
+        .updated-feature { border-left: 4px solid #ffc107; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <strong>Buildly Product Labs</strong> Documentation
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="#getting-started">Getting Started</a>
+                <a class="nav-link" href="#features">Features</a>
+                <a class="nav-link" href="#api">API</a>
+                <a class="nav-link" href="https://github.com/buildlyio/buildly-react-template">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>Welcome to Buildly Product Labs</h1>
+                <p class="lead">Comprehensive documentation for the AI-powered product management platform</p>
+                
+                <div class="alert alert-info">
+                    <strong>Last Updated:</strong> 8/2/2025<br>
+                    <strong>Version:</strong> 2025.8.2
+                </div>
+
+                <h2 id="getting-started">Getting Started</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Quick Start Guide</h5>
+                        <p class="card-text">Get up and running with Buildly Product Labs in minutes.</p>
+                        <a href="#" class="btn btn-primary">View Guide</a>
+                    </div>
+                </div>
+
+                <h2 id="features">Features</h2>
+                <div class="row" id="features-container">
+                    <!-- Features will be loaded dynamically -->
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Quick Navigation</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="#dashboard" class="list-group-item">Dashboard</a>
+                        <a href="#product-portfolio" class="list-group-item">Product Portfolio</a>
+                        <a href="#product-roadmap" class="list-group-item">Product Roadmap</a>
+                        <a href="#releases" class="list-group-item">Release Management</a>
+                        <a href="#insights" class="list-group-item">Insights & Analytics</a>
+                        <a href="#ai-assistant" class="list-group-item">AI Assistant</a>
+                    </div>
+                </div>
+                
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5>Recent Updates</h5>
+                    </div>
+                    <div class="card-body" id="recent-updates">
+                        <!-- Recent updates will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script>
+        // Load documentation data and populate the page
+        fetch('./buildly-documentation.json')
+            .then(response => response.json())
+            .then(data => {
+                populateFeatures(data.features);
+                populateRecentUpdates(data.change_log);
+            })
+            .catch(error => console.error('Error loading documentation:', error));
+
+        function populateFeatures(features) {
+            const container = document.getElementById('features-container');
+            
+            Object.entries(features).forEach(([key, feature]) => {
+                const featureCard = document.createElement('div');
+                featureCard.className = 'col-md-6 mb-3';
+                
+                const cardClass = feature.auto_generated ? 'new-feature' : 'feature-card';
+                
+                featureCard.innerHTML = `
+                    <div class="card h-100 ${cardClass}">
+                        <div class="card-body">
+                            <h5 class="card-title">${feature.title}</h5>
+                            <p class="card-text">${feature.description}</p>
+                            ${feature.needs_documentation ? 
+                                '<span class="badge bg-warning">Needs Documentation</span>' : 
+                                '<span class="badge bg-success">Documented</span>'
+                            }
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(featureCard);
+            });
+        }
+
+        function populateRecentUpdates(changeLog) {
+            const container = document.getElementById('recent-updates');
+            
+            if (!changeLog || changeLog.length === 0) {
+                container.innerHTML = '<p class="text-muted">No recent updates</p>';
+                return;
+            }
+            
+            const recentChanges = changeLog.slice(0, 5);
+            
+            recentChanges.forEach(change => {
+                const updateItem = document.createElement('div');
+                updateItem.className = 'mb-2';
+                
+                const date = new Date(change.timestamp).toLocaleDateString();
+                
+                updateItem.innerHTML = `
+                    <small class="text-muted">${date}</small><br>
+                    <strong>${change.features_detected} features detected</strong><br>
+                    <small>Commit: ${change.commit}</small>
+                `;
+                
+                container.appendChild(updateItem);
+            });
+        }
+    </script>
+</body>
+</html>

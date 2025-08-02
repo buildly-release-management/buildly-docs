@@ -1,12 +1,10 @@
-# Buildly Product Labs Documentation
+# GitHub Pages Jekyll Configuration
 title: "Buildly Product Labs Documentation"
 description: "Comprehensive documentation for the AI-powered product management platform"
-baseurl: "/buildly-docs"
-url: "https://buildly-release-management.github.io"
+baseurl: ""
+url: "https://buildly-release-management.github.io/buildly-docs"
 
-# Build settings
-markdown: kramdown
-highlighter: rouge
+# Theme
 theme: minima
 
 # Plugins
@@ -14,7 +12,10 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-toc
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
 
 # Collections
 collections:
@@ -38,31 +39,8 @@ defaults:
     values:
       layout: "guide"
 
-# Navigation
-header_pages:
-  - getting-started.md
-  - features/index.md
-  - guides/index.md
-  - api/index.md
-
-# Exclude from processing
+# Exclude files
 exclude:
-  - vendor/
-  - Gemfile
-  - Gemfile.lock
   - node_modules/
   - package*.json
-  - scripts/
-
-# SEO
-author: Buildly Team
-twitter:
-  username: buildlyio
-social:
-  name: Buildly
-  links:
-    - https://twitter.com/buildlyio
-    - https://github.com/buildlyio
-
-# Google Analytics (add your tracking ID)
-# google_analytics: UA-XXXXXXXXX-X
+  - README.md
