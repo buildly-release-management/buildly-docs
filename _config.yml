@@ -1,0 +1,68 @@
+# Buildly Product Labs Documentation
+title: "Buildly Product Labs Documentation"
+description: "Comprehensive documentation for the AI-powered product management platform"
+baseurl: "/buildly-docs"
+url: "https://buildly-release-management.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-toc
+
+# Collections
+collections:
+  features:
+    output: true
+    permalink: /:collection/:name/
+  guides:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "features"
+    values:
+      layout: "feature"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+
+# Navigation
+header_pages:
+  - getting-started.md
+  - features/index.md
+  - guides/index.md
+  - api/index.md
+
+# Exclude from processing
+exclude:
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package*.json
+  - scripts/
+
+# SEO
+author: Buildly Team
+twitter:
+  username: buildlyio
+social:
+  name: Buildly
+  links:
+    - https://twitter.com/buildlyio
+    - https://github.com/buildlyio
+
+# Google Analytics (add your tracking ID)
+# google_analytics: UA-XXXXXXXXX-X
