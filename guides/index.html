@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides - Buildly Product Labs Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #0C5595 0%, #F9943B 100%); }
+        .guide-card { 
+            border: none; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .guide-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+        }
+        .guide-icon { 
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, #0C5595, #F9943B);
+            color: white; 
+            border-radius: 15px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .difficulty-badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 1rem;
+        }
+        .difficulty-beginner { background-color: #28a745; color: white; }
+        .difficulty-intermediate { background-color: #ffc107; color: black; }
+        .difficulty-advanced { background-color: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark hero-gradient">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-rocket me-2"></i>Buildly Docs
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/getting-started">Getting Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/api">API Reference</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/guides">Guides</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="hero-gradient text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">User Guides</h1>
+                    <p class="lead">Step-by-step tutorials and best practices for mastering Buildly</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guide Categories -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-5">Tutorial Categories</h2>
+                
+                <!-- Beginner Guides -->
+                <div class="mb-5">
+                    <h3 class="mb-4">
+                        <i class="fas fa-seedling text-success me-2"></i>
+                        Beginner Guides
+                        <span class="difficulty-badge difficulty-beginner ms-2">Beginner</span>
+                    </h3>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <h5 class="card-title">Getting Started Tutorial</h5>
+                                    <p class="card-text">Complete walkthrough from account creation to your first product launch.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">15 min read</small>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <h5 class="card-title">Account Setup</h5>
+                                    <p class="card-text">Learn how to configure your organization, users, and basic settings.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">10 min read</small>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <h5 class="card-title">Creating Your First Product</h5>
+                                    <p class="card-text">Step-by-step guide to defining and setting up your first product.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">12 min read</small>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intermediate Guides -->
+                <div class="mb-5">
+                    <h3 class="mb-4">
+                        <i class="fas fa-cogs text-warning me-2"></i>
+                        Intermediate Guides
+                        <span class="difficulty-badge difficulty-intermediate ms-2">Intermediate</span>
+                    </h3>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h5 class="card-title">AI Assistant Deep Dive</h5>
+                                    <p class="card-text">Master BabbleBeaver AI features for maximum productivity gains.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">20 min read</small>
+                                        <a href="#" class="btn btn-outline-warning btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-road"></i>
+                                    </div>
+                                    <h5 class="card-title">Advanced Roadmapping</h5>
+                                    <p class="card-text">Create complex roadmaps with dependencies and advanced planning.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">25 min read</small>
+                                        <a href="#" class="btn btn-outline-warning btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h5 class="card-title">Team Collaboration</h5>
+                                    <p class="card-text">Optimize team workflows and collaboration patterns.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">18 min read</small>
+                                        <a href="#" class="btn btn-outline-warning btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h5 class="card-title">Release Management</h5>
+                                    <p class="card-text">Streamline your release process with automated workflows.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">22 min read</small>
+                                        <a href="#" class="btn btn-outline-warning btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Guides -->
+                <div class="mb-5">
+                    <h3 class="mb-4">
+                        <i class="fas fa-graduation-cap text-danger me-2"></i>
+                        Advanced Guides
+                        <span class="difficulty-badge difficulty-advanced ms-2">Advanced</span>
+                    </h3>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <h5 class="card-title">API Integration</h5>
+                                    <p class="card-text">Build custom integrations using the Buildly REST API.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">30 min read</small>
+                                        <a href="#" class="btn btn-outline-danger btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h5 class="card-title">Custom Analytics</h5>
+                                    <p class="card-text">Create custom dashboards and advanced analytics workflows.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">35 min read</small>
+                                        <a href="#" class="btn btn-outline-danger btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card guide-card">
+                                <div class="card-body">
+                                    <div class="guide-icon">
+                                        <i class="fas fa-cog"></i>
+                                    </div>
+                                    <h5 class="card-title">Enterprise Configuration</h5>
+                                    <p class="card-text">Advanced configuration for large organizations and teams.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">40 min read</small>
+                                        <a href="#" class="btn btn-outline-danger btn-sm">Start Guide</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Best Practices -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="text-center mb-5">Best Practices & Tips</h2>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-lightbulb text-warning me-2"></i>
+                                        Planning Tips
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">• Start with clear product vision and objectives</li>
+                                        <li class="mb-2">• Use AI suggestions to identify blind spots</li>
+                                        <li class="mb-2">• Break large features into smaller, manageable pieces</li>
+                                        <li class="mb-2">• Regularly review and adjust complexity scores</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-users text-primary me-2"></i>
+                                        Team Collaboration
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">• Set up proper role-based permissions</li>
+                                        <li class="mb-2">• Use contextual AI help for onboarding</li>
+                                        <li class="mb-2">• Establish regular roadmap review cycles</li>
+                                        <li class="mb-2">• Document decisions and reasoning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-rocket text-success me-2"></i>
+                                        Release Management
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">• Use automated punchlists for consistency</li>
+                                        <li class="mb-2">• Monitor post-release metrics closely</li>
+                                        <li class="mb-2">• Plan rollback strategies in advance</li>
+                                        <li class="mb-2">• Gather user feedback quickly</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card border-0 bg-transparent">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-chart-bar text-info me-2"></i>
+                                        Analytics & Optimization
+                                    </h5>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">• Define success metrics early</li>
+                                        <li class="mb-2">• Use AI insights for optimization</li>
+                                        <li class="mb-2">• Regular performance reviews</li>
+                                        <li class="mb-2">• Track velocity and improvement trends</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Section -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Need More Help?</h2>
+                <p class="lead mb-4">Can't find what you're looking for? We're here to help you succeed.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="#" class="btn btn-primary">Contact Support</a>
+                    <a href="#" class="btn btn-outline-primary">Join Community</a>
+                    <a href="/api" class="btn btn-outline-secondary">API Docs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
