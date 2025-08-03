@@ -1,0 +1,154 @@
+/* Custom styles to match landing page design */
+
+/* Import Google Fonts to match landing page */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Global font family */
+body, .wy-nav-content-wrap, .wy-nav-content, .rst-content {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
+}
+
+/* Update RTD theme colors to match landing page gradient */
+.wy-nav-side {
+    background: linear-gradient(180deg, #0C5595 0%, #2c6aa0 100%) !important;
+}
+
+.wy-nav-top {
+    background: #0C5595 !important;
+}
+
+/* Headers styling to match landing page */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+}
+
+h1 {
+    color: #0C5595 !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+h2 {
+    color: #0C5595 !important;
+    font-size: 2rem !important;
+    border-bottom: 3px solid #F9943B !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* Link colors to match theme */
+a {
+    color: #0C5595 !important;
+}
+
+a:hover {
+    color: #F9943B !important;
+}
+
+/* Button styling */
+.btn, .wy-btn {
+    background: linear-gradient(135deg, #0C5595 0%, #F9943B 100%) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    padding: 12px 24px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn:hover, .wy-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(12, 85, 149, 0.3) !important;
+}
+
+/* Navigation improvements */
+.wy-menu-vertical a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 400 !important;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: rgba(249, 148, 59, 0.2) !important;
+    color: #fff !important;
+}
+
+.wy-menu-vertical li.current > a {
+    background-color: #F9943B !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+}
+
+/* Content area improvements */
+.rst-content {
+    line-height: 1.6 !important;
+    font-size: 16px !important;
+}
+
+/* Code blocks */
+.rst-content pre, .rst-content code {
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+    background-color: #f8f9fa !important;
+    border: 1px solid #e9ecef !important;
+    border-radius: 6px !important;
+}
+
+/* Alert/admonition styling */
+.rst-content .admonition {
+    border-radius: 8px !important;
+    border-left: 4px solid #0C5595 !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+.rst-content .admonition.note {
+    border-left-color: #0C5595 !important;
+}
+
+.rst-content .admonition.warning {
+    border-left-color: #F9943B !important;
+}
+
+/* Table styling */
+.rst-content table.docutils {
+    border-collapse: collapse !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+.rst-content table.docutils th {
+    background: linear-gradient(135deg, #0C5595 0%, #2c6aa0 100%) !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* Search box styling */
+.wy-side-nav-search {
+    background: #0C5595 !important;
+}
+
+.wy-side-nav-search input[type=text] {
+    border-radius: 6px !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    background-color: rgba(255,255,255,0.1) !important;
+    color: white !important;
+}
+
+.wy-side-nav-search input[type=text]:focus {
+    border-color: #F9943B !important;
+    box-shadow: 0 0 0 2px rgba(249, 148, 59, 0.2) !important;
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 768px) {
+    .rst-content {
+        font-size: 15px !important;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+}

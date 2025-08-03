@@ -10,16 +10,15 @@
 Welcome to Buildly Product Labs Documentation
 ==============================================
 
-Buildly Product Labs is an advanced React development platform that combines modern frontend technologies with AI-powered development tools. Get started with the :ref:`quickstart` guide.
+Buildly Product Labs is an AI-powered product management platform designed for modern development teams. This user guide will help you get started with account registration, team collaboration, and utilizing all the platform's features.
 
-Features are described and explained in more details in the :ref:`features` section.
-The rest of the docs describe each module and component in detail.
+New to Buildly Product Labs? Start with our :ref:`quickstart` guide for account setup and onboarding.
 
-Buildly Product Labs depends on Node.js and modern web technologies. The documentation for related technologies can be found at:
+Platform features and capabilities are explained in detail in the :ref:`features` section.
+For comprehensive guidance, check out our complete user documentation.
 
-- `Node.js documentation <https://nodejs.org/en/docs/>`_
-- `React documentation <https://reactjs.org/docs/>`_
-- `Material-UI documentation <https://mui.com/>`_
+.. note::
+   This documentation is designed for end users of the Buildly Product Labs platform. For developers and technical implementation, visit our `open source repositories <https://github.com/buildlyio>`_.
 
 Quick Navigation
 ----------------

@@ -1,44 +1,71 @@
 .. _quickstart:
 
-Quickstart
-==========
+Getting Started
+===============
 
-Excited to get start? This page gives a decent prologue to Buildly React Template. It assumes
-you as of now have a Buildly Core instance up and running and also all the project's
-prerequisites installed.
+Welcome to Buildly Product Labs! This guide will help you get started with using the platform for product management and team collaboration.
 
-- node v16.13.0
-- yarn v1.17.3
+.. note::
+   This is a user guide for the Buildly Product Labs platform. If you're a developer looking to contribute to the codebase, please visit our `GitHub repository <https://github.com/buildlyio>`_.
 
-Installing
+Account Registration
+--------------------
+
+To begin using Buildly Product Labs, you'll need to create an account:
+
+1. **Visit the Platform**: Navigate to your organization's Buildly Product Labs instance
+2. **Click "Register"**: Find the registration link on the login page
+3. **Fill in Your Details**:
+   
+   - Full name
+   - Email address
+   - Choose a secure password
+   - Organization (if applicable)
+
+4. **Verify Your Email**: Check your email for a verification link and click it to activate your account
+
+First Login
+-----------
+
+After email verification:
+
+1. **Return to the Login Page**: Use the credentials you just created
+2. **Complete Your Profile**: You'll be prompted to add additional information:
+   
+   - Profile picture (optional)
+   - Job title
+   - Department
+   - Timezone preferences
+
+3. **Platform Tour**: Take the optional guided tour to familiarize yourself with key features
+
+Essential Setup
+---------------
+
+Once logged in, complete these initial setup steps:
+
+**1. Join or Create Teams**
+   - Navigate to the Teams section
+   - Join existing teams you've been invited to
+   - Create new teams if you're a team lead
+
+**2. Configure Notifications**
+   - Go to Settings → Notifications
+   - Choose your preferred notification methods
+   - Set up email digests and real-time alerts
+
+**3. Connect Integrations** (if available)
+   - Link your calendar for scheduling
+   - Connect project management tools
+   - Set up any required third-party integrations
+
+Next Steps
 ----------
 
-Download and install web application dependencies running the following command:
+Now that you're set up, explore these key areas:
 
-.. code-block:: bash
+- :doc:`features/user_management` - Managing your profile and team settings
+- :doc:`features/profile_settings` - Customizing your experience
+- :doc:`user-guide/BUILDLY-USER-DOCUMENTATION` - Comprehensive user documentation
 
-   yarn install
-
-Now, initialize and build the project
-
-.. code-block:: bash
-
-   yarn run build
-
-To run the web app:
-
-.. code-block:: bash
-
-   yarn run start
-
-your Buildy UI will be running locally and listening to the port 4200, so you can access
-it via your browser typing this address: 127.0.0.1:4200
-
-Running the tests
------------------
-
-To run tests using `Jest <https://jestjs.io/>`_:
-
-.. code-block:: bash
-
-   yarn run test
+Need help? Contact your system administrator or check our troubleshooting guides.
