@@ -113,6 +113,31 @@ a:hover {
     color: #fff !important;
 }
 
+/* Fix white text on light background in current section sub-items */
+.wy-menu-vertical li.current ul li a,
+.wy-menu-vertical li.on ul li a,
+.wy-menu-vertical .current ul a,
+.wy-menu-vertical .current .toctree-l3 a,
+.wy-menu-vertical .current .toctree-l4 a,
+.wy-menu-vertical .current .toctree-l5 a {
+    color: #2c3e50 !important;
+    background-color: transparent !important;
+}
+
+.wy-menu-vertical li.current ul li a:hover,
+.wy-menu-vertical li.on ul li a:hover,
+.wy-menu-vertical .current ul a:hover {
+    background-color: rgba(249, 148, 59, 0.2) !important;
+    color: #0C5595 !important;
+}
+
+/* Additional fix for deeply nested current items */
+.wy-menu-vertical li.current li a,
+.wy-menu-vertical li.on li a {
+    color: #2c3e50 !important;
+    font-weight: 400 !important;
+}
+
 /* Content area improvements */
 .rst-content {
     line-height: 1.6 !important;
