@@ -42,13 +42,25 @@ jobs:
       - name: Build documentation
         run: |
           make html
+      - name: Prepare deployment
+        run: |
+          # Create deployment directory
+          mkdir -p deploy
+          # Copy the attractive landing page
+          cp index.html deploy/
+          cp -r assets deploy/ 2>/dev/null || true
+          cp -r _static deploy/ 2>/dev/null || true
+          # Copy Sphinx docs to /docs subdirectory
+          cp -r _build/html deploy/docs
+          # Ensure CNAME is in the right place
+          cp CNAME deploy/ 2>/dev/null || true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload built documentation
-          path: '_build/html'
+          # Upload combined site
+          path: 'deploy'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
