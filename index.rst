@@ -42,6 +42,7 @@ Quick Navigation
 
    features/index
    features/onboarding
+   features/ai_features
    features/login
    features/registration
    features/profile_settings
@@ -49,27 +50,15 @@ Quick Navigation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Development
+   :caption: AI & Automation
 
-   development/AI-FEATURE-IMPROVEMENTS
-   development/RELEASE-API-FIX
-   development/DOCS-REPOSITORY-STRUCTURE
-   development/DOCUMENTATION-SETUP-GUIDE
+   features/ai_features
 
 .. toctree::
    :maxdepth: 2
-   :caption: Automation
+   :caption: For Developers
 
-   automation/index
-
-.. toctree::
-   :maxdepth: 2
-   :caption: API Reference
-
-   modules/index
-   modules/connect_buildly_core
-   modules/http
-   modules/oauth
+   developers/index
 
 .. toctree::
    :maxdepth: 2
@@ -83,8 +72,6 @@ Quick Navigation
 
    contributing
    license
-   features/index
-   modules/index
 
 
 Additional Notes
@@ -92,8 +79,4 @@ Additional Notes
 
 Design notes, legal information and changelog are here.
 
-.. toctree::
-   :maxdepth: 2
-
-   license
-   contributing
+For developers interested in contributing to the Buildly ecosystem, see our :doc:`developers/index` section which covers our open source projects and premium marketplace components.
