@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Buildly Product Labs Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #0C5595 0%, #F9943B 100%); }
+        .feature-card { 
+            border: none; 
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .feature-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+        }
+        .feature-icon { 
+            width: 80px; 
+            height: 80px; 
+            background: linear-gradient(135deg, #0C5595, #F9943B);
+            color: white; 
+            border-radius: 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+        .feature-category {
+            border-left: 4px solid #F9943B;
+            padding-left: 1rem;
+        }
+        .workflow-step {
+            position: relative;
+            padding-left: 3rem;
+        }
+        .workflow-step::before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background: #0C5595;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .workflow-container {
+            counter-reset: step;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark hero-gradient">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="fas fa-rocket me-2"></i>Buildly Docs
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/getting-started">Getting Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/api">API Reference</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="hero-gradient text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Platform Features</h1>
+                    <p class="lead">Discover the powerful capabilities that make Buildly your complete product management solution</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Features -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-5">Core Features</h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h5 class="card-title">AI-Powered Assistant</h5>
+                                <p class="card-text">BabbleBeaver AI provides intelligent suggestions, automates workflows, and offers contextual help throughout your product development process.</p>
+                                <ul class="list-unstyled text-start small text-muted">
+                                    <li>• Smart feature suggestions</li>
+                                    <li>• Automated planning assistance</li>
+                                    <li>• Contextual help and guidance</li>
+                                    <li>• Natural language processing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <h5 class="card-title">Product Portfolio</h5>
+                                <p class="card-text">Manage multiple products with comprehensive feature tracking, complexity scoring, and priority management.</p>
+                                <ul class="list-unstyled text-start small text-muted">
+                                    <li>• Multi-product management</li>
+                                    <li>• Feature complexity scoring</li>
+                                    <li>• Priority-based planning</li>
+                                    <li>• Cross-product insights</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-road"></i>
+                                </div>
+                                <h5 class="card-title">Smart Roadmaps</h5>
+                                <p class="card-text">Create data-driven roadmaps with AI assistance for timeline estimation and feature sequencing.</p>
+                                <ul class="list-unstyled text-start small text-muted">
+                                    <li>• AI-powered timeline estimation</li>
+                                    <li>• Visual roadmap builder</li>
+                                    <li>• Dependency management</li>
+                                    <li>• Milestone tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h5 class="card-title">Release Management</h5>
+                                <p class="card-text">Streamline releases with automated punchlists, deployment tracking, and post-launch monitoring.</p>
+                                <ul class="list-unstyled text-start small text-muted">
+                                    <li>• Automated release punchlists</li>
+                                    <li>• Deployment tracking</li>
+                                    <li>• Post-launch monitoring</li>
+                                    <li>• Release notes generation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h5 class="card-title">Analytics & Insights</h5>
+                                <p class="card-text">Gain deep insights into product performance with comprehensive analytics and AI-generated recommendations.</p>
+                                <ul class="list-unstyled text-start small text-muted">
+                                    <li>• Performance dashboards</li>
+                                    <li>• AI-generated insights</li>
+                                    <li>• Custom metrics tracking</li>
+                                    <li>• Predictive analytics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card feature-card">
+                            <div class="card-body text-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h5 class="card-title">Team Collaboration</h5>
+                                <p class="card-text">Enable seamless collaboration with role-based permissions, real-time updates, and integrated communication.</p>
+                                <ul class="list-unstyled text-start small text-muted">
+                                    <li>• Role-based access control</li>
+                                    <li>• Real-time collaboration</li>
+                                    <li>• Integrated messaging</li>
+                                    <li>• Activity tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Categories -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Feature Categories</h2>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="feature-category mb-4">
+                        <h4 class="text-primary mb-3">
+                            <i class="fas fa-cogs me-2"></i>Product Management
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Feature planning and tracking</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Product portfolio management</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Roadmap visualization</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Priority scoring and ranking</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Dependency mapping</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-category mb-4">
+                        <h4 class="text-primary mb-3">
+                            <i class="fas fa-robot me-2"></i>AI Capabilities
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Intelligent feature suggestions</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Automated timeline estimation</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Contextual help and guidance</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Predictive analytics</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Natural language processing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-category mb-4">
+                        <h4 class="text-primary mb-3">
+                            <i class="fas fa-chart-bar me-2"></i>Analytics & Reporting
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Performance dashboards</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom metrics tracking</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>AI-generated insights</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Export and reporting tools</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Real-time data visualization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-category mb-4">
+                        <h4 class="text-primary mb-3">
+                            <i class="fas fa-shield-alt me-2"></i>Security & Integration
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>OAuth2 authentication</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>JWT token management</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Role-based permissions</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>API integrations</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Data encryption and privacy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Workflow Section -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-5">Typical Workflow</h2>
+                <p class="text-center text-muted mb-5">See how teams use Buildly features in their daily workflow</p>
+                
+                <div class="workflow-container">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="workflow-step">
+                                <h5>Define Product Vision</h5>
+                                <p class="text-muted">Start by creating your product and defining its core vision, objectives, and success metrics using our product portfolio tools.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="workflow-step">
+                                <h5>AI-Assisted Planning</h5>
+                                <p class="text-muted">Let BabbleBeaver AI analyze your requirements and suggest features, timelines, and optimal development sequences.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="workflow-step">
+                                <h5>Build Roadmap</h5>
+                                <p class="text-muted">Create visual roadmaps with AI-powered timeline estimation and dependency management for clear project visibility.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="workflow-step">
+                                <h5>Execute & Track</h5>
+                                <p class="text-muted">Use release management tools to track progress, manage deployments, and monitor post-launch performance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="workflow-step">
+                                <h5>Analyze & Optimize</h5>
+                                <p class="text-muted">Review performance analytics and AI insights to optimize your product strategy and plan future iterations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="workflow-step">
+                                <h5>Scale & Improve</h5>
+                                <p class="text-muted">Use lessons learned and AI recommendations to enhance your process and scale to multiple products.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Spotlight -->
+    <div class="hero-gradient text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Feature Spotlight: BabbleBeaver AI</h2>
+                    <p class="lead mb-4">Our AI assistant doesn't just suggest features - it understands context, learns from your patterns, and provides intelligent guidance throughout your product development journey.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-star me-2"></i>Contextual suggestions based on your product type</li>
+                        <li class="mb-2"><i class="fas fa-star me-2"></i>Learning algorithms that improve over time</li>
+                        <li class="mb-2"><i class="fas fa-star me-2"></i>Natural language interaction for easy communication</li>
+                        <li class="mb-2"><i class="fas fa-star me-2"></i>Integration with all platform features</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="display-1 mb-3">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <p>Experience the power of AI-driven product management</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">Ready to Experience These Features?</h2>
+                <p class="lead mb-4">Start your free trial and see how Buildly can transform your product development process.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="/getting-started" class="btn btn-primary btn-lg">Get Started</a>
+                    <a href="/api" class="btn btn-outline-primary btn-lg">View API Docs</a>
+                    <a href="#" class="btn btn-outline-secondary btn-lg">Schedule Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
