@@ -28,6 +28,7 @@ Quick Navigation
    :caption: Getting Started
 
    quickstart
+   features/onboarding
 
 .. toctree::
    :maxdepth: 2
@@ -40,6 +41,7 @@ Quick Navigation
    :caption: Features
 
    features/index
+   features/onboarding
    features/login
    features/registration
    features/profile_settings

@@ -8,6 +8,23 @@ Welcome to Buildly Product Labs! This guide will help you get started with using
 .. note::
    This is a user guide for the Buildly Product Labs platform. If you're a developer looking to contribute to the codebase, please visit our `GitHub repository <https://github.com/buildlyio>`_.
 
+Choose Your Path
+----------------
+
+**🚀 New Organization? Try AI-Powered Onboarding (Recommended)**
+  If you're setting up Buildly for your organization for the first time, we recommend starting with our intelligent onboarding system:
+  
+  - **AI-Guided Setup**: Answer a few questions about your organization and needs
+  - **Personalized Recommendations**: Get platform suggestions tailored to your requirements
+  - **Streamlined Process**: Complete setup with expert guidance
+  
+  `Start AI Onboarding <https://labs-onboarding.buildly.io/>`_ (Beta)
+  
+  📖 *For detailed information about the onboarding process, see* :doc:`features/onboarding`
+
+**👤 Individual User? Follow Manual Setup**
+  If you're joining an existing organization or prefer manual setup, continue with the standard registration process below.
+
 Account Registration
 --------------------
 
