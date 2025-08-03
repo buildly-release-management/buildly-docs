@@ -78,6 +78,41 @@ a:hover {
     font-weight: 500 !important;
 }
 
+/* Fix expanded navigation section readability */
+.wy-menu-vertical li.toctree-l2.current > a,
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {
+    background-color: #2c6aa0 !important;
+    color: #fff !important;
+}
+
+.wy-menu-vertical li.toctree-l3.current > a,
+.wy-menu-vertical li.toctree-l3.current li.toctree-l4 > a {
+    background-color: #1f5080 !important;
+    color: #fff !important;
+}
+
+.wy-menu-vertical li.toctree-l4.current > a,
+.wy-menu-vertical li.toctree-l4.current li.toctree-l5 > a {
+    background-color: #174060 !important;
+    color: #fff !important;
+}
+
+/* Ensure all nested navigation items have good contrast */
+.wy-menu-vertical li.toctree-l2 a,
+.wy-menu-vertical li.toctree-l3 a,
+.wy-menu-vertical li.toctree-l4 a,
+.wy-menu-vertical li.toctree-l5 a {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.wy-menu-vertical li.toctree-l2 a:hover,
+.wy-menu-vertical li.toctree-l3 a:hover,
+.wy-menu-vertical li.toctree-l4 a:hover,
+.wy-menu-vertical li.toctree-l5 a:hover {
+    background-color: rgba(249, 148, 59, 0.3) !important;
+    color: #fff !important;
+}
+
 /* Content area improvements */
 .rst-content {
     line-height: 1.6 !important;

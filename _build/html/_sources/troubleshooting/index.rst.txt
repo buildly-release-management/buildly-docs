@@ -1,12 +1,12 @@
 .. _troubleshooting:
 
 Troubleshooting Guide
-====================
+=====================
 
 This guide helps you resolve common issues you might encounter while using Buildly Product Labs. If you can't find a solution here, contact your system administrator or support team.
 
 Common Login Issues
-------------------
+-------------------
 
 **Problem: Can't log in to the platform**
 
