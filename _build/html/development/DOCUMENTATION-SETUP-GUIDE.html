@@ -1,0 +1,536 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📖 Documentation Management &amp; GitHub Pages Setup Guide &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../automation/index.html" />
+    <link rel="prev" title="Documentation Repository Structure" href="DOCS-REPOSITORY-STRUCTURE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="AI-FEATURE-IMPROVEMENTS.html">🤖 AI Feature Suggestion Improvements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RELEASE-API-FIX.html">🔧 Release API Endpoint Fix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DOCS-REPOSITORY-STRUCTURE.html">Documentation Repository Structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">📖 Documentation Management &amp; GitHub Pages Setup Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-ll-get">🎯 What You’ll Get</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quick-setup-5-minutes">🚀 Quick Setup (5 minutes)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-create-github-repository">Step 1: Create GitHub Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-initialize-documentation-system">Step 2: Initialize Documentation System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-enable-github-pages">Step 3: Enable GitHub Pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-deploy-documentation">Step 4: Deploy Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#automated-workflow">🔄 Automated Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#when-you-add-features">When You Add Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#auto-update-process">Auto-Update Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git-integration">Git Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#documentation-structure">📁 Documentation Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#customization">🎨 Customization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#branding">Branding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#styling">Styling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#content">Content</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-configuration">🔧 Advanced Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#custom-domain">Custom Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-integration">Search Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analytics">Analytics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ai-integration">🤖 AI Integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#chatbot-configuration">Chatbot Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#monitoring-maintenance">📊 Monitoring &amp; Maintenance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#documentation-health">Documentation Health</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#regular-maintenance">Regular Maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">🐛 Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#common-issues">Common Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debug-mode">Debug Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#success-metrics">📈 Success Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#best-practices">🎓 Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#content-writing">Content Writing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maintenance">Maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#team-workflow">Team Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">🔗 Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-help">📞 Getting Help</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/connect_buildly_core.html">Connection to Buildly Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/http.html">HTTP Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/oauth.html">OAuth Module</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/CORS-RESOLUTION-SUMMARY.html">🎉 CORS Issue Resolution Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">📖 Documentation Management &amp; GitHub Pages Setup Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/development/DOCUMENTATION-SETUP-GUIDE.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentation-management-github-pages-setup-guide">
+<h1>📖 Documentation Management &amp; GitHub Pages Setup Guide<a class="headerlink" href="#documentation-management-github-pages-setup-guide" title="Link to this heading"></a></h1>
+<p>This guide walks you through setting up an automated documentation system for Buildly Product Labs with GitHub Pages hosting.</p>
+<section id="what-you-ll-get">
+<h2>🎯 What You’ll Get<a class="headerlink" href="#what-you-ll-get" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Automated Documentation Updates</strong>: Scripts that detect code changes and update docs</p></li>
+<li><p><strong>GitHub Pages Site</strong>: Professional documentation website with search and navigation</p></li>
+<li><p><strong>AI Integration</strong>: Chatbot links updated to point to your live documentation</p></li>
+<li><p><strong>Continuous Deployment</strong>: Automatic updates when you push changes</p></li>
+</ul>
+</section>
+<section id="quick-setup-5-minutes">
+<h2>🚀 Quick Setup (5 minutes)<a class="headerlink" href="#quick-setup-5-minutes" title="Link to this heading"></a></h2>
+<section id="step-1-create-github-repository">
+<h3>Step 1: Create GitHub Repository<a class="headerlink" href="#step-1-create-github-repository" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Go to GitHub and create a new repository:</p>
+<ul class="simple">
+<li><p><strong>Name</strong>: <code class="docutils literal notranslate"><span class="pre">buildly-docs</span></code></p></li>
+<li><p><strong>Owner</strong>: <code class="docutils literal notranslate"><span class="pre">buildly-release-management</span></code> (or your organization)</p></li>
+<li><p><strong>Visibility</strong>: Public (required for free GitHub Pages)</p></li>
+<li><p><strong>Initialize</strong>: Empty repository (no README)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="step-2-initialize-documentation-system">
+<h3>Step 2: Initialize Documentation System<a class="headerlink" href="#step-2-initialize-documentation-system" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/path/to/buildly-react-template
+
+<span class="c1"># Install documentation dependencies</span>
+<span class="nb">cd</span><span class="w"> </span>scripts
+npm<span class="w"> </span>install
+
+<span class="c1"># Initialize the documentation repository</span>
+npm<span class="w"> </span>run<span class="w"> </span>docs:init
+</pre></div>
+</div>
+<p>This creates a complete Jekyll site with:</p>
+<ul class="simple">
+<li><p>Professional layout and styling</p></li>
+<li><p>Feature pages with navigation</p></li>
+<li><p>Search functionality</p></li>
+<li><p>Mobile-responsive design</p></li>
+<li><p>GitHub Actions deployment</p></li>
+</ul>
+</section>
+<section id="step-3-enable-github-pages">
+<h3>Step 3: Enable GitHub Pages<a class="headerlink" href="#step-3-enable-github-pages" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Go to your <code class="docutils literal notranslate"><span class="pre">buildly-docs</span></code> repository on GitHub</p></li>
+<li><p>Click <strong>Settings</strong> → <strong>Pages</strong></p></li>
+<li><p>Under <strong>Source</strong>, select <strong>“GitHub Actions”</strong></p></li>
+<li><p>Click <strong>Save</strong></p></li>
+</ol>
+</section>
+<section id="step-4-deploy-documentation">
+<h3>Step 4: Deploy Documentation<a class="headerlink" href="#step-4-deploy-documentation" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update documentation with current codebase</span>
+npm<span class="w"> </span>run<span class="w"> </span>docs:update
+
+<span class="c1"># Deploy to GitHub Pages</span>
+npm<span class="w"> </span>run<span class="w"> </span>docs:deploy
+</pre></div>
+</div>
+<p>Your documentation will be live at: <code class="docutils literal notranslate"><span class="pre">https://buildly-release-management.github.io/buildly-docs</span></code></p>
+</section>
+</section>
+<section id="automated-workflow">
+<h2>🔄 Automated Workflow<a class="headerlink" href="#automated-workflow" title="Link to this heading"></a></h2>
+<section id="when-you-add-features">
+<h3>When You Add Features<a class="headerlink" href="#when-you-add-features" title="Link to this heading"></a></h3>
+<p>The system automatically detects and documents:</p>
+<ol class="arabic simple">
+<li><p><strong>AI Features</strong>: BabbleBeaver integrations, AI suggestions, chatbot enhancements</p></li>
+<li><p><strong>New Pages</strong>: React components, new UI sections</p></li>
+<li><p><strong>API Changes</strong>: New endpoints, mutations, queries</p></li>
+<li><p><strong>UI Components</strong>: Form helpers, modals, interactive elements</p></li>
+</ol>
+</section>
+<section id="auto-update-process">
+<h3>Auto-Update Process<a class="headerlink" href="#auto-update-process" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Manual update (scans codebase and updates docs)</span>
+npm<span class="w"> </span>run<span class="w"> </span>docs:update
+
+<span class="c1"># Watch mode (auto-updates when files change)</span>
+npm<span class="w"> </span>run<span class="w"> </span>docs:watch
+
+<span class="c1"># Full deployment (update + build + deploy)</span>
+npm<span class="w"> </span>run<span class="w"> </span>docs:deploy
+</pre></div>
+</div>
+</section>
+<section id="git-integration">
+<h3>Git Integration<a class="headerlink" href="#git-integration" title="Link to this heading"></a></h3>
+<p>Add to your main project workflow:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add to package.json scripts</span>
+<span class="s2">&quot;pre-commit&quot;</span>:<span class="w"> </span><span class="s2">&quot;cd scripts &amp;&amp; npm run docs:update&quot;</span>
+
+<span class="c1"># Or use git hooks</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;cd scripts &amp;&amp; npm run docs:update&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.git/hooks/pre-commit
+chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
+</pre></div>
+</div>
+</section>
+</section>
+<section id="documentation-structure">
+<h2>📁 Documentation Structure<a class="headerlink" href="#documentation-structure" title="Link to this heading"></a></h2>
+<p>Your generated site includes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://buildly-release-management.github.io/buildly-docs/
+├── /                          # Home page with feature overview
+├── /getting-started/          # Quick start guides
+├── /features/                 # Individual feature documentation
+│   ├── /dashboard/           # Dashboard features
+│   ├── /product-roadmap/     # Roadmap and AI suggestions
+│   ├── /ai-assistant/        # Chatbot documentation
+│   └── /team-assistance/     # Team help features
+├── /guides/                   # Step-by-step tutorials
+├── /api/                      # API reference
+└── /search/                   # Documentation search
+</pre></div>
+</div>
+</section>
+<section id="customization">
+<h2>🎨 Customization<a class="headerlink" href="#customization" title="Link to this heading"></a></h2>
+<section id="branding">
+<h3>Branding<a class="headerlink" href="#branding" title="Link to this heading"></a></h3>
+<p>Edit <code class="docutils literal notranslate"><span class="pre">docs-repo/_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Your</span><span class="nv"> </span><span class="s">Company</span><span class="nv"> </span><span class="s">Documentation&quot;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Your</span><span class="nv"> </span><span class="s">custom</span><span class="nv"> </span><span class="s">description&quot;</span>
+<span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://your-org.github.io/your-docs&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="styling">
+<h3>Styling<a class="headerlink" href="#styling" title="Link to this heading"></a></h3>
+<p>Modify <code class="docutils literal notranslate"><span class="pre">docs-repo/assets/css/style.css</span></code> for custom colors, fonts, and layout.</p>
+</section>
+<section id="content">
+<h3>Content<a class="headerlink" href="#content" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Features</strong>: Add markdown files to <code class="docutils literal notranslate"><span class="pre">docs-repo/_features/</span></code></p></li>
+<li><p><strong>Guides</strong>: Add tutorials to <code class="docutils literal notranslate"><span class="pre">docs-repo/_guides/</span></code></p></li>
+<li><p><strong>API Docs</strong>: Update <code class="docutils literal notranslate"><span class="pre">docs-repo/api/</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="advanced-configuration">
+<h2>🔧 Advanced Configuration<a class="headerlink" href="#advanced-configuration" title="Link to this heading"></a></h2>
+<section id="custom-domain">
+<h3>Custom Domain<a class="headerlink" href="#custom-domain" title="Link to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> file to repository root:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docs</span><span class="o">.</span><span class="n">buildly</span><span class="o">.</span><span class="n">io</span>
+</pre></div>
+</div>
+</li>
+<li><p>Configure DNS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docs</span><span class="o">.</span><span class="n">buildly</span><span class="o">.</span><span class="n">io</span> <span class="n">CNAME</span> <span class="n">buildly</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">management</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="search-integration">
+<h3>Search Integration<a class="headerlink" href="#search-integration" title="Link to this heading"></a></h3>
+<p>The system includes built-in search. To enhance it:</p>
+<ol class="arabic simple">
+<li><p><strong>Algolia</strong>: Add Algolia search configuration</p></li>
+<li><p><strong>Google</strong>: Enable Google site search</p></li>
+<li><p><strong>Custom</strong>: Modify search JavaScript</p></li>
+</ol>
+</section>
+<section id="analytics">
+<h3>Analytics<a class="headerlink" href="#analytics" title="Link to this heading"></a></h3>
+<p>Add Google Analytics to <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">google_analytics</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UA-XXXXXXXXX-X</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ai-integration">
+<h2>🤖 AI Integration<a class="headerlink" href="#ai-integration" title="Link to this heading"></a></h2>
+<p>The chatbot automatically uses your documentation links:</p>
+<ul class="simple">
+<li><p><strong>Contextual Help</strong>: Links change based on current page</p></li>
+<li><p><strong>Smart Suggestions</strong>: AI generates relevant questions</p></li>
+<li><p><strong>Live Updates</strong>: Links update when you deploy docs</p></li>
+</ul>
+<section id="chatbot-configuration">
+<h3>Chatbot Configuration<a class="headerlink" href="#chatbot-configuration" title="Link to this heading"></a></h3>
+<p>The chatbot now points to your documentation:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Updated automatically in Chatbot.js</span>
+<span class="nx">links</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Getting Started&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://buildly-release-management.github.io/buildly-docs/getting-started&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;AI Features&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://buildly-release-management.github.io/buildly-docs/features/ai-assistant&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="c1">// ... more links</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="monitoring-maintenance">
+<h2>📊 Monitoring &amp; Maintenance<a class="headerlink" href="#monitoring-maintenance" title="Link to this heading"></a></h2>
+<section id="documentation-health">
+<h3>Documentation Health<a class="headerlink" href="#documentation-health" title="Link to this heading"></a></h3>
+<p>Check documentation status:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># View update log</span>
+cat<span class="w"> </span>buildly-documentation.json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">&#39;.change_log[0]&#39;</span>
+
+<span class="c1"># Check feature coverage</span>
+npm<span class="w"> </span>run<span class="w"> </span>docs:update<span class="w"> </span>--<span class="w"> </span>--report
+</pre></div>
+</div>
+</section>
+<section id="regular-maintenance">
+<h3>Regular Maintenance<a class="headerlink" href="#regular-maintenance" title="Link to this heading"></a></h3>
+<p><strong>Weekly</strong>:</p>
+<ul class="simple">
+<li><p>Review auto-generated content</p></li>
+<li><p>Update any placeholder documentation</p></li>
+<li><p>Check for broken links</p></li>
+</ul>
+<p><strong>Monthly</strong>:</p>
+<ul class="simple">
+<li><p>Review analytics for popular pages</p></li>
+<li><p>Update screenshots and examples</p></li>
+<li><p>Optimize search performance</p></li>
+</ul>
+<p><strong>Per Release</strong>:</p>
+<ul class="simple">
+<li><p>Update version numbers</p></li>
+<li><p>Add release notes</p></li>
+<li><p>Update getting started guides</p></li>
+</ul>
+</section>
+</section>
+<section id="troubleshooting">
+<h2>🐛 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="common-issues">
+<h3>Common Issues<a class="headerlink" href="#common-issues" title="Link to this heading"></a></h3>
+<p><strong>“Repository not found”</strong></p>
+<ul class="simple">
+<li><p>Ensure GitHub repository exists and is public</p></li>
+<li><p>Check repository name in <code class="docutils literal notranslate"><span class="pre">scripts/init-docs-repo.js</span></code></p></li>
+</ul>
+<p><strong>“GitHub Actions failing”</strong></p>
+<ul class="simple">
+<li><p>Verify Pages is enabled with “GitHub Actions” source</p></li>
+<li><p>Check workflow file in <code class="docutils literal notranslate"><span class="pre">.github/workflows/</span></code></p></li>
+</ul>
+<p><strong>“Documentation not updating”</strong></p>
+<ul class="simple">
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">docs:update</span></code> manually</p></li>
+<li><p>Check feature detection patterns in <code class="docutils literal notranslate"><span class="pre">update-docs.js</span></code></p></li>
+</ul>
+<p><strong>“Links not working”</strong></p>
+<ul class="simple">
+<li><p>Verify base URL in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p></li>
+<li><p>Check relative vs absolute URLs</p></li>
+</ul>
+</section>
+<section id="debug-mode">
+<h3>Debug Mode<a class="headerlink" href="#debug-mode" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">DEBUG</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>npm<span class="w"> </span>run<span class="w"> </span>docs:update
+</pre></div>
+</div>
+<p>Shows detailed logging of the scanning and update process.</p>
+</section>
+</section>
+<section id="success-metrics">
+<h2>📈 Success Metrics<a class="headerlink" href="#success-metrics" title="Link to this heading"></a></h2>
+<p>Track your documentation success:</p>
+<ul class="simple">
+<li><p><strong>Coverage</strong>: Percentage of features documented</p></li>
+<li><p><strong>Usage</strong>: GitHub Pages analytics</p></li>
+<li><p><strong>Freshness</strong>: How recently docs were updated</p></li>
+<li><p><strong>User Feedback</strong>: Issues and suggestions</p></li>
+</ul>
+</section>
+<section id="best-practices">
+<h2>🎓 Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h2>
+<section id="content-writing">
+<h3>Content Writing<a class="headerlink" href="#content-writing" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Start with Overview</strong>: What the feature does</p></li>
+<li><p><strong>How-to Steps</strong>: Clear, numbered instructions</p></li>
+<li><p><strong>Examples</strong>: Screenshots and code samples</p></li>
+<li><p><strong>Troubleshooting</strong>: Common issues and solutions</p></li>
+</ol>
+</section>
+<section id="maintenance">
+<h3>Maintenance<a class="headerlink" href="#maintenance" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Regular Updates</strong>: Keep docs current with code</p></li>
+<li><p><strong>User Focus</strong>: Write for your actual users</p></li>
+<li><p><strong>Visual Elements</strong>: Use screenshots and diagrams</p></li>
+<li><p><strong>Search Optimization</strong>: Use clear headings and keywords</p></li>
+</ol>
+</section>
+<section id="team-workflow">
+<h3>Team Workflow<a class="headerlink" href="#team-workflow" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Feature Documentation</strong>: Document new features as you build them</p></li>
+<li><p><strong>Review Process</strong>: Have team members review docs</p></li>
+<li><p><strong>User Testing</strong>: Test docs with actual users</p></li>
+<li><p><strong>Feedback Loop</strong>: Regularly collect and act on feedback</p></li>
+</ol>
+</section>
+</section>
+<section id="resources">
+<h2>🔗 Resources<a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Jekyll Documentation</strong>: <a class="reference external" href="https://jekyllrb.com">jekyllrb.com</a></p></li>
+<li><p><strong>GitHub Pages</strong>: <a class="reference external" href="https://pages.github.com">pages.github.com</a></p></li>
+<li><p><strong>Markdown Guide</strong>: <a class="reference external" href="https://www.markdownguide.org">markdownguide.org</a></p></li>
+<li><p><strong>Documentation Best Practices</strong>: <a class="reference external" href="https://www.writethedocs.org">writethedocs.org</a></p></li>
+</ul>
+</section>
+<section id="getting-help">
+<h2>📞 Getting Help<a class="headerlink" href="#getting-help" title="Link to this heading"></a></h2>
+<p>If you run into issues:</p>
+<ol class="arabic simple">
+<li><p>Check the troubleshooting section above</p></li>
+<li><p>Review script logs for error messages</p></li>
+<li><p>Open an issue in the main repository</p></li>
+<li><p>Contact the development team</p></li>
+</ol>
+<hr class="docutils" />
+<p><strong>Your documentation system is now ready!</strong></p>
+<p>Visit your live documentation at: <code class="docutils literal notranslate"><span class="pre">https://buildly-release-management.github.io/buildly-docs</span></code></p>
+<p>The system will automatically keep your documentation up-to-date as you develop new features.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="DOCS-REPOSITORY-STRUCTURE.html" class="btn btn-neutral float-left" title="Documentation Repository Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../automation/index.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

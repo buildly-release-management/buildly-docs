@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🤖 AI Feature Suggestion Improvements &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="🔧 Release API Endpoint Fix" href="RELEASE-API-FIX.html" />
+    <link rel="prev" title="Profile Settings" href="../features/profile_settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">🤖 AI Feature Suggestion Improvements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#issues-fixed">✅ <strong>Issues Fixed</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#improved-ai-prompt-for-buildly-specific-features">1. <strong>Improved AI Prompt for Buildly-Specific Features</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-json-code-block-parsing">2. <strong>Fixed JSON Code Block Parsing</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fixed-disappearing-button-issue">3. <strong>Fixed Disappearing Button Issue</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#technical-implementation">🛠️ <strong>Technical Implementation</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#enhanced-prompt-structure">Enhanced Prompt Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#robust-json-parsing">Robust JSON Parsing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#persistent-button-ui">Persistent Button UI</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#expected-results">🎯 <strong>Expected Results</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing">🧪 <strong>Testing</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="RELEASE-API-FIX.html">🔧 Release API Endpoint Fix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DOCS-REPOSITORY-STRUCTURE.html">Documentation Repository Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DOCUMENTATION-SETUP-GUIDE.html">📖 Documentation Management &amp; GitHub Pages Setup Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/connect_buildly_core.html">Connection to Buildly Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/http.html">HTTP Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/oauth.html">OAuth Module</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/CORS-RESOLUTION-SUMMARY.html">🎉 CORS Issue Resolution Summary</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">🤖 AI Feature Suggestion Improvements</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/development/AI-FEATURE-IMPROVEMENTS.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ai-feature-suggestion-improvements">
+<h1>🤖 AI Feature Suggestion Improvements<a class="headerlink" href="#ai-feature-suggestion-improvements" title="Link to this heading"></a></h1>
+<section id="issues-fixed">
+<h2>✅ <strong>Issues Fixed</strong><a class="headerlink" href="#issues-fixed" title="Link to this heading"></a></h2>
+<section id="improved-ai-prompt-for-buildly-specific-features">
+<h3>1. <strong>Improved AI Prompt for Buildly-Specific Features</strong><a class="headerlink" href="#improved-ai-prompt-for-buildly-specific-features" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Problem</strong>: AI was suggesting generic features that don’t fit a product management platform</p></li>
+<li><p><strong>Solution</strong>: Enhanced prompt to specifically target Buildly use cases:</p>
+<ul>
+<li><p>Product roadmap management</p></li>
+<li><p>Release planning and tracking</p></li>
+<li><p>Development team collaboration</p></li>
+<li><p>Project estimation and budgeting</p></li>
+<li><p>Issue tracking and feature development</p></li>
+<li><p>Team productivity and workflow optimization</p></li>
+</ul>
+</li>
+<li><p><strong>Explicitly excludes</strong>: E-commerce, social media, gaming, blockchain, and other unrelated features</p></li>
+</ul>
+</section>
+<section id="fixed-json-code-block-parsing">
+<h3>2. <strong>Fixed JSON Code Block Parsing</strong><a class="headerlink" href="#fixed-json-code-block-parsing" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Problem</strong>: AI responses contained markdown code blocks like ````json { “suggested_feature”: “…”`</p></li>
+<li><p><strong>Solution</strong>: Added robust parsing that:</p>
+<ul>
+<li><p>Removes markdown code block markers (````json` and `````)</p></li>
+<li><p>Extracts JSON from mixed text responses using regex</p></li>
+<li><p>Validates required fields before processing</p></li>
+<li><p>Provides graceful fallback for non-JSON responses</p></li>
+<li><p>Cleans up any residual JSON formatting characters</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="fixed-disappearing-button-issue">
+<h3>3. <strong>Fixed Disappearing Button Issue</strong><a class="headerlink" href="#fixed-disappearing-button-issue" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Problem</strong>: “Generate AI Suggestion” button disappeared after first suggestion was created</p></li>
+<li><p><strong>Solution</strong>: Added persistent “Generate Another AI Suggestion” buttons in both views:</p>
+<ul>
+<li><p><strong>Tabular View</strong>: Added “Generate Another AI Suggestion” button below the suggestions table</p></li>
+<li><p><strong>Kanban View</strong>: Added “Generate Another” button as a card in the suggestions column</p></li>
+</ul>
+</li>
+<li><p><strong>Result</strong>: Users can now generate multiple AI suggestions without losing access to the button</p></li>
+</ul>
+</section>
+</section>
+<section id="technical-implementation">
+<h2>🛠️ <strong>Technical Implementation</strong><a class="headerlink" href="#technical-implementation" title="Link to this heading"></a></h2>
+<section id="enhanced-prompt-structure">
+<h3>Enhanced Prompt Structure<a class="headerlink" href="#enhanced-prompt-structure" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// New prompt specifically targets Buildly product management features</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
+<span class="sb">You are an AI product manager helping to suggest new features for a software product built on the Buildly platform.</span>
+
+<span class="sb">IMPORTANT: Buildly is a product management and development platform. Please only suggest features that make sense for:</span>
+<span class="sb">- Product roadmap management</span>
+<span class="sb">- Release planning and tracking</span>
+<span class="sb">- Development team collaboration  </span>
+<span class="sb">- Project estimation and budgeting</span>
+<span class="sb">- Issue tracking and feature development</span>
+<span class="sb">- Team productivity and workflow optimization</span>
+
+<span class="sb">DO NOT suggest features like:</span>
+<span class="sb">- E-commerce or shopping cart functionality</span>
+<span class="sb">- Social media features</span>
+<span class="sb">- Gaming features</span>
+<span class="sb">- Blockchain or cryptocurrency features</span>
+<span class="sb">- Features unrelated to product management/development</span>
+<span class="sb">...</span>
+<span class="sb">`</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="robust-json-parsing">
+<h3>Robust JSON Parsing<a class="headerlink" href="#robust-json-parsing" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Remove markdown code blocks and extract JSON</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">responseText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">aiResponse</span><span class="p">.</span><span class="nx">response</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">aiResponse</span><span class="p">.</span><span class="nx">message</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s1">&#39;{}&#39;</span><span class="p">;</span>
+<span class="nx">responseText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">responseText</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/```json\s*/g</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/```\s*/g</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">);</span>
+
+<span class="c1">// Extract JSON if wrapped in other text</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">jsonMatch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">responseText</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/\{[\s\S]*\}/</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">jsonMatch</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">responseText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">jsonMatch</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="nx">suggestion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">responseText</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="persistent-button-ui">
+<h3>Persistent Button UI<a class="headerlink" href="#persistent-button-ui" title="Link to this heading"></a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Tabular View: Shows button even when suggestions exist</span>
+<span class="p">{</span><span class="nx">suggestedFeatures</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="nx">_</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">(</span><span class="nx">suggestedFeatures</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="o">&lt;&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">DataTableWrapper</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="o">/&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">marginTop</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;10px&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">textAlign</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;center&#39;</span><span class="w"> </span><span class="p">}}</span><span class="o">&gt;</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="nx">Button</span><span class="w"> </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">generateAIFeatureSuggestion</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="w">        </span><span class="nx">Generate</span><span class="w"> </span><span class="nx">Another</span><span class="w"> </span><span class="nx">AI</span><span class="w"> </span><span class="nx">Suggestion</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="err">/Button&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="err">/&gt;</span>
+<span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="c1">// Original empty state button</span>
+<span class="p">)}</span>
+
+<span class="c1">// Kanban View: Adds button as a card in suggestions column</span>
+<span class="o">&lt;</span><span class="nx">Card</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">classes</span><span class="p">.</span><span class="nx">card</span><span class="p">}</span><span class="w"> </span><span class="nx">variant</span><span class="o">=</span><span class="s2">&quot;outlined&quot;</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="nx">CardContent</span><span class="w"> </span><span class="nx">style</span><span class="o">=</span><span class="p">{{</span><span class="w"> </span><span class="nx">textAlign</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;center&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">padding</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;12px&#39;</span><span class="w"> </span><span class="p">}}</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">Button</span><span class="w"> </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">generateAIFeatureSuggestion</span><span class="p">}</span><span class="o">&gt;</span>
+<span class="w">      </span><span class="nx">Generate</span><span class="w"> </span><span class="nx">Another</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="err">/Button&gt;</span>
+<span class="w">  </span><span class="o">&lt;</span><span class="err">/CardContent&gt;</span>
+<span class="o">&lt;</span><span class="err">/Card&gt;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="expected-results">
+<h2>🎯 <strong>Expected Results</strong><a class="headerlink" href="#expected-results" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Relevant Suggestions</strong>: AI will now suggest features appropriate for product management workflows</p></li>
+<li><p><strong>Clean Feature Names</strong>: No more JSON code blocks in feature titles</p></li>
+<li><p><strong>Continuous Generation</strong>: Users can generate multiple suggestions without losing the button</p></li>
+<li><p><strong>Better UX</strong>: Consistent experience across both Tabular and Kanban views</p></li>
+</ol>
+</section>
+<section id="testing">
+<h2>🧪 <strong>Testing</strong><a class="headerlink" href="#testing" title="Link to this heading"></a></h2>
+<p>To test the improvements:</p>
+<ol class="arabic simple">
+<li><p>Go to Product Roadmap page</p></li>
+<li><p>Click “Generate AI Suggestion”</p></li>
+<li><p>Verify the suggested feature is relevant to product management</p></li>
+<li><p>Verify the feature name is clean (no JSON formatting)</p></li>
+<li><p>Verify the “Generate Another AI Suggestion” button is still available</p></li>
+<li><p>Generate multiple suggestions to confirm the button persists</p></li>
+<li><p>Test in both Tabular and Kanban views</p></li>
+</ol>
+<p><strong>All fixes are now live and ready for testing! 🚀</strong></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../features/profile_settings.html" class="btn btn-neutral float-left" title="Profile Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="RELEASE-API-FIX.html" class="btn btn-neutral float-right" title="🔧 Release API Endpoint Fix" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
