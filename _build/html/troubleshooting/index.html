@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Troubleshooting Guide &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=5db9fe7f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributing to Buildly Product Labs" href="../contributing.html" />
+    <link rel="prev" title="For Developers" href="../developers/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">For Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#common-login-issues">Common Login Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#platform-access-issues">Platform Access Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ai-features-babblebeaver-issues">AI Features (BabbleBeaver) Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notification-problems">Notification Problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#team-and-collaboration-issues">Team and Collaboration Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profile-and-settings-issues">Profile and Settings Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#technical-issues">Technical Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-additional-help">Getting Additional Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prevention-tips">Prevention Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#related-documentation">Related Documentation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Troubleshooting Guide</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/troubleshooting/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="troubleshooting-guide">
+<span id="troubleshooting"></span><h1>Troubleshooting Guide<a class="headerlink" href="#troubleshooting-guide" title="Link to this heading"></a></h1>
+<p>This guide helps you resolve common issues you might encounter while using Buildly Product Labs. If you can’t find a solution here, contact your system administrator or support team.</p>
+<section id="common-login-issues">
+<h2>Common Login Issues<a class="headerlink" href="#common-login-issues" title="Link to this heading"></a></h2>
+<p><strong>Problem: Can’t log in to the platform</strong></p>
+<p><em>Symptoms</em>: Login page shows error messages, credentials don’t work, or page won’t load.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Check your credentials</strong>: Ensure you’re using the correct email and password</p></li>
+<li><p><strong>Reset your password</strong>: Use the “Forgot Password” link on the login page</p></li>
+<li><p><strong>Clear browser cache</strong>: Try logging in with an incognito/private window</p></li>
+<li><p><strong>Check internet connection</strong>: Ensure you have a stable internet connection</p></li>
+<li><p><strong>Contact administrator</strong>: Your account may need to be activated or reset</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Problem: Account locked or suspended</strong></p>
+<p><em>Symptoms</em>: Error message about account being locked or access denied.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Wait for auto-unlock</strong>: Many systems unlock accounts automatically after a set time</p></li>
+<li><p><strong>Contact your administrator</strong>: They can unlock your account manually</p></li>
+<li><p><strong>Review security policies</strong>: Ensure you’re following your organization’s login policies</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="platform-access-issues">
+<h2>Platform Access Issues<a class="headerlink" href="#platform-access-issues" title="Link to this heading"></a></h2>
+<p><strong>Problem: Features or sections are missing</strong></p>
+<p><em>Symptoms</em>: Expected buttons, menus, or pages are not visible.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Check your permissions</strong>: Contact your administrator about access levels</p></li>
+<li><p><strong>Refresh the page</strong>: Sometimes a simple page refresh resolves display issues</p></li>
+<li><p><strong>Try a different browser</strong>: Some features may work better in different browsers</p></li>
+<li><p><strong>Update your browser</strong>: Ensure you’re using a supported, up-to-date browser</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Problem: Page loading slowly or not at all</strong></p>
+<p><em>Symptoms</em>: Pages take a long time to load or show error messages.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Check internet speed</strong>: Run a speed test to ensure adequate bandwidth</p></li>
+<li><p><strong>Close other applications</strong>: Free up system resources</p></li>
+<li><p><strong>Try a different device</strong>: Test if the issue is device-specific</p></li>
+<li><p><strong>Contact IT support</strong>: The issue may be network-related</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="ai-features-babblebeaver-issues">
+<h2>AI Features (BabbleBeaver) Issues<a class="headerlink" href="#ai-features-babblebeaver-issues" title="Link to this heading"></a></h2>
+<p><strong>Problem: AI assistant not responding</strong></p>
+<p><em>Symptoms</em>: BabbleBeaver doesn’t answer questions or provide suggestions.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Check AI settings</strong>: Ensure BabbleBeaver is enabled in your profile settings</p></li>
+<li><p><strong>Rephrase your question</strong>: Try asking in a different way</p></li>
+<li><p><strong>Wait and retry</strong>: The AI service may be temporarily busy</p></li>
+<li><p><strong>Contact support</strong>: Report persistent AI issues to your administrator</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Problem: AI recommendations seem incorrect</strong></p>
+<p><em>Symptoms</em>: BabbleBeaver provides irrelevant or inaccurate suggestions.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Provide feedback</strong>: Use the thumbs up/down buttons to rate responses</p></li>
+<li><p><strong>Add more context</strong>: Give the AI more information about your situation</p></li>
+<li><p><strong>Check your settings</strong>: Review your AI preferences and permissions</p></li>
+<li><p><strong>Allow learning time</strong>: The AI improves as it learns your patterns</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="notification-problems">
+<h2>Notification Problems<a class="headerlink" href="#notification-problems" title="Link to this heading"></a></h2>
+<p><strong>Problem: Not receiving notifications</strong></p>
+<p><em>Symptoms</em>: Missing email alerts, in-app notifications, or updates about projects.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Check notification settings</strong>: Review your preferences in profile settings</p></li>
+<li><p><strong>Look in spam folder</strong>: Email notifications might be filtered as spam</p></li>
+<li><p><strong>Verify email address</strong>: Ensure your contact information is current</p></li>
+<li><p><strong>Test notifications</strong>: Send yourself a test notification if the feature exists</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Problem: Too many notifications</strong></p>
+<p><em>Symptoms</em>: Overwhelmed by constant alerts and messages.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Adjust frequency</strong>: Change to daily or weekly digest emails</p></li>
+<li><p><strong>Filter by priority</strong>: Set notifications only for high-priority items</p></li>
+<li><p><strong>Use quiet hours</strong>: Set times when you don’t want to be disturbed</p></li>
+<li><p><strong>Customize by project</strong>: Different notification levels for different teams</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="team-and-collaboration-issues">
+<h2>Team and Collaboration Issues<a class="headerlink" href="#team-and-collaboration-issues" title="Link to this heading"></a></h2>
+<p><strong>Problem: Can’t see team members or projects</strong></p>
+<p><em>Symptoms</em>: Expected team members, projects, or data are not visible.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Verify team membership</strong>: Confirm you’re added to the correct teams</p></li>
+<li><p><strong>Check project access</strong>: Ensure you have permissions for specific projects</p></li>
+<li><p><strong>Refresh team data</strong>: Log out and back in to sync team information</p></li>
+<li><p><strong>Contact team lead</strong>: They may need to add you to additional projects</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Problem: Collaboration features not working</strong></p>
+<p><em>Symptoms</em>: Can’t share files, comment on tasks, or communicate with team members.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Check permissions</strong>: Verify you have collaboration rights</p></li>
+<li><p><strong>Update browser</strong>: Ensure you’re using a supported browser version</p></li>
+<li><p><strong>Test with different content</strong>: Try sharing different types of files or data</p></li>
+<li><p><strong>Contact IT support</strong>: May be a technical configuration issue</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="profile-and-settings-issues">
+<h2>Profile and Settings Issues<a class="headerlink" href="#profile-and-settings-issues" title="Link to this heading"></a></h2>
+<p><strong>Problem: Can’t update profile information</strong></p>
+<p><em>Symptoms</em>: Changes to profile settings don’t save or cause errors.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Check required fields</strong>: Ensure all mandatory information is filled</p></li>
+<li><p><strong>File size limits</strong>: Profile pictures may be too large</p></li>
+<li><p><strong>Contact administrator</strong>: You may not have permission to change certain settings</p></li>
+<li><p><strong>Try again later</strong>: The system may be temporarily busy</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Problem: Settings changes don’t take effect</strong></p>
+<p><em>Symptoms</em>: Updated preferences don’t change the platform behavior.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Log out and back in</strong>: Some changes require a fresh session</p></li>
+<li><p><strong>Clear browser cache</strong>: Force the browser to load new settings</p></li>
+<li><p><strong>Wait for sync</strong>: Some changes may take time to propagate</p></li>
+<li><p><strong>Verify settings</strong>: Double-check that changes were actually saved</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="technical-issues">
+<h2>Technical Issues<a class="headerlink" href="#technical-issues" title="Link to this heading"></a></h2>
+<p><strong>Problem: Browser compatibility issues</strong></p>
+<p><em>Symptoms</em>: Platform doesn’t work correctly in your browser.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Use supported browsers</strong>: Chrome, Firefox, Safari, or Edge (latest versions)</p></li>
+<li><p><strong>Enable JavaScript</strong>: Ensure JavaScript is enabled in your browser</p></li>
+<li><p><strong>Disable extensions</strong>: Some browser extensions may interfere with functionality</p></li>
+<li><p><strong>Update browser</strong>: Use the most recent version of your preferred browser</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>Problem: Mobile device issues</strong></p>
+<p><em>Symptoms</em>: Platform doesn’t work well on mobile devices.</p>
+<dl class="simple">
+<dt><em>Solutions</em>:</dt><dd><ol class="arabic simple">
+<li><p><strong>Use mobile browser</strong>: Try the platform in your mobile browser first</p></li>
+<li><p><strong>Check for mobile app</strong>: Ask if there’s a dedicated mobile application</p></li>
+<li><p><strong>Adjust display settings</strong>: Try landscape mode or adjusting text size</p></li>
+<li><p><strong>Contact support</strong>: Report mobile-specific issues to improve mobile experience</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="getting-additional-help">
+<h2>Getting Additional Help<a class="headerlink" href="#getting-additional-help" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Self-Service Options</strong></dt><dd><ul class="simple">
+<li><p>Review this troubleshooting guide thoroughly</p></li>
+<li><p>Check your profile settings and permissions</p></li>
+<li><p>Try the solutions in a different browser or device</p></li>
+<li><p>Look for help buttons or tooltips within the platform</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Contact Support</strong></p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>For Technical Issues</strong>:</dt><dd><ul class="simple">
+<li><p>Contact your IT department or system administrator</p></li>
+<li><p>Provide specific error messages and steps to reproduce the problem</p></li>
+<li><p>Include your browser type and version</p></li>
+<li><p>Note the time when the issue occurred</p></li>
+</ul>
+</dd>
+<dt><strong>For Account Issues</strong>:</dt><dd><ul class="simple">
+<li><p>Contact your team lead or platform administrator</p></li>
+<li><p>Provide your user ID or email address</p></li>
+<li><p>Describe what you were trying to accomplish</p></li>
+<li><p>Include any error messages you received</p></li>
+</ul>
+</dd>
+<dt><strong>For Training or Usage Questions</strong>:</dt><dd><ul class="simple">
+<li><p>Ask team members who are experienced with the platform</p></li>
+<li><p>Check if your organization offers internal training</p></li>
+<li><p>Review the complete user documentation</p></li>
+<li><p>Request additional training from your administrator</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt><strong>When Contacting Support, Include</strong>:</dt><dd><ul class="simple">
+<li><p>Detailed description of the problem</p></li>
+<li><p>Steps you’ve already tried</p></li>
+<li><p>Error messages (exact text or screenshots)</p></li>
+<li><p>Your browser and operating system</p></li>
+<li><p>Time and date when the issue occurred</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="prevention-tips">
+<h2>Prevention Tips<a class="headerlink" href="#prevention-tips" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Best Practices</strong>:</dt><dd><ul class="simple">
+<li><p>Keep your browser updated to the latest version</p></li>
+<li><p>Regularly review and update your profile settings</p></li>
+<li><p>Use strong, unique passwords and change them periodically</p></li>
+<li><p>Clear browser cache periodically to prevent conflicts</p></li>
+<li><p>Report issues promptly to help improve the platform for everyone</p></li>
+</ul>
+</dd>
+<dt><strong>Security Reminders</strong>:</dt><dd><ul class="simple">
+<li><p>Never share your login credentials with others</p></li>
+<li><p>Log out when using shared computers</p></li>
+<li><p>Report suspicious activity immediately</p></li>
+<li><p>Keep your contact information current for important notifications</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="related-documentation">
+<h2>Related Documentation<a class="headerlink" href="#related-documentation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../features/profile_settings.html"><span class="doc">Profile Settings</span></a> - Managing your account settings</p></li>
+<li><p><a class="reference internal" href="../features/ai_features.html"><span class="doc">AI Features &amp; BabbleBeaver Integration</span></a> - BabbleBeaver AI troubleshooting</p></li>
+<li><p><a class="reference internal" href="../features/user_management.html"><span class="doc">User Management</span></a> - Team access and permissions</p></li>
+<li><p><a class="reference internal" href="../user-guide/BUILDLY-USER-DOCUMENTATION.html"><span class="doc">📚 Buildly Product Labs - Complete User Documentation</span></a> - Complete platform guide</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../developers/index.html" class="btn btn-neutral float-left" title="For Developers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../contributing.html" class="btn btn-neutral float-right" title="Contributing to Buildly Product Labs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

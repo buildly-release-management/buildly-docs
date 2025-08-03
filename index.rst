@@ -3,7 +3,7 @@
 .. _buildly-product-labs:
 
 .. image:: _static/images/buildly-labs-logo.png
-    :alt: Buildly Product Labs: Advanced React Development Platform
+    :alt: Buildly Product Labs: AI-Powered Product Management Platform
     :align: center
     :target: https://buildly.io/
 
@@ -41,18 +41,11 @@ Quick Navigation
    :caption: Features
 
    features/index
-   features/onboarding
    features/ai_features
    features/login
    features/registration
    features/profile_settings
    features/user_management
-
-.. toctree::
-   :maxdepth: 2
-   :caption: AI & Automation
-
-   features/ai_features
 
 .. toctree::
    :maxdepth: 2
@@ -64,7 +57,7 @@ Quick Navigation
    :maxdepth: 2
    :caption: Troubleshooting
 
-   troubleshooting/CORS-RESOLUTION-SUMMARY
+   troubleshooting/index
 
 .. toctree::
    :maxdepth: 2
@@ -74,9 +67,7 @@ Quick Navigation
    license
 
 
-Additional Notes
-----------------
+Additional Information
+----------------------
 
-Design notes, legal information and changelog are here.
-
-For developers interested in contributing to the Buildly ecosystem, see our :doc:`developers/index` section which covers our open source projects and premium marketplace components.
+This documentation focuses on end-user guidance for the Buildly Product Labs platform. For developers interested in contributing to the Buildly ecosystem, see our :doc:`developers/index` section which covers our open source projects and premium marketplace components.

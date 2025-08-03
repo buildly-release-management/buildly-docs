@@ -9,7 +9,7 @@
   <title>User Management &mdash; Buildly Product Labs Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=5db9fe7f" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -46,7 +46,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding.html">Platform Onboarding (Beta)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
@@ -55,39 +56,30 @@
 <p class="caption" role="heading"><span class="caption-text">Features</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="login.html">Login</a></li>
 <li class="toctree-l1"><a class="reference internal" href="registration.html">Registration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="profile_settings.html">Profile Settings</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">User Management</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#key-capabilities">Key Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-interface">User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Development</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../development/AI-FEATURE-IMPROVEMENTS.html">🤖 AI Feature Suggestion Improvements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/RELEASE-API-FIX.html">🔧 Release API Endpoint Fix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/DOCS-REPOSITORY-STRUCTURE.html">Documentation Repository Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/DOCUMENTATION-SETUP-GUIDE.html">📖 Documentation Management &amp; GitHub Pages Setup Guide</a></li>
+</li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/connect_buildly_core.html">Connection to Buildly Core</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/http.html">HTTP Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/oauth.html">OAuth Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">For Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/CORS-RESOLUTION-SUMMARY.html">🎉 CORS Issue Resolution Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Buildly Product Labs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
 </ul>
 
         </div>
@@ -117,10 +109,81 @@
              
   <section id="user-management">
 <span id="id1"></span><h1>User Management<a class="headerlink" href="#user-management" title="Link to this heading"></a></h1>
-<p>A screen where an administrator can manage users, create/update/delete application
-permission groups and assign them to users.</p>
-<img alt="Current Users Screen" class="align-center" src="../_images/current_users.png" />
-<img alt="User Group Screen" class="align-center" src="../_images/user_group.png" />
+<p>The User Management feature allows administrators to oversee team members, organize users into groups, and control access permissions across the platform.</p>
+<section id="key-capabilities">
+<h2>Key Capabilities<a class="headerlink" href="#key-capabilities" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>User Administration</strong></dt><dd><ul class="simple">
+<li><p>View all platform users and their status</p></li>
+<li><p>Invite new team members via email</p></li>
+<li><p>Manage user roles and permissions</p></li>
+<li><p>Deactivate or remove users when needed</p></li>
+</ul>
+</dd>
+<dt><strong>Permission Groups</strong></dt><dd><ul class="simple">
+<li><p>Create custom permission groups for different roles</p></li>
+<li><p>Assign specific platform access levels</p></li>
+<li><p>Manage group memberships</p></li>
+<li><p>Set default permissions for new users</p></li>
+</ul>
+</dd>
+<dt><strong>Team Organization</strong></dt><dd><ul class="simple">
+<li><p>Organize users by department or project</p></li>
+<li><p>Assign team leads and administrators</p></li>
+<li><p>Control cross-team collaboration settings</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="user-interface">
+<h2>User Interface<a class="headerlink" href="#user-interface" title="Link to this heading"></a></h2>
+<img alt="Current Users Management Interface" class="align-center" src="../_images/current_users.png" />
+<p>The main user management interface shows:</p>
+<ul class="simple">
+<li><p>Complete user directory with status indicators</p></li>
+<li><p>Quick actions for common administrative tasks</p></li>
+<li><p>Search and filter capabilities for large teams</p></li>
+<li><p>Bulk operations for efficient management</p></li>
+</ul>
+<img alt="User Group Management Interface" class="align-center" src="../_images/user_group.png" />
+<p>The group management section allows:</p>
+<ul class="simple">
+<li><p>Creation and editing of permission groups</p></li>
+<li><p>Visual assignment of users to groups</p></li>
+<li><p>Permission level configuration</p></li>
+<li><p>Group-based access control</p></li>
+</ul>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<p><strong>For Administrators:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Access User Management</strong>: Navigate to Settings → User Management</p></li>
+<li><p><strong>Review Current Users</strong>: Check the user directory and verify active accounts</p></li>
+<li><p><strong>Set Up Groups</strong>: Create permission groups that match your organization structure</p></li>
+<li><p><strong>Invite Team Members</strong>: Use the invite feature to add new users</p></li>
+<li><p><strong>Assign Permissions</strong>: Add users to appropriate groups based on their roles</p></li>
+</ol>
+<p><strong>For Team Leads:</strong></p>
+<ul class="simple">
+<li><p>Request administrator access if you need to manage your team</p></li>
+<li><p>Review your team members’ access levels</p></li>
+<li><p>Coordinate with administrators for permission changes</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>User management features may be limited based on your role. Contact your system administrator if you need additional permissions.</p>
+</div>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Regular Audits</strong>: Review user access quarterly</p></li>
+<li><p><strong>Principle of Least Privilege</strong>: Give users only the access they need</p></li>
+<li><p><strong>Group Organization</strong>: Use clear, descriptive names for permission groups</p></li>
+<li><p><strong>Onboarding Process</strong>: Establish consistent procedures for new user setup</p></li>
+</ul>
+</section>
 </section>
 
 

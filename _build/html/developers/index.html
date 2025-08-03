@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Developers &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=5db9fe7f" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Troubleshooting Guide" href="../troubleshooting/index.html" />
+    <link rel="prev" title="Profile Settings" href="../features/profile_settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">For Developers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#open-source-ecosystem">Open Source Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-open-source-projects">Key Open Source Projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#premium-marketplace">Premium Marketplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#component-driven-architecture">Component-Driven Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-workflow">Development Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-to-open-source">Contributing to Open Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#technical-resources">Technical Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enterprise-support">Enterprise Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started-as-a-developer">Getting Started as a Developer</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">For Developers</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/developers/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="for-developers">
+<span id="developers"></span><h1>For Developers<a class="headerlink" href="#for-developers" title="Link to this heading"></a></h1>
+<p>Buildly offers a comprehensive ecosystem of open source tools and premium components designed to accelerate development and enable scalable, cloud-native architectures. Whether you’re building with our open source foundations or leveraging our premium marketplace, Buildly provides the tools you need for modern application development.</p>
+<section id="open-source-ecosystem">
+<h2>Open Source Ecosystem<a class="headerlink" href="#open-source-ecosystem" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Core Philosophy</strong></dt><dd><p>Buildly is built on open source principles, providing transparent, community-driven tools that developers can trust, modify, and contribute to. Our open source ecosystem forms the foundation of all Buildly products.</p>
+</dd>
+<dt><strong>GitHub Organization: buildlyio</strong></dt><dd><p>Explore our complete open source toolkit at <a class="reference external" href="https://github.com/buildlyio">github.com/buildlyio</a></p>
+</dd>
+</dl>
+</section>
+<section id="key-open-source-projects">
+<h2>Key Open Source Projects<a class="headerlink" href="#key-open-source-projects" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Buildly Core</strong></dt><dd><p>The heart of the Buildly ecosystem - a powerful backend framework for building APIs and microservices.</p>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Rapid API development and microservice orchestration</p></li>
+<li><p><strong>Technology</strong>: Python/Django with cloud-native design</p></li>
+<li><p><strong>Features</strong>: Authentication, permissions, data connectors, workflow engine</p></li>
+<li><p><strong>Repository</strong>: <a class="reference external" href="https://github.com/buildlyio/buildly-core">buildlyio/buildly-core</a></p></li>
+</ul>
+</dd>
+<dt><strong>Buildly React Template</strong></dt><dd><p>A comprehensive React frontend template with built-in integrations for Buildly Core.</p>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Accelerate frontend development with pre-built components</p></li>
+<li><p><strong>Technology</strong>: React, Material-UI, OAuth integration</p></li>
+<li><p><strong>Features</strong>: User management, responsive design, theming system</p></li>
+<li><p><strong>Repository</strong>: <a class="reference external" href="https://github.com/buildlyio/buildly-react-template">buildlyio/buildly-react-template</a></p></li>
+</ul>
+</dd>
+<dt><strong>Buildly UI Library</strong></dt><dd><p>Reusable React components and design system for consistent user interfaces.</p>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Standardized UI components across Buildly applications</p></li>
+<li><p><strong>Technology</strong>: React, Storybook, CSS-in-JS</p></li>
+<li><p><strong>Features</strong>: Accessibility-first design, theme customization, comprehensive documentation</p></li>
+<li><p><strong>Repository</strong>: <a class="reference external" href="https://github.com/buildlyio/buildly-ui">buildlyio/buildly-ui</a></p></li>
+</ul>
+</dd>
+<dt><strong>Data Connectors &amp; Integrations</strong></dt><dd><p>Pre-built connectors for popular services and databases.</p>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: Simplify third-party integrations and data synchronization</p></li>
+<li><p><strong>Technology</strong>: Python, REST APIs, GraphQL</p></li>
+<li><p><strong>Features</strong>: Salesforce, Google Workspace, AWS services, database connectors</p></li>
+<li><p><strong>Repository</strong>: <a class="reference external" href="https://github.com/buildlyio/buildly-connectors">buildlyio/buildly-connectors</a></p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="premium-marketplace">
+<h2>Premium Marketplace<a class="headerlink" href="#premium-marketplace" title="Link to this heading"></a></h2>
+<dl>
+<dt><strong>Buildly Marketplace</strong></dt><dd><p>Access premium components, advanced integrations, and enterprise-grade solutions.</p>
+<p>🏪 <strong>Explore at</strong>: <a class="reference external" href="https://github.com/buildly-marketplace">github.com/buildly-marketplace</a></p>
+</dd>
+</dl>
+<p><strong>What’s Available</strong></p>
+<dl class="simple">
+<dt><strong>Premium Components</strong></dt><dd><ul class="simple">
+<li><p>Advanced analytics dashboards</p></li>
+<li><p>Enterprise authentication modules</p></li>
+<li><p>Specialized industry connectors</p></li>
+<li><p>High-performance data processing tools</p></li>
+<li><p>Custom workflow engines</p></li>
+</ul>
+</dd>
+<dt><strong>Enterprise Integrations</strong></dt><dd><ul class="simple">
+<li><p>SAP and Oracle connectors</p></li>
+<li><p>Microsoft ecosystem integration</p></li>
+<li><p>Advanced security modules</p></li>
+<li><p>Compliance and audit tools</p></li>
+<li><p>Multi-tenant architecture components</p></li>
+</ul>
+</dd>
+<dt><strong>Industry-Specific Solutions</strong></dt><dd><ul class="simple">
+<li><p>Healthcare (HIPAA-compliant components)</p></li>
+<li><p>Financial services (SOX compliance tools)</p></li>
+<li><p>Manufacturing (IoT integrations)</p></li>
+<li><p>Retail (e-commerce connectors)</p></li>
+<li><p>Education (LMS integrations)</p></li>
+</ul>
+</dd>
+<dt><strong>Professional Services</strong></dt><dd><ul class="simple">
+<li><p>Custom component development</p></li>
+<li><p>Architecture consulting</p></li>
+<li><p>Migration assistance</p></li>
+<li><p>Training and certification programs</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="component-driven-architecture">
+<h2>Component-Driven Architecture<a class="headerlink" href="#component-driven-architecture" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Microservices by Design</strong></dt><dd><p>Buildly’s architecture is fundamentally component-driven, enabling:</p>
+<ul class="simple">
+<li><p><strong>Independent Deployment</strong> - Deploy and scale components independently</p></li>
+<li><p><strong>Technology Flexibility</strong> - Use different technologies for different components</p></li>
+<li><p><strong>Team Autonomy</strong> - Teams can work on components without blocking each other</p></li>
+<li><p><strong>Gradual Migration</strong> - Replace legacy systems one component at a time</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Cloud-Native Principles</strong></p>
+<dl class="simple">
+<dt><strong>Containerization</strong></dt><dd><ul class="simple">
+<li><p>Docker containers for all components</p></li>
+<li><p>Kubernetes orchestration support</p></li>
+<li><p>Auto-scaling and load balancing</p></li>
+<li><p>Rolling deployments with zero downtime</p></li>
+</ul>
+</dd>
+<dt><strong>API-First Design</strong></dt><dd><ul class="simple">
+<li><p>RESTful and GraphQL APIs</p></li>
+<li><p>OpenAPI specification compliance</p></li>
+<li><p>Automatic API documentation generation</p></li>
+<li><p>Version management and backwards compatibility</p></li>
+</ul>
+</dd>
+<dt><strong>Event-Driven Architecture</strong></dt><dd><ul class="simple">
+<li><p>Asynchronous communication between components</p></li>
+<li><p>Event sourcing for audit trails</p></li>
+<li><p>Real-time updates and notifications</p></li>
+<li><p>Resilient, fault-tolerant design</p></li>
+</ul>
+</dd>
+<dt><strong>Infrastructure as Code</strong></dt><dd><ul class="simple">
+<li><p>Terraform modules for cloud deployment</p></li>
+<li><p>Ansible playbooks for configuration management</p></li>
+<li><p>CI/CD pipeline templates</p></li>
+<li><p>Monitoring and logging setup automation</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="development-workflow">
+<h2>Development Workflow<a class="headerlink" href="#development-workflow" title="Link to this heading"></a></h2>
+<p><strong>Getting Started</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Choose Your Stack</strong>
+- Start with open source foundations
+- Add premium components as needed
+- Leverage existing templates and examples</p></li>
+<li><p><strong>Development Environment</strong>
+- Docker Compose for local development
+- Pre-configured development containers
+- Hot reloading for rapid iteration
+- Integrated testing frameworks</p></li>
+<li><p><strong>Deployment Pipeline</strong>
+- GitHub Actions workflows
+- Automated testing and quality gates
+- Staging and production environments
+- Monitoring and alerting setup</p></li>
+</ol>
+<p><strong>Best Practices</strong></p>
+<dl class="simple">
+<dt><strong>Code Organization</strong></dt><dd><ul class="simple">
+<li><p>Component-based project structure</p></li>
+<li><p>Shared libraries and utilities</p></li>
+<li><p>Consistent coding standards</p></li>
+<li><p>Comprehensive documentation</p></li>
+</ul>
+</dd>
+<dt><strong>Testing Strategy</strong></dt><dd><ul class="simple">
+<li><p>Unit tests for individual components</p></li>
+<li><p>Integration tests for API endpoints</p></li>
+<li><p>End-to-end tests for user workflows</p></li>
+<li><p>Performance and load testing</p></li>
+</ul>
+</dd>
+<dt><strong>Security</strong></dt><dd><ul class="simple">
+<li><p>OAuth 2.0 and JWT authentication</p></li>
+<li><p>Role-based access control (RBAC)</p></li>
+<li><p>API rate limiting and throttling</p></li>
+<li><p>Secure secret management</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="contributing-to-open-source">
+<h2>Contributing to Open Source<a class="headerlink" href="#contributing-to-open-source" title="Link to this heading"></a></h2>
+<p><strong>How to Contribute</strong></p>
+<dl class="simple">
+<dt><strong>Code Contributions</strong></dt><dd><ul class="simple">
+<li><p>Fork repositories and submit pull requests</p></li>
+<li><p>Follow coding standards and guidelines</p></li>
+<li><p>Include tests for new features</p></li>
+<li><p>Update documentation as needed</p></li>
+</ul>
+</dd>
+<dt><strong>Community Involvement</strong></dt><dd><ul class="simple">
+<li><p>Report bugs and suggest features</p></li>
+<li><p>Participate in discussions and forums</p></li>
+<li><p>Help other developers with questions</p></li>
+<li><p>Share your Buildly implementations</p></li>
+</ul>
+</dd>
+<dt><strong>Documentation</strong></dt><dd><ul class="simple">
+<li><p>Improve existing documentation</p></li>
+<li><p>Create tutorials and guides</p></li>
+<li><p>Translate documentation to other languages</p></li>
+<li><p>Share best practices and use cases</p></li>
+</ul>
+</dd>
+<dt><strong>Recognition Program</strong></dt><dd><ul class="simple">
+<li><p>Contributor recognition on project pages</p></li>
+<li><p>Swag and rewards for significant contributions</p></li>
+<li><p>Speaking opportunities at conferences</p></li>
+<li><p>Access to beta features and early releases</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="technical-resources">
+<h2>Technical Resources<a class="headerlink" href="#technical-resources" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Documentation &amp; Guides</strong></dt><dd><ul class="simple">
+<li><p><a class="reference external" href="https://buildly.io/">Buildly Main Website</a></p></li>
+<li><p><a class="reference external" href="https://github.com/buildlyio">GitHub Organization</a></p></li>
+<li><p><a class="reference external" href="https://github.com/buildly-marketplace">Marketplace Repository</a></p></li>
+<li><p>Developer documentation (coming soon)</p></li>
+</ul>
+</dd>
+<dt><strong>Development Tools</strong></dt><dd><ul class="simple">
+<li><p>CLI tools for project scaffolding</p></li>
+<li><p>VS Code extensions and snippets</p></li>
+<li><p>Postman collections for API testing</p></li>
+<li><p>Docker images and Kubernetes charts</p></li>
+</ul>
+</dd>
+<dt><strong>Community &amp; Support</strong></dt><dd><ul class="simple">
+<li><p>GitHub Discussions for project-specific questions</p></li>
+<li><p><a class="reference external" href="https://stackoverflow.com/questions/tagged/buildly">Stack Overflow</a> (#buildly tag)</p></li>
+<li><p>Community forums (coming soon)</p></li>
+<li><p>Technical blog and tutorials</p></li>
+</ul>
+</dd>
+<dt><strong>Training &amp; Certification</strong></dt><dd><ul class="simple">
+<li><p>Free online courses for open source tools</p></li>
+<li><p>Certification programs for Buildly expertise</p></li>
+<li><p>Webinars and technical workshops</p></li>
+<li><p>Conference presentations and case studies</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="enterprise-support">
+<h2>Enterprise Support<a class="headerlink" href="#enterprise-support" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Professional Services</strong></dt><dd><ul class="simple">
+<li><p>Architecture consulting and design</p></li>
+<li><p>Custom component development</p></li>
+<li><p>Migration and integration services</p></li>
+<li><p>Performance optimization and scaling</p></li>
+</ul>
+</dd>
+<dt><strong>Enterprise Licenses</strong></dt><dd><ul class="simple">
+<li><p>Commercial licenses for premium components</p></li>
+<li><p>Priority support and SLA guarantees</p></li>
+<li><p>Custom feature development</p></li>
+<li><p>Dedicated technical account management</p></li>
+</ul>
+</dd>
+<dt><strong>Training Programs</strong></dt><dd><ul class="simple">
+<li><p>On-site team training</p></li>
+<li><p>Custom curriculum development</p></li>
+<li><p>Certification for internal teams</p></li>
+<li><p>Ongoing mentorship and support</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="getting-started-as-a-developer">
+<h2>Getting Started as a Developer<a class="headerlink" href="#getting-started-as-a-developer" title="Link to this heading"></a></h2>
+<p><strong>Quick Start</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Explore the Ecosystem</strong>
+- Browse <a class="reference external" href="https://github.com/buildlyio">github.com/buildlyio</a>
+- Check out the marketplace at <a class="reference external" href="https://github.com/buildly-marketplace">github.com/buildly-marketplace</a>
+- Read the architecture documentation</p></li>
+<li><p><strong>Set Up Development Environment</strong>
+- Clone the buildly-core repository
+- Follow the setup instructions in README.md
+- Run the local development environment
+- Explore the example applications</p></li>
+<li><p><strong>Join the Community</strong>
+- Join our Discord server
+- Follow us on GitHub
+- Subscribe to our developer newsletter
+- Participate in community discussions</p></li>
+<li><p><strong>Start Building</strong>
+- Create your first Buildly application
+- Experiment with different components
+- Share your project with the community
+- Contribute improvements back to open source</p></li>
+</ol>
+<dl class="simple">
+<dt><strong>Next Steps</strong></dt><dd><ul class="simple">
+<li><p>Explore premium components in the marketplace</p></li>
+<li><p>Consider enterprise support for production deployments</p></li>
+<li><p>Get involved in the open source community</p></li>
+<li><p>Build something amazing with Buildly!</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Buildly ecosystem is constantly evolving. Check our GitHub repositories regularly for new tools, components, and improvements to existing projects.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../features/profile_settings.html" class="btn btn-neutral float-left" title="Profile Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../troubleshooting/index.html" class="btn btn-neutral float-right" title="Troubleshooting Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

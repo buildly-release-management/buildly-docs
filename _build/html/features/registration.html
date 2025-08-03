@@ -9,7 +9,7 @@
   <title>Registration &mdash; Buildly Product Labs Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=5db9fe7f" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -46,7 +46,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding.html">Platform Onboarding (Beta)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
@@ -55,39 +56,31 @@
 <p class="caption" role="heading"><span class="caption-text">Features</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="login.html">Login</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Registration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Registration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#registration-methods">Registration Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registration-form">Registration Form</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#account-verification">Account Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting-registration">Troubleshooting Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="profile_settings.html">Profile Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user_management.html">User Management</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../development/AI-FEATURE-IMPROVEMENTS.html">🤖 AI Feature Suggestion Improvements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/RELEASE-API-FIX.html">🔧 Release API Endpoint Fix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/DOCS-REPOSITORY-STRUCTURE.html">Documentation Repository Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/DOCUMENTATION-SETUP-GUIDE.html">📖 Documentation Management &amp; GitHub Pages Setup Guide</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/connect_buildly_core.html">Connection to Buildly Core</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/http.html">HTTP Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/oauth.html">OAuth Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">For Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/CORS-RESOLUTION-SUMMARY.html">🎉 CORS Issue Resolution Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Buildly Product Labs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
 </ul>
 
         </div>
@@ -117,10 +110,81 @@
              
   <section id="registration">
 <span id="id1"></span><h1>Registration<a class="headerlink" href="#registration" title="Link to this heading"></a></h1>
-<p>A form where the user can register an account with the app.
-They will also be redirected to this screen after accepting
-an invitation from a super user.</p>
-<img alt="Register Screen" class="align-center" src="../_images/register.png" />
+<p>Creating your Buildly Product Labs account is quick and straightforward. The registration process ensures you get access to all the collaboration and project management features you need.</p>
+<section id="registration-methods">
+<h2>Registration Methods<a class="headerlink" href="#registration-methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Self-Registration</strong></dt><dd><p>If your organization allows open registration, you can create an account directly:</p>
+<ol class="arabic simple">
+<li><p>Visit your organization’s Buildly Product Labs URL</p></li>
+<li><p>Click “Create Account” or “Register”</p></li>
+<li><p>Fill in the required information</p></li>
+<li><p>Verify your email address</p></li>
+<li><p>Complete your profile setup</p></li>
+</ol>
+</dd>
+<dt><strong>Invitation-Based Registration</strong></dt><dd><p>Most users join through team invitations:</p>
+<ol class="arabic simple">
+<li><p>Receive an invitation email from a team administrator</p></li>
+<li><p>Click the invitation link</p></li>
+<li><p>Complete the registration form (some details may be pre-filled)</p></li>
+<li><p>Set your password and preferences</p></li>
+<li><p>Access your team’s workspace immediately</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="registration-form">
+<h2>Registration Form<a class="headerlink" href="#registration-form" title="Link to this heading"></a></h2>
+<img alt="User Registration Interface" class="align-center" src="../_images/register.png" />
+<p>The registration form includes:</p>
+<p><strong>Required Information:</strong>
+- Full name (first and last)
+- Email address (used for login)
+- Secure password
+- Organization name (if applicable)</p>
+<p><strong>Optional Details:</strong>
+- Job title or role
+- Department
+- Phone number
+- Profile picture</p>
+</section>
+<section id="account-verification">
+<h2>Account Verification<a class="headerlink" href="#account-verification" title="Link to this heading"></a></h2>
+<p>After submitting your registration:</p>
+<ol class="arabic simple">
+<li><p><strong>Email Verification</strong>: Check your email for a verification message</p></li>
+<li><p><strong>Click Verification Link</strong>: This activates your account</p></li>
+<li><p><strong>First Login</strong>: Return to the platform and log in with your credentials</p></li>
+<li><p><strong>Profile Completion</strong>: Add any additional information requested</p></li>
+<li><p><strong>Platform Orientation</strong>: Take the optional tour to familiarize yourself with features</p></li>
+</ol>
+</section>
+<section id="troubleshooting-registration">
+<h2>Troubleshooting Registration<a class="headerlink" href="#troubleshooting-registration" title="Link to this heading"></a></h2>
+<p><strong>Common Issues:</strong></p>
+<ul class="simple">
+<li><p><strong>Email Not Received</strong>: Check spam/junk folders; wait a few minutes for delivery</p></li>
+<li><p><strong>Invitation Expired</strong>: Contact the person who sent the invitation for a new one</p></li>
+<li><p><strong>Organization Not Found</strong>: Verify the organization name or contact your administrator</p></li>
+<li><p><strong>Password Requirements</strong>: Ensure your password meets security requirements (usually 8+ characters with mixed case and numbers)</p></li>
+</ul>
+<p><strong>Getting Help:</strong>
+- Contact your system administrator
+- Use the “Forgot Password” link if you’ve already registered
+- Check with your team lead about invitation status</p>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>Once registered and verified:</p>
+<ul class="simple">
+<li><p>Complete your profile setup</p></li>
+<li><p>Join relevant teams and projects</p></li>
+<li><p>Configure notification preferences</p></li>
+<li><p>Explore the platform features</p></li>
+</ul>
+<p>See <a class="reference internal" href="../quickstart.html"><span class="doc">Getting Started</span></a> for detailed onboarding steps and <a class="reference internal" href="profile_settings.html"><span class="doc">Profile Settings</span></a> for customizing your experience.</p>
+</section>
 </section>
 
 

@@ -9,7 +9,7 @@
   <title>Login &mdash; Buildly Product Labs Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=5db9fe7f" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Registration" href="registration.html" />
-    <link rel="prev" title="Features" href="index.html" /> 
+    <link rel="prev" title="AI Features &amp; BabbleBeaver Integration" href="ai_features.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,7 +46,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding.html">Platform Onboarding (Beta)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
@@ -55,39 +56,33 @@
 <p class="caption" role="heading"><span class="caption-text">Features</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Features</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Login</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#login-process">Login Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#login-interface-features">Login Interface Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#authentication-methods">Authentication Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting-login-issues">Troubleshooting Login Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#security-best-practices">Security Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#session-management">Session Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-help">Getting Help</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="registration.html">Registration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="profile_settings.html">Profile Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user_management.html">User Management</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../development/AI-FEATURE-IMPROVEMENTS.html">🤖 AI Feature Suggestion Improvements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/RELEASE-API-FIX.html">🔧 Release API Endpoint Fix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/DOCS-REPOSITORY-STRUCTURE.html">Documentation Repository Structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../development/DOCUMENTATION-SETUP-GUIDE.html">📖 Documentation Management &amp; GitHub Pages Setup Guide</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/connect_buildly_core.html">Connection to Buildly Core</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/http.html">HTTP Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/oauth.html">OAuth Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">For Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/CORS-RESOLUTION-SUMMARY.html">🎉 CORS Issue Resolution Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Buildly Product Labs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Modules</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contribuiting</a></li>
 </ul>
 
         </div>
@@ -117,16 +112,125 @@
              
   <section id="login">
 <span id="id1"></span><h1>Login<a class="headerlink" href="#login" title="Link to this heading"></a></h1>
-<p>Uses the OAuth library from midgard-core for the OAuth password-flow
-authentication process with Buildly Core.</p>
-<img alt="Login Screen" class="align-center" src="../_images/login.png" />
+<p>Access your Buildly Product Labs workspace securely through our streamlined login process. The platform uses enterprise-grade authentication to protect your data and maintain team security.</p>
+<section id="login-process">
+<h2>Login Process<a class="headerlink" href="#login-process" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Standard Login</strong></dt><dd><ol class="arabic simple">
+<li><p>Navigate to your organization’s Buildly Product Labs URL</p></li>
+<li><p>Enter your registered email address</p></li>
+<li><p>Enter your password</p></li>
+<li><p>Click “Sign In” to access your workspace</p></li>
+</ol>
+</dd>
+<dt><strong>First-Time Login</strong></dt><dd><p>After registration, your first login may include:</p>
+<ul class="simple">
+<li><p>Profile completion prompts</p></li>
+<li><p>Team assignment confirmations</p></li>
+<li><p>Platform orientation tour</p></li>
+<li><p>Notification preference setup</p></li>
+</ul>
+</dd>
+</dl>
+<img alt="Buildly Product Labs Login Interface" class="align-center" src="../_images/login.png" />
+</section>
+<section id="login-interface-features">
+<h2>Login Interface Features<a class="headerlink" href="#login-interface-features" title="Link to this heading"></a></h2>
+<p><strong>Security Features:</strong>
+- Secure OAuth authentication
+- Session management
+- Password complexity requirements
+- Failed attempt monitoring</p>
+<p><strong>User Convenience:</strong>
+- “Remember Me” option for trusted devices
+- Password reset functionality
+- Clear error messages for troubleshooting</p>
+</section>
+<section id="authentication-methods">
+<h2>Authentication Methods<a class="headerlink" href="#authentication-methods" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Email/Password</strong></dt><dd><p>Standard authentication using your registered email and password.</p>
+</dd>
+<dt><strong>Single Sign-On (SSO)</strong></dt><dd><p>If enabled by your organization:</p>
+<ul class="simple">
+<li><p>Connect through your company’s identity provider</p></li>
+<li><p>Use existing corporate credentials</p></li>
+<li><p>Automatic team and permission assignment</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="troubleshooting-login-issues">
+<h2>Troubleshooting Login Issues<a class="headerlink" href="#troubleshooting-login-issues" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Forgot Password</strong></dt><dd><ol class="arabic simple">
+<li><p>Click “Forgot Password” on the login screen</p></li>
+<li><p>Enter your email address</p></li>
+<li><p>Check your email for reset instructions</p></li>
+<li><p>Follow the link to create a new password</p></li>
+<li><p>Return to login with your new credentials</p></li>
+</ol>
+</dd>
+<dt><strong>Account Locked</strong></dt><dd><ul class="simple">
+<li><p>Contact your system administrator</p></li>
+<li><p>Wait for automatic unlock (if configured)</p></li>
+<li><p>Verify you’re using the correct credentials</p></li>
+</ul>
+</dd>
+<dt><strong>Browser Issues</strong></dt><dd><ul class="simple">
+<li><p>Clear browser cache and cookies</p></li>
+<li><p>Try an incognito/private browsing window</p></li>
+<li><p>Ensure JavaScript is enabled</p></li>
+<li><p>Update your browser to the latest version</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Common Error Messages:</strong>
+- “Invalid credentials”: Check email and password spelling
+- “Account not activated”: Complete email verification process
+- “Access denied”: Contact administrator about permissions</p>
+</section>
+<section id="security-best-practices">
+<h2>Security Best Practices<a class="headerlink" href="#security-best-practices" title="Link to this heading"></a></h2>
+<p><strong>For Users:</strong>
+- Use a strong, unique password
+- Don’t share login credentials
+- Log out when using shared computers
+- Report suspicious activity immediately</p>
+<p><strong>Password Requirements:</strong>
+- Minimum 8 characters
+- Mix of uppercase and lowercase letters
+- Include numbers and special characters
+- Avoid common words or personal information</p>
+</section>
+<section id="session-management">
+<h2>Session Management<a class="headerlink" href="#session-management" title="Link to this heading"></a></h2>
+<p><strong>Automatic Features:</strong>
+- Sessions expire after periods of inactivity
+- Secure logout when browser is closed
+- Protection against unauthorized access</p>
+<p><strong>Manual Controls:</strong>
+- “Sign Out” to end your session securely
+- “Sign Out All Devices” for enhanced security
+- Session history in account settings</p>
+</section>
+<section id="getting-help">
+<h2>Getting Help<a class="headerlink" href="#getting-help" title="Link to this heading"></a></h2>
+<p>If you continue to experience login issues:</p>
+<ul class="simple">
+<li><p>Contact your team administrator</p></li>
+<li><p>Check with IT support for SSO-related problems</p></li>
+<li><p>Review your organization’s specific login procedures</p></li>
+<li><p>See <a class="reference internal" href="../troubleshooting/CORS-RESOLUTION-SUMMARY.html"><span class="doc">🎉 CORS Issue Resolution Summary</span></a> for technical issues</p></li>
+</ul>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ai_features.html" class="btn btn-neutral float-left" title="AI Features &amp; BabbleBeaver Integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="registration.html" class="btn btn-neutral float-right" title="Registration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
