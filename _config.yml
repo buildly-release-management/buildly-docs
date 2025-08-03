@@ -1,0 +1,46 @@
+# GitHub Pages Jekyll Configuration
+title: "Buildly Product Labs Documentation"
+description: "Comprehensive documentation for the AI-powered product management platform"
+baseurl: ""
+url: "https://docs.buildly.io"
+
+# Theme
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+
+# Collections
+collections:
+  features:
+    output: true
+    permalink: /:collection/:name/
+  guides:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "features"
+    values:
+      layout: "feature"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+
+# Exclude files
+exclude:
+  - node_modules/
+  - package*.json
+  - README.md
