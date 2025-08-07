@@ -181,6 +181,19 @@ a:hover {
     font-weight: 600 !important;
 }
 
+/* Navigation buttons styling */
+.btn-neutral {
+    background: white !important;
+    color: #0C5595 !important;
+    border: 1px solid #0C5595 !important;
+}
+
+.btn-neutral:hover {
+    background: #f8f9fa !important;
+    color: #F9943B !important;
+    border-color: #F9943B !important;
+}
+
 /* Search box styling */
 .wy-side-nav-search {
     background: #0C5595 !important;
