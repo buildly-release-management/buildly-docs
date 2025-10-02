@@ -4,191 +4,501 @@ Platform Onboarding (Beta)
 ===========================
 
 .. note::
-   The Buildly Labs Onboarding system is currently in beta. This guided onboarding process helps organizations find the perfect platform solution for their needs.
+   The Buildly Labs Onboarding system is currently in beta. This intelligent onboarding service provides a personalized 3-phase journey that guides users from initial contact to detailed architecture recommendations.
 
 Overview
 --------
 
-The Buildly Labs Onboarding system is an intelligent, multi-step process that helps new users and organizations discover the most suitable Buildly platform solutions. This AI-powered onboarding experience collects information about your company, use cases, and technical requirements to recommend the optimal configuration.
+The Buildly Labs Onboarding service is a modern, AI-powered application that helps users discover the perfect Buildly solution for their needs. Built with React frontend and FastAPI backend, this service features comprehensive integrations with BabbleBeaver AI, Stripe payment processing, and the Labs API ecosystem.
+
+**Key Technologies:**
+
+- **Frontend**: React 18 with modern hooks and responsive design
+- **Backend**: FastAPI with PostgreSQL database
+- **AI Integration**: BabbleBeaver API for intelligent recommendations
+- **Payments**: Stripe integration with 30-day free trials
+- **Authentication**: JWT token-based with Labs API integration
 
 **Access the Onboarding**: https://labs-onboarding.buildly.io/
 
 Key Features
 ------------
 
-**Intelligent Questionnaire**
-  - Step-by-step guided process
-  - Context-aware questions based on your responses
-  - AI-powered recommendations
+**3-Phase Intelligent Flow**
+  - **Phase 1**: Initial onboarding and contact information
+  - **Phase 2**: Product selection with AI analysis
+  - **Phase 3**: Detailed architecture generation and setup
 
-**Multi-Step Process**
-  1. **Contact Information** - Basic details and communication preferences
-  2. **Company Profile** - Organization size, industry, and structure
-  3. **Use Case Analysis** - Specific needs and project requirements
-  4. **Technical Experience** - Development capabilities and infrastructure
+**Advanced AI Integration**
+  - **BabbleBeaver Analysis**: Intelligent product recommendations with confidence scoring
+  - **Real-time Organization Validation**: Checks existing organizations and prevents duplicates
+  - **Architecture Generation**: AI-powered technical recommendations
+  - **Marketing Insights**: Personalized feature recommendations with business reasoning
 
-**AI-Powered Insights**
-  - Real-time analysis of your responses
-  - Personalized platform recommendations
-  - Integration suggestions based on your tech stack
+**Modern Technical Stack**
+  - **Responsive Design**: Mobile-first UI with glass morphism effects
+  - **Payment Processing**: Stripe integration with free trial management
+  - **Authentication**: OAuth2 (Google/GitHub) and JWT token management
+  - **HubSpot Integration**: Automatic lead capture and CRM synchronization
+  - **Error Recovery**: Robust SMTP auto-recovery and comprehensive error handling
+
+**Production-Ready Features**
+  - **Docker Containerization**: Production-ready containers with Kubernetes support
+  - **Environment Management**: Comprehensive configuration for development and production
+  - **API Documentation**: Interactive Swagger documentation at ``/docs``
+  - **Database Schema**: PostgreSQL with complete onboarding submission tracking
 
 Onboarding Process
 ------------------
 
+Phase 1: Initial Onboarding (4 Steps)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 **Step 1: Contact Information**
-  Start by providing basic contact details:
-  
-  - Email address (required for follow-up)
-  - Communication preferences
-  - Marketing consent options
+  - Email collection with format validation
+  - Marketing opt-in preferences
+  - Automatic HubSpot lead capture
   
   .. note::
      Your information is handled according to Buildly's `Privacy Policy <https://buildly.io/privacy>`_. You can unsubscribe from communications at any time.
 
-**Step 2: Company Profile**
-  Tell us about your organization:
-  
-  - Company size and structure
-  - Industry and market focus
-  - Current development challenges
-  - Team composition and roles
+**Step 2: Organization Validation**
+  - Company name with real-time validation
+  - Organization size selection (Individual, Small Team 2-10, Large Portfolio)
+  - Special handling for existing organizations
+  - Duplicate prevention with smart suggestions
 
-**Step 3: Use Case Analysis**
-  Define your specific needs:
+**Step 3: Use Case Identification**
+  - Primary use case selection from predefined categories
+  - Context-aware questions based on organization size
+  - Technical experience assessment
+  - Project stage identification
+
+**Step 4: Challenge Analysis**
+  - Open-text field for biggest development challenges
+  - AI preprocessing for better recommendations
+  - Used by BabbleBeaver for personalized analysis
+
+Phase 2: Product Selection & Trial
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**AI-Powered Analysis**
+  - BabbleBeaver integration analyzes all collected data
+  - Generates confidence-scored recommendations
+  - Provides detailed reasoning for each suggestion
+  - Includes marketing feature highlights
+
+**Product Recommendations**
+  Options include:
   
-  - Project types and scope
+  - **Buildly Labs**: Developer platform with no-code tools and API integration
+  - **Buildly Foundry**: Startup acceleration program with enhanced support
+  - **Buildly Enterprise**: Enterprise-grade solutions with custom architecture
+
+**Trial Signup**
+  - 30-day free trial activation
+  - Stripe payment integration with secure processing
+  - Subscription management through Labs API
+  - Automated account provisioning
+
+Phase 3: Architecture Generation (3 Steps)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Step 1: Application Type Definition**
+  - Web application, mobile app, or enterprise system
+  - Technology stack preferences
   - Integration requirements
-  - Workflow and process needs
-  - Collaboration requirements
 
-**Step 4: Technical Experience**
-  Share your technical context:
-  
-  - Development experience level
-  - Current technology stack
-  - Infrastructure preferences
-  - Deployment requirements
+**Step 2: Detailed Requirements**
+  - Comprehensive project description
+  - Feature requirements and scope
+  - Performance and scalability needs
+  - Timeline and budget considerations
+
+**Step 3: AI Architecture Recommendations**
+  - BabbleBeaver generates detailed technical architecture
+  - Technology stack recommendations (frontend, backend, database)
+  - Deployment strategy suggestions
+  - Team composition recommendations
+  - Estimated timeline and development phases
 
 AI Insights & Recommendations
 -----------------------------
 
-Throughout the onboarding process, the Buildly AI assistant provides:
+BabbleBeaver AI Integration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Real-Time Analysis**
-  - Immediate feedback on your responses
-  - Suggestions for additional considerations
-  - Clarification questions when needed
+The onboarding service leverages Buildly's advanced BabbleBeaver AI system to provide intelligent guidance:
 
-**Platform Recommendations**
-  Based on your inputs, receive recommendations for:
+**Analysis Capabilities**
+  - **Confidence Scoring**: Each recommendation includes a confidence percentage
+  - **Reasoning Engine**: Detailed explanations for why specific solutions are recommended
+  - **Feature Matching**: AI matches user needs to platform capabilities
+  - **Risk Assessment**: Identifies potential challenges and mitigation strategies
+
+**Real-Time Organization Intelligence**
+  - **Duplicate Detection**: Prevents duplicate organization registrations
+  - **Company Recognition**: Special handling for existing Buildly partners
+  - **Smart Suggestions**: Recommends similar organization names and alternatives
+  - **Integration Opportunities**: Identifies potential collaboration scenarios
+
+**Architecture Generation**
+  BabbleBeaver provides comprehensive technical recommendations:
   
-  - **Buildly Core** - For backend API management
-  - **Buildly Foundry** - For rapid application development
-  - **Buildly Labs** - For experimental and beta features
-  - **Custom Solutions** - Tailored platform configurations
+  - **Technology Stack**: Frontend, backend, and database recommendations
+  - **Deployment Strategy**: Container, cloud, and infrastructure suggestions
+  - **Feature Planning**: Prioritized feature development roadmap
+  - **Team Structure**: Role recommendations based on project complexity
+  - **Timeline Estimation**: Realistic development timeline projections
 
-**Next Steps Guidance**
-  - Recommended implementation approach
-  - Timeline suggestions
-  - Resource requirements
-  - Integration roadmap
+**Marketing Intelligence**
+  - **Feature Highlighting**: AI identifies most relevant platform features
+  - **Business Value**: Explains ROI and business impact of recommendations
+  - **Competitive Analysis**: Positions Buildly solutions against alternatives
+  - **Success Stories**: Matches user profile to relevant case studies
+
+**Continuous Learning**
+  - **Feedback Integration**: AI improves based on user selections and outcomes
+  - **Pattern Recognition**: Identifies trends across similar organizations
+  - **Recommendation Refinement**: Continuously improves suggestion accuracy
 
 Getting Started with Onboarding
 -------------------------------
 
 **Before You Begin**
-  Prepare information about:
+  Prepare the following information for optimal recommendations:
   
-  - Your organization's size and structure
-  - Current development challenges
-  - Technical requirements and constraints
-  - Project timeline and goals
+  - **Organization Details**: Company name, size, and industry
+  - **Development Challenges**: Current pain points and technical obstacles
+  - **Project Requirements**: Scope, timeline, and technical constraints
+  - **Team Information**: Current team size and technical expertise
+  - **Budget Considerations**: Investment capacity and timeline preferences
 
 **During the Process**
-  - Take your time with each step
-  - Provide detailed responses for better recommendations
-  - Use the AI insights to explore additional options
-  - Save your progress (automatic in most browsers)
+  - **Progressive Disclosure**: Each step builds on previous responses
+  - **Detailed Responses**: More information leads to better AI recommendations
+  - **Real-Time Validation**: Organization names are checked for conflicts
+  - **Auto-Save**: Progress is automatically saved throughout the process
+  - **Error Recovery**: Robust error handling prevents data loss
+
+**Payment Integration**
+  - **Free Trial**: 30-day trial available for all products
+  - **Secure Processing**: Stripe integration with PCI compliance
+  - **Development Mode**: Payment simulation available for testing
+  - **Subscription Management**: Automatic Labs API account creation
 
 **After Completion**
-  - Review your personalized recommendations
-  - Schedule follow-up consultations if needed
-  - Access recommended platform documentation
-  - Begin implementation planning
+  - **Personalized Dashboard**: Access to recommended platform features
+  - **Architecture Documentation**: Detailed technical recommendations
+  - **Implementation Roadmap**: Step-by-step development guidance
+  - **Team Setup**: Automated user and organization provisioning
+  - **Follow-up Support**: HubSpot integration for ongoing assistance
 
 Integration with Main Platform
 ------------------------------
 
-**Seamless Transition**
-  The onboarding process is designed to connect with:
-  
-  - Account creation on recommended platforms
-  - Direct access to relevant documentation
-  - Pre-configured project templates
-  - Team setup assistance
+Labs API Integration
+^^^^^^^^^^^^^^^^^^^^
 
-**Data Continuity**
+The onboarding service seamlessly integrates with the Buildly Labs ecosystem:
+
+**Account Provisioning**
+  - **Automated User Creation**: Direct integration with Labs API ``coreuser`` endpoints
+  - **Organization Setup**: Automatic organization creation and linking
+  - **Authentication Flow**: JWT token management with secure session handling
+  - **Active Account Status**: Users are immediately activated with ``is_active: true``
+
+**Subscription Management**
+  - **Trial Activation**: 30-day free trial automatically configured
+  - **Payment Processing**: Stripe subscriptions linked to Labs API accounts
+  - **Billing Integration**: Seamless transition from trial to paid subscriptions
+  - **Plan Configuration**: Automatic feature enablement based on selected products
+
+**Data Synchronization**
   Information collected during onboarding:
   
-  - Informs initial platform configuration
-  - Helps customize the user experience
-  - Enables targeted feature recommendations
-  - Supports ongoing optimization
+  - **Profile Configuration**: Pre-populates user profiles with onboarding data
+  - **Project Templates**: Architecture recommendations become project scaffolding
+  - **Team Assignments**: Automatic role and permission configuration
+  - **Feature Enablement**: Selected features are immediately available
 
-Benefits of Beta Participation
------------------------------
+**HubSpot CRM Integration**
+  - **Lead Capture**: Automatic contact creation with marketing preferences
+  - **Pipeline Management**: Users move through defined sales/onboarding stages
+  - **Follow-up Automation**: Triggered email sequences based on user actions
+  - **Analytics Tracking**: Comprehensive funnel analysis and conversion metrics
 
-**Early Access**
-  - Experience cutting-edge onboarding technology
-  - Influence the development of future features
-  - Get priority support during the beta period
+**Technical Integration Points**
+  .. code-block:: text
 
-**Enhanced Experience**
-  - More personalized recommendations
-  - Direct feedback channel to the development team
-  - Opportunity to shape the final product
+     Onboarding Service → Labs API Endpoints:
+     ├── POST /api/coreuser/users/          # User account creation
+     ├── POST /api/organizations/           # Organization setup
+     ├── POST /api/subscriptions/          # Trial/subscription creation
+     └── GET  /api/auth/login/             # Authentication verification
 
-**Community Involvement**
-  - Join the beta user community
-  - Share feedback and suggestions
-  - Participate in product development discussions
+     External Integrations:
+     ├── BabbleBeaver API     → AI analysis and recommendations
+     ├── Stripe API           → Payment processing and billing
+     └── HubSpot API          → CRM and marketing automation
 
-Support & Feedback
-------------------
+Technical Architecture
+-----------------------
+
+Development Environment
+^^^^^^^^^^^^^^^^^^^^^^^
+
+**Quick Start Setup**
+  .. code-block:: bash
+
+     # Clone the repository
+     git clone https://github.com/Buildly-Labs/onboarding-service
+     cd onboarding-service
+
+     # Start in development mode with hot reload
+     ./dev-start.sh
+
+     # Or use Docker Compose
+     docker compose up --build
+
+**Service Access**
+  - **Frontend**: http://localhost:3000 (React with hot reload)
+  - **Backend API**: http://localhost:8000 (FastAPI with auto-reload)
+  - **API Documentation**: http://localhost:8000/docs (Interactive Swagger)
+  - **Database**: PostgreSQL on localhost:5432
+
+**Environment Configuration**
+  Key environment variables for development:
+  
+  .. code-block:: bash
+
+     # Core Configuration
+     REACT_APP_BACKEND_URL=http://localhost:8000
+     DATABASE_URL=postgresql://user:pass@localhost:5432/onboarding
+     
+     # AI Integration
+     BABBLEBEAVER_API_KEY=your-babblebeaver-key
+     BABBLEBEAVER_API_URL=https://labs-babble.buildly.io
+     
+     # Payment Processing
+     STRIPE_SECRET_KEY=sk_test_your_stripe_key
+     REACT_APP_STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_key
+     
+     # Authentication
+     JWT_SECRET=your-jwt-secret
+     GOOGLE_CLIENT_ID=your-google-oauth-id
+     GITHUB_CLIENT_ID=your-github-oauth-id
+
+Production Deployment
+^^^^^^^^^^^^^^^^^^^^^
+
+**Docker Containerization**
+  - Production-ready containers with multi-stage builds
+  - Kubernetes deployment manifests included
+  - Cloud deployment scripts for GCP/AWS
+  - Comprehensive environment variable management
+
+**Security Features**
+  - **CSP Configuration**: Disabled for Stripe compatibility, Permissions Policy enabled
+  - **JWT Authentication**: Secure token management with Labs API
+  - **HTTPS Enforcement**: Production-ready SSL/TLS configuration
+  - **API Rate Limiting**: Protection against abuse and overload
+
+**Database Schema**
+  .. code-block:: sql
+
+     CREATE TABLE onboarding_submissions (
+         id UUID PRIMARY KEY,
+         email VARCHAR NOT NULL,
+         organization_size VARCHAR,
+         product_stage VARCHAR,
+         product_scope VARCHAR,
+         biggest_challenge TEXT,
+         team_composition VARCHAR,
+         analysis JSONB,
+         selected_recommendation VARCHAR,
+         completed_at TIMESTAMP
+     );
+
+**Monitoring & Observability**
+  - **Health Endpoints**: ``/health`` for system monitoring
+  - **API Documentation**: Auto-generated Swagger at ``/docs``
+  - **Error Tracking**: Comprehensive error handling and logging
+  - **Performance Metrics**: Response time and throughput monitoring
+
+API Endpoints & Testing
+-----------------------
+
+Core API Endpoints
+^^^^^^^^^^^^^^^^^^
+
+**Step-by-Step Onboarding Flow**
+  .. code-block:: text
+
+     POST /onboarding/step1          # Email collection
+     POST /onboarding/step2          # Organization size
+     POST /onboarding/step3_small    # Product stage (small organizations)
+     POST /onboarding/step3_large    # Product scope (large organizations)
+     POST /onboarding/step4          # Biggest challenge identification
+     POST /onboarding/step5          # Team composition
+     POST /onboarding/complete       # Final AI analysis
+     POST /onboarding/select-recommendation  # User selection
+
+**Organization & Analysis**
+  .. code-block:: text
+
+     POST /check-organization        # Real-time organization validation
+     POST /analyze                   # BabbleBeaver AI analysis
+     POST /babblebeaver/architecture # Architecture generation
+     GET  /onboarding/status/{email} # Progress tracking
+
+**Authentication & Integration**
+  .. code-block:: text
+
+     GET  /auth/{provider}           # OAuth login (Google/GitHub)
+     GET  /auth/callback/{provider}  # OAuth callback handling
+     POST /create-buildly-account    # Labs API account creation
+     POST /integrate-labs            # Complete Labs integration
+
+**Development & Testing**
+  .. code-block:: text
+
+     GET  /health                    # Health check endpoint
+     POST /babblebeaver/test         # BabbleBeaver connectivity test
+     GET  /docs                      # Interactive API documentation
+
+Example API Usage
+^^^^^^^^^^^^^^^^^
+
+**Starting the Onboarding Process**
+  .. code-block:: text
+
+     POST /onboarding/step1
+     
+  .. code-block:: json
+
+     {
+       "email": "user@company.com"
+     }
+
+**Organization Validation**
+  .. code-block:: text
+
+     POST /check-organization
+     
+  .. code-block:: json
+
+     {
+       "organization_name": "TechCorp"
+     }
+     
+     Response:
+     {
+       "exists": false,
+       "is_buildly": false,
+       "message": "Organization name available",
+       "action": "proceed"
+     }
+
+**AI Analysis Request**
+  .. code-block:: text
+
+     POST /analyze
+     
+  .. code-block:: json
+
+     {
+       "email": "user@company.com",
+       "company": "TechCorp",
+       "company_size": "small_team",
+       "use_case": "web_app",
+       "experience": "intermediate"
+     }
+
+**Architecture Generation**
+  .. code-block:: text
+
+     POST /babblebeaver/architecture
+     
+  .. code-block:: json
+
+     {
+       "email": "user@company.com",
+       "application_type": "e_commerce",
+       "application_details": "Modern e-commerce platform with payments",
+       "selected_product": "Buildly Labs"
+     }
+
+Support & Development
+---------------------
 
 **Getting Help**
-  - Built-in help system within the onboarding flow
-  - AI assistant for immediate guidance
-  - Contact support for technical issues
+  - **Interactive Documentation**: Complete API reference at http://localhost:8000/docs
+  - **GitHub Repository**: https://github.com/Buildly-Labs/onboarding-service
+  - **Development Guide**: Comprehensive setup and contribution documentation
+  - **Issue Tracking**: Bug reports and feature requests via GitHub Issues
 
-**Providing Feedback**
-  Beta users are encouraged to share:
-  
-  - User experience feedback
-  - Suggestion for improvements
-  - Bug reports or technical issues
-  - Feature requests
+**Contributing to Development**
+  1. Fork the repository from GitHub
+  2. Set up local development environment
+  3. Make changes following the coding standards
+  4. Add tests for new functionality
+  5. Update relevant documentation
+  6. Submit a pull request with detailed description
 
-**Beta Community**
-  - Access to beta user forums
-  - Regular updates on new features
-  - Early preview of upcoming enhancements
+**Testing the Service**
+  .. code-block:: bash
 
-.. warning::
-   As this is a beta feature, functionality may change based on user feedback and testing. Please report any issues or suggestions to the development team.
+     # Backend API testing
+     cd backend
+     python test_api.py
+
+     # Frontend testing
+     cd frontend
+     npm test
+
+     # Integration testing
+     # Complete the full onboarding flow at http://localhost:3000
+
+.. note::
+   The onboarding service is production-ready with comprehensive error handling, security measures, and scalability features. All integrations are fully functional and tested.
 
 Related Documentation
---------------------
+---------------------
 
-- :doc:`../quickstart` - Account setup after onboarding
-- :doc:`registration` - Standard registration process
-- :doc:`user_management` - Team setup and management
-- :doc:`../user-guide/BUILDLY-USER-DOCUMENTATION` - Complete user guide
+**Platform Integration**
+- :doc:`../quickstart` - Getting started after completing onboarding
+- :doc:`registration` - Alternative registration methods
+- :doc:`user_management` - Team setup and user administration
+- :doc:`../user-guide/BUILDLY-USER-DOCUMENTATION` - Complete platform user guide
+- :doc:`../architecture` - Technical architecture and patterns
+
+**Developer Resources**
+- :doc:`../developers/index` - Developer platform documentation
+- :doc:`ai_features` - BabbleBeaver AI integration details
+- :doc:`../troubleshooting/index` - Common issues and solutions
+
+**Technical Integration**
+- Labs API documentation for account management
+- Stripe integration guide for payment processing  
+- HubSpot setup for CRM integration
+- BabbleBeaver AI API reference
 
 External Links
 --------------
 
-- `Buildly Labs Onboarding <https://labs-onboarding.buildly.io/>`_ - Start the onboarding process
-- `Buildly Main Platform <https://buildly.io/>`_ - Learn about all Buildly products
-- `Buildly Labs <https://labs.buildly.io/>`_ - Experimental features and tools
-- `Buildly Foundry <https://foundry.buildly.io/>`_ - Rapid development platform
+**Onboarding Service**
+- `Buildly Labs Onboarding <https://labs-onboarding.buildly.io/>`_ - Start the intelligent onboarding process
+- `Onboarding Service Repository <https://github.com/Buildly-Labs/onboarding-service>`_ - Source code and documentation
+- `API Documentation <https://labs-onboarding.buildly.io:8000/docs>`_ - Interactive Swagger documentation
+
+**Buildly Ecosystem**
+- `Buildly Labs Platform <https://labs.buildly.io/>`_ - Developer platform with AI-powered tools
+- `Buildly Foundry <https://foundry.buildly.io/>`_ - Startup acceleration program
+- `Buildly Enterprise <https://buildly.io/enterprise>`_ - Enterprise solutions
+- `Buildly Main Site <https://buildly.io/>`_ - Complete platform overview
+
+**Technical Resources**
+- `BabbleBeaver AI <https://labs-babble.buildly.io/>`_ - AI analysis and recommendations
+- `Labs API <https://labs-api.buildly.io/>`_ - Core platform APIs
+- `GitHub Organization <https://github.com/Buildly-Labs>`_ - Open source repositories

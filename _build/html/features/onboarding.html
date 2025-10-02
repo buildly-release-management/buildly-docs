@@ -9,7 +9,7 @@
   <title>Platform Onboarding (Beta) &mdash; Buildly Product Labs Documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=5db9fe7f" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=29f8334c" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -50,12 +50,32 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Platform Onboarding (Beta)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#onboarding-process">Onboarding Process</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ai-insights-recommendations">AI Insights &amp; Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#onboarding-process">Onboarding Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#phase-1-initial-onboarding-4-steps">Phase 1: Initial Onboarding (4 Steps)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phase-2-product-selection-trial">Phase 2: Product Selection &amp; Trial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phase-3-architecture-generation-3-steps">Phase 3: Architecture Generation (3 Steps)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ai-insights-recommendations">AI Insights &amp; Recommendations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#babblebeaver-ai-integration">BabbleBeaver AI Integration</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#getting-started-with-onboarding">Getting Started with Onboarding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#integration-with-main-platform">Integration with Main Platform</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#benefits-of-beta-participation">Benefits of Beta Participation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#support-feedback">Support &amp; Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integration-with-main-platform">Integration with Main Platform</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#labs-api-integration">Labs API Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#technical-architecture">Technical Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#development-environment">Development Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#production-deployment">Production Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#api-endpoints-testing">API Endpoints &amp; Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#core-api-endpoints">Core API Endpoints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-api-usage">Example API Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#support-development">Support &amp; Development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#related-documentation">Related Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#external-links">External Links</a></li>
 </ul>
@@ -76,6 +96,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../developers/index.html">For Developers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
@@ -116,221 +137,531 @@
 <span id="onboarding"></span><h1>Platform Onboarding (Beta)<a class="headerlink" href="#platform-onboarding-beta" title="Link to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The Buildly Labs Onboarding system is currently in beta. This guided onboarding process helps organizations find the perfect platform solution for their needs.</p>
+<p>The Buildly Labs Onboarding system is currently in beta. This intelligent onboarding service provides a personalized 3-phase journey that guides users from initial contact to detailed architecture recommendations.</p>
 </div>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
-<p>The Buildly Labs Onboarding system is an intelligent, multi-step process that helps new users and organizations discover the most suitable Buildly platform solutions. This AI-powered onboarding experience collects information about your company, use cases, and technical requirements to recommend the optimal configuration.</p>
+<p>The Buildly Labs Onboarding service is a modern, AI-powered application that helps users discover the perfect Buildly solution for their needs. Built with React frontend and FastAPI backend, this service features comprehensive integrations with BabbleBeaver AI, Stripe payment processing, and the Labs API ecosystem.</p>
+<p><strong>Key Technologies:</strong></p>
+<ul class="simple">
+<li><p><strong>Frontend</strong>: React 18 with modern hooks and responsive design</p></li>
+<li><p><strong>Backend</strong>: FastAPI with PostgreSQL database</p></li>
+<li><p><strong>AI Integration</strong>: BabbleBeaver API for intelligent recommendations</p></li>
+<li><p><strong>Payments</strong>: Stripe integration with 30-day free trials</p></li>
+<li><p><strong>Authentication</strong>: JWT token-based with Labs API integration</p></li>
+</ul>
 <p><strong>Access the Onboarding</strong>: <a class="reference external" href="https://labs-onboarding.buildly.io/">https://labs-onboarding.buildly.io/</a></p>
 </section>
 <section id="key-features">
 <h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading"></a></h2>
 <dl class="simple">
-<dt><strong>Intelligent Questionnaire</strong></dt><dd><ul class="simple">
-<li><p>Step-by-step guided process</p></li>
-<li><p>Context-aware questions based on your responses</p></li>
-<li><p>AI-powered recommendations</p></li>
+<dt><strong>3-Phase Intelligent Flow</strong></dt><dd><ul class="simple">
+<li><p><strong>Phase 1</strong>: Initial onboarding and contact information</p></li>
+<li><p><strong>Phase 2</strong>: Product selection with AI analysis</p></li>
+<li><p><strong>Phase 3</strong>: Detailed architecture generation and setup</p></li>
 </ul>
 </dd>
-<dt><strong>Multi-Step Process</strong></dt><dd><ol class="arabic simple">
-<li><p><strong>Contact Information</strong> - Basic details and communication preferences</p></li>
-<li><p><strong>Company Profile</strong> - Organization size, industry, and structure</p></li>
-<li><p><strong>Use Case Analysis</strong> - Specific needs and project requirements</p></li>
-<li><p><strong>Technical Experience</strong> - Development capabilities and infrastructure</p></li>
-</ol>
+<dt><strong>Advanced AI Integration</strong></dt><dd><ul class="simple">
+<li><p><strong>BabbleBeaver Analysis</strong>: Intelligent product recommendations with confidence scoring</p></li>
+<li><p><strong>Real-time Organization Validation</strong>: Checks existing organizations and prevents duplicates</p></li>
+<li><p><strong>Architecture Generation</strong>: AI-powered technical recommendations</p></li>
+<li><p><strong>Marketing Insights</strong>: Personalized feature recommendations with business reasoning</p></li>
+</ul>
 </dd>
-<dt><strong>AI-Powered Insights</strong></dt><dd><ul class="simple">
-<li><p>Real-time analysis of your responses</p></li>
-<li><p>Personalized platform recommendations</p></li>
-<li><p>Integration suggestions based on your tech stack</p></li>
+<dt><strong>Modern Technical Stack</strong></dt><dd><ul class="simple">
+<li><p><strong>Responsive Design</strong>: Mobile-first UI with glass morphism effects</p></li>
+<li><p><strong>Payment Processing</strong>: Stripe integration with free trial management</p></li>
+<li><p><strong>Authentication</strong>: OAuth2 (Google/GitHub) and JWT token management</p></li>
+<li><p><strong>HubSpot Integration</strong>: Automatic lead capture and CRM synchronization</p></li>
+<li><p><strong>Error Recovery</strong>: Robust SMTP auto-recovery and comprehensive error handling</p></li>
+</ul>
+</dd>
+<dt><strong>Production-Ready Features</strong></dt><dd><ul class="simple">
+<li><p><strong>Docker Containerization</strong>: Production-ready containers with Kubernetes support</p></li>
+<li><p><strong>Environment Management</strong>: Comprehensive configuration for development and production</p></li>
+<li><p><strong>API Documentation</strong>: Interactive Swagger documentation at <code class="docutils literal notranslate"><span class="pre">/docs</span></code></p></li>
+<li><p><strong>Database Schema</strong>: PostgreSQL with complete onboarding submission tracking</p></li>
 </ul>
 </dd>
 </dl>
 </section>
 <section id="onboarding-process">
 <h2>Onboarding Process<a class="headerlink" href="#onboarding-process" title="Link to this heading"></a></h2>
+<section id="phase-1-initial-onboarding-4-steps">
+<h3>Phase 1: Initial Onboarding (4 Steps)<a class="headerlink" href="#phase-1-initial-onboarding-4-steps" title="Link to this heading"></a></h3>
 <dl>
-<dt><strong>Step 1: Contact Information</strong></dt><dd><p>Start by providing basic contact details:</p>
-<ul class="simple">
-<li><p>Email address (required for follow-up)</p></li>
-<li><p>Communication preferences</p></li>
-<li><p>Marketing consent options</p></li>
+<dt><strong>Step 1: Contact Information</strong></dt><dd><ul class="simple">
+<li><p>Email collection with format validation</p></li>
+<li><p>Marketing opt-in preferences</p></li>
+<li><p>Automatic HubSpot lead capture</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Your information is handled according to Buildly’s <a class="reference external" href="https://buildly.io/privacy">Privacy Policy</a>. You can unsubscribe from communications at any time.</p>
 </div>
 </dd>
-<dt><strong>Step 2: Company Profile</strong></dt><dd><p>Tell us about your organization:</p>
-<ul class="simple">
-<li><p>Company size and structure</p></li>
-<li><p>Industry and market focus</p></li>
-<li><p>Current development challenges</p></li>
-<li><p>Team composition and roles</p></li>
+<dt><strong>Step 2: Organization Validation</strong></dt><dd><ul class="simple">
+<li><p>Company name with real-time validation</p></li>
+<li><p>Organization size selection (Individual, Small Team 2-10, Large Portfolio)</p></li>
+<li><p>Special handling for existing organizations</p></li>
+<li><p>Duplicate prevention with smart suggestions</p></li>
 </ul>
 </dd>
-<dt><strong>Step 3: Use Case Analysis</strong></dt><dd><p>Define your specific needs:</p>
-<ul class="simple">
-<li><p>Project types and scope</p></li>
-<li><p>Integration requirements</p></li>
-<li><p>Workflow and process needs</p></li>
-<li><p>Collaboration requirements</p></li>
+<dt><strong>Step 3: Use Case Identification</strong></dt><dd><ul class="simple">
+<li><p>Primary use case selection from predefined categories</p></li>
+<li><p>Context-aware questions based on organization size</p></li>
+<li><p>Technical experience assessment</p></li>
+<li><p>Project stage identification</p></li>
 </ul>
 </dd>
-<dt><strong>Step 4: Technical Experience</strong></dt><dd><p>Share your technical context:</p>
-<ul class="simple">
-<li><p>Development experience level</p></li>
-<li><p>Current technology stack</p></li>
-<li><p>Infrastructure preferences</p></li>
-<li><p>Deployment requirements</p></li>
+<dt><strong>Step 4: Challenge Analysis</strong></dt><dd><ul class="simple">
+<li><p>Open-text field for biggest development challenges</p></li>
+<li><p>AI preprocessing for better recommendations</p></li>
+<li><p>Used by BabbleBeaver for personalized analysis</p></li>
 </ul>
 </dd>
 </dl>
 </section>
-<section id="ai-insights-recommendations">
-<h2>AI Insights &amp; Recommendations<a class="headerlink" href="#ai-insights-recommendations" title="Link to this heading"></a></h2>
-<p>Throughout the onboarding process, the Buildly AI assistant provides:</p>
+<section id="phase-2-product-selection-trial">
+<h3>Phase 2: Product Selection &amp; Trial<a class="headerlink" href="#phase-2-product-selection-trial" title="Link to this heading"></a></h3>
 <dl class="simple">
-<dt><strong>Real-Time Analysis</strong></dt><dd><ul class="simple">
-<li><p>Immediate feedback on your responses</p></li>
-<li><p>Suggestions for additional considerations</p></li>
-<li><p>Clarification questions when needed</p></li>
+<dt><strong>AI-Powered Analysis</strong></dt><dd><ul class="simple">
+<li><p>BabbleBeaver integration analyzes all collected data</p></li>
+<li><p>Generates confidence-scored recommendations</p></li>
+<li><p>Provides detailed reasoning for each suggestion</p></li>
+<li><p>Includes marketing feature highlights</p></li>
 </ul>
 </dd>
-<dt><strong>Platform Recommendations</strong></dt><dd><p>Based on your inputs, receive recommendations for:</p>
+<dt><strong>Product Recommendations</strong></dt><dd><p>Options include:</p>
 <ul class="simple">
-<li><p><strong>Buildly Core</strong> - For backend API management</p></li>
-<li><p><strong>Buildly Foundry</strong> - For rapid application development</p></li>
-<li><p><strong>Buildly Labs</strong> - For experimental and beta features</p></li>
-<li><p><strong>Custom Solutions</strong> - Tailored platform configurations</p></li>
+<li><p><strong>Buildly Labs</strong>: Developer platform with no-code tools and API integration</p></li>
+<li><p><strong>Buildly Foundry</strong>: Startup acceleration program with enhanced support</p></li>
+<li><p><strong>Buildly Enterprise</strong>: Enterprise-grade solutions with custom architecture</p></li>
 </ul>
 </dd>
-<dt><strong>Next Steps Guidance</strong></dt><dd><ul class="simple">
-<li><p>Recommended implementation approach</p></li>
-<li><p>Timeline suggestions</p></li>
-<li><p>Resource requirements</p></li>
-<li><p>Integration roadmap</p></li>
+<dt><strong>Trial Signup</strong></dt><dd><ul class="simple">
+<li><p>30-day free trial activation</p></li>
+<li><p>Stripe payment integration with secure processing</p></li>
+<li><p>Subscription management through Labs API</p></li>
+<li><p>Automated account provisioning</p></li>
 </ul>
 </dd>
 </dl>
+</section>
+<section id="phase-3-architecture-generation-3-steps">
+<h3>Phase 3: Architecture Generation (3 Steps)<a class="headerlink" href="#phase-3-architecture-generation-3-steps" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>Step 1: Application Type Definition</strong></dt><dd><ul class="simple">
+<li><p>Web application, mobile app, or enterprise system</p></li>
+<li><p>Technology stack preferences</p></li>
+<li><p>Integration requirements</p></li>
+</ul>
+</dd>
+<dt><strong>Step 2: Detailed Requirements</strong></dt><dd><ul class="simple">
+<li><p>Comprehensive project description</p></li>
+<li><p>Feature requirements and scope</p></li>
+<li><p>Performance and scalability needs</p></li>
+<li><p>Timeline and budget considerations</p></li>
+</ul>
+</dd>
+<dt><strong>Step 3: AI Architecture Recommendations</strong></dt><dd><ul class="simple">
+<li><p>BabbleBeaver generates detailed technical architecture</p></li>
+<li><p>Technology stack recommendations (frontend, backend, database)</p></li>
+<li><p>Deployment strategy suggestions</p></li>
+<li><p>Team composition recommendations</p></li>
+<li><p>Estimated timeline and development phases</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="ai-insights-recommendations">
+<h2>AI Insights &amp; Recommendations<a class="headerlink" href="#ai-insights-recommendations" title="Link to this heading"></a></h2>
+<section id="babblebeaver-ai-integration">
+<h3>BabbleBeaver AI Integration<a class="headerlink" href="#babblebeaver-ai-integration" title="Link to this heading"></a></h3>
+<p>The onboarding service leverages Buildly’s advanced BabbleBeaver AI system to provide intelligent guidance:</p>
+<dl class="simple">
+<dt><strong>Analysis Capabilities</strong></dt><dd><ul class="simple">
+<li><p><strong>Confidence Scoring</strong>: Each recommendation includes a confidence percentage</p></li>
+<li><p><strong>Reasoning Engine</strong>: Detailed explanations for why specific solutions are recommended</p></li>
+<li><p><strong>Feature Matching</strong>: AI matches user needs to platform capabilities</p></li>
+<li><p><strong>Risk Assessment</strong>: Identifies potential challenges and mitigation strategies</p></li>
+</ul>
+</dd>
+<dt><strong>Real-Time Organization Intelligence</strong></dt><dd><ul class="simple">
+<li><p><strong>Duplicate Detection</strong>: Prevents duplicate organization registrations</p></li>
+<li><p><strong>Company Recognition</strong>: Special handling for existing Buildly partners</p></li>
+<li><p><strong>Smart Suggestions</strong>: Recommends similar organization names and alternatives</p></li>
+<li><p><strong>Integration Opportunities</strong>: Identifies potential collaboration scenarios</p></li>
+</ul>
+</dd>
+<dt><strong>Architecture Generation</strong></dt><dd><p>BabbleBeaver provides comprehensive technical recommendations:</p>
+<ul class="simple">
+<li><p><strong>Technology Stack</strong>: Frontend, backend, and database recommendations</p></li>
+<li><p><strong>Deployment Strategy</strong>: Container, cloud, and infrastructure suggestions</p></li>
+<li><p><strong>Feature Planning</strong>: Prioritized feature development roadmap</p></li>
+<li><p><strong>Team Structure</strong>: Role recommendations based on project complexity</p></li>
+<li><p><strong>Timeline Estimation</strong>: Realistic development timeline projections</p></li>
+</ul>
+</dd>
+<dt><strong>Marketing Intelligence</strong></dt><dd><ul class="simple">
+<li><p><strong>Feature Highlighting</strong>: AI identifies most relevant platform features</p></li>
+<li><p><strong>Business Value</strong>: Explains ROI and business impact of recommendations</p></li>
+<li><p><strong>Competitive Analysis</strong>: Positions Buildly solutions against alternatives</p></li>
+<li><p><strong>Success Stories</strong>: Matches user profile to relevant case studies</p></li>
+</ul>
+</dd>
+<dt><strong>Continuous Learning</strong></dt><dd><ul class="simple">
+<li><p><strong>Feedback Integration</strong>: AI improves based on user selections and outcomes</p></li>
+<li><p><strong>Pattern Recognition</strong>: Identifies trends across similar organizations</p></li>
+<li><p><strong>Recommendation Refinement</strong>: Continuously improves suggestion accuracy</p></li>
+</ul>
+</dd>
+</dl>
+</section>
 </section>
 <section id="getting-started-with-onboarding">
 <h2>Getting Started with Onboarding<a class="headerlink" href="#getting-started-with-onboarding" title="Link to this heading"></a></h2>
 <dl class="simple">
-<dt><strong>Before You Begin</strong></dt><dd><p>Prepare information about:</p>
+<dt><strong>Before You Begin</strong></dt><dd><p>Prepare the following information for optimal recommendations:</p>
 <ul class="simple">
-<li><p>Your organization’s size and structure</p></li>
-<li><p>Current development challenges</p></li>
-<li><p>Technical requirements and constraints</p></li>
-<li><p>Project timeline and goals</p></li>
+<li><p><strong>Organization Details</strong>: Company name, size, and industry</p></li>
+<li><p><strong>Development Challenges</strong>: Current pain points and technical obstacles</p></li>
+<li><p><strong>Project Requirements</strong>: Scope, timeline, and technical constraints</p></li>
+<li><p><strong>Team Information</strong>: Current team size and technical expertise</p></li>
+<li><p><strong>Budget Considerations</strong>: Investment capacity and timeline preferences</p></li>
 </ul>
 </dd>
 <dt><strong>During the Process</strong></dt><dd><ul class="simple">
-<li><p>Take your time with each step</p></li>
-<li><p>Provide detailed responses for better recommendations</p></li>
-<li><p>Use the AI insights to explore additional options</p></li>
-<li><p>Save your progress (automatic in most browsers)</p></li>
+<li><p><strong>Progressive Disclosure</strong>: Each step builds on previous responses</p></li>
+<li><p><strong>Detailed Responses</strong>: More information leads to better AI recommendations</p></li>
+<li><p><strong>Real-Time Validation</strong>: Organization names are checked for conflicts</p></li>
+<li><p><strong>Auto-Save</strong>: Progress is automatically saved throughout the process</p></li>
+<li><p><strong>Error Recovery</strong>: Robust error handling prevents data loss</p></li>
+</ul>
+</dd>
+<dt><strong>Payment Integration</strong></dt><dd><ul class="simple">
+<li><p><strong>Free Trial</strong>: 30-day trial available for all products</p></li>
+<li><p><strong>Secure Processing</strong>: Stripe integration with PCI compliance</p></li>
+<li><p><strong>Development Mode</strong>: Payment simulation available for testing</p></li>
+<li><p><strong>Subscription Management</strong>: Automatic Labs API account creation</p></li>
 </ul>
 </dd>
 <dt><strong>After Completion</strong></dt><dd><ul class="simple">
-<li><p>Review your personalized recommendations</p></li>
-<li><p>Schedule follow-up consultations if needed</p></li>
-<li><p>Access recommended platform documentation</p></li>
-<li><p>Begin implementation planning</p></li>
+<li><p><strong>Personalized Dashboard</strong>: Access to recommended platform features</p></li>
+<li><p><strong>Architecture Documentation</strong>: Detailed technical recommendations</p></li>
+<li><p><strong>Implementation Roadmap</strong>: Step-by-step development guidance</p></li>
+<li><p><strong>Team Setup</strong>: Automated user and organization provisioning</p></li>
+<li><p><strong>Follow-up Support</strong>: HubSpot integration for ongoing assistance</p></li>
 </ul>
 </dd>
 </dl>
 </section>
 <section id="integration-with-main-platform">
 <h2>Integration with Main Platform<a class="headerlink" href="#integration-with-main-platform" title="Link to this heading"></a></h2>
-<dl class="simple">
-<dt><strong>Seamless Transition</strong></dt><dd><p>The onboarding process is designed to connect with:</p>
-<ul class="simple">
-<li><p>Account creation on recommended platforms</p></li>
-<li><p>Direct access to relevant documentation</p></li>
-<li><p>Pre-configured project templates</p></li>
-<li><p>Team setup assistance</p></li>
+<section id="labs-api-integration">
+<h3>Labs API Integration<a class="headerlink" href="#labs-api-integration" title="Link to this heading"></a></h3>
+<p>The onboarding service seamlessly integrates with the Buildly Labs ecosystem:</p>
+<dl>
+<dt><strong>Account Provisioning</strong></dt><dd><ul class="simple">
+<li><p><strong>Automated User Creation</strong>: Direct integration with Labs API <code class="docutils literal notranslate"><span class="pre">coreuser</span></code> endpoints</p></li>
+<li><p><strong>Organization Setup</strong>: Automatic organization creation and linking</p></li>
+<li><p><strong>Authentication Flow</strong>: JWT token management with secure session handling</p></li>
+<li><p><strong>Active Account Status</strong>: Users are immediately activated with <code class="docutils literal notranslate"><span class="pre">is_active:</span> <span class="pre">true</span></code></p></li>
 </ul>
 </dd>
-<dt><strong>Data Continuity</strong></dt><dd><p>Information collected during onboarding:</p>
+<dt><strong>Subscription Management</strong></dt><dd><ul class="simple">
+<li><p><strong>Trial Activation</strong>: 30-day free trial automatically configured</p></li>
+<li><p><strong>Payment Processing</strong>: Stripe subscriptions linked to Labs API accounts</p></li>
+<li><p><strong>Billing Integration</strong>: Seamless transition from trial to paid subscriptions</p></li>
+<li><p><strong>Plan Configuration</strong>: Automatic feature enablement based on selected products</p></li>
+</ul>
+</dd>
+<dt><strong>Data Synchronization</strong></dt><dd><p>Information collected during onboarding:</p>
 <ul class="simple">
-<li><p>Informs initial platform configuration</p></li>
-<li><p>Helps customize the user experience</p></li>
-<li><p>Enables targeted feature recommendations</p></li>
-<li><p>Supports ongoing optimization</p></li>
+<li><p><strong>Profile Configuration</strong>: Pre-populates user profiles with onboarding data</p></li>
+<li><p><strong>Project Templates</strong>: Architecture recommendations become project scaffolding</p></li>
+<li><p><strong>Team Assignments</strong>: Automatic role and permission configuration</p></li>
+<li><p><strong>Feature Enablement</strong>: Selected features are immediately available</p></li>
+</ul>
+</dd>
+<dt><strong>HubSpot CRM Integration</strong></dt><dd><ul class="simple">
+<li><p><strong>Lead Capture</strong>: Automatic contact creation with marketing preferences</p></li>
+<li><p><strong>Pipeline Management</strong>: Users move through defined sales/onboarding stages</p></li>
+<li><p><strong>Follow-up Automation</strong>: Triggered email sequences based on user actions</p></li>
+<li><p><strong>Analytics Tracking</strong>: Comprehensive funnel analysis and conversion metrics</p></li>
+</ul>
+</dd>
+<dt><strong>Technical Integration Points</strong></dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Onboarding Service → Labs API Endpoints:
+├── POST /api/coreuser/users/          # User account creation
+├── POST /api/organizations/           # Organization setup
+├── POST /api/subscriptions/          # Trial/subscription creation
+└── GET  /api/auth/login/             # Authentication verification
+
+External Integrations:
+├── BabbleBeaver API     → AI analysis and recommendations
+├── Stripe API           → Payment processing and billing
+└── HubSpot API          → CRM and marketing automation
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+</section>
+<section id="technical-architecture">
+<h2>Technical Architecture<a class="headerlink" href="#technical-architecture" title="Link to this heading"></a></h2>
+<section id="development-environment">
+<h3>Development Environment<a class="headerlink" href="#development-environment" title="Link to this heading"></a></h3>
+<dl>
+<dt><strong>Quick Start Setup</strong></dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Buildly-Labs/onboarding-service
+<span class="nb">cd</span><span class="w"> </span>onboarding-service
+
+<span class="c1"># Start in development mode with hot reload</span>
+./dev-start.sh
+
+<span class="c1"># Or use Docker Compose</span>
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
+</pre></div>
+</div>
+</dd>
+<dt><strong>Service Access</strong></dt><dd><ul class="simple">
+<li><p><strong>Frontend</strong>: <a class="reference external" href="http://localhost:3000">http://localhost:3000</a> (React with hot reload)</p></li>
+<li><p><strong>Backend API</strong>: <a class="reference external" href="http://localhost:8000">http://localhost:8000</a> (FastAPI with auto-reload)</p></li>
+<li><p><strong>API Documentation</strong>: <a class="reference external" href="http://localhost:8000/docs">http://localhost:8000/docs</a> (Interactive Swagger)</p></li>
+<li><p><strong>Database</strong>: PostgreSQL on localhost:5432</p></li>
+</ul>
+</dd>
+<dt><strong>Environment Configuration</strong></dt><dd><p>Key environment variables for development:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Core Configuration</span>
+<span class="nv">REACT_APP_BACKEND_URL</span><span class="o">=</span>http://localhost:8000
+<span class="nv">DATABASE_URL</span><span class="o">=</span>postgresql://user:pass@localhost:5432/onboarding
+
+<span class="c1"># AI Integration</span>
+<span class="nv">BABBLEBEAVER_API_KEY</span><span class="o">=</span>your-babblebeaver-key
+<span class="nv">BABBLEBEAVER_API_URL</span><span class="o">=</span>https://labs-babble.buildly.io
+
+<span class="c1"># Payment Processing</span>
+<span class="nv">STRIPE_SECRET_KEY</span><span class="o">=</span>sk_test_your_stripe_key
+<span class="nv">REACT_APP_STRIPE_PUBLISHABLE_KEY</span><span class="o">=</span>pk_test_your_stripe_key
+
+<span class="c1"># Authentication</span>
+<span class="nv">JWT_SECRET</span><span class="o">=</span>your-jwt-secret
+<span class="nv">GOOGLE_CLIENT_ID</span><span class="o">=</span>your-google-oauth-id
+<span class="nv">GITHUB_CLIENT_ID</span><span class="o">=</span>your-github-oauth-id
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="production-deployment">
+<h3>Production Deployment<a class="headerlink" href="#production-deployment" title="Link to this heading"></a></h3>
+<dl>
+<dt><strong>Docker Containerization</strong></dt><dd><ul class="simple">
+<li><p>Production-ready containers with multi-stage builds</p></li>
+<li><p>Kubernetes deployment manifests included</p></li>
+<li><p>Cloud deployment scripts for GCP/AWS</p></li>
+<li><p>Comprehensive environment variable management</p></li>
+</ul>
+</dd>
+<dt><strong>Security Features</strong></dt><dd><ul class="simple">
+<li><p><strong>CSP Configuration</strong>: Disabled for Stripe compatibility, Permissions Policy enabled</p></li>
+<li><p><strong>JWT Authentication</strong>: Secure token management with Labs API</p></li>
+<li><p><strong>HTTPS Enforcement</strong>: Production-ready SSL/TLS configuration</p></li>
+<li><p><strong>API Rate Limiting</strong>: Protection against abuse and overload</p></li>
+</ul>
+</dd>
+<dt><strong>Database Schema</strong></dt><dd><div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">onboarding_submissions</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="n">UUID</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">    </span><span class="n">organization_size</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">,</span>
+<span class="w">    </span><span class="n">product_stage</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">,</span>
+<span class="w">    </span><span class="n">product_scope</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">,</span>
+<span class="w">    </span><span class="n">biggest_challenge</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">team_composition</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">,</span>
+<span class="w">    </span><span class="n">analysis</span><span class="w"> </span><span class="n">JSONB</span><span class="p">,</span>
+<span class="w">    </span><span class="n">selected_recommendation</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">,</span>
+<span class="w">    </span><span class="n">completed_at</span><span class="w"> </span><span class="k">TIMESTAMP</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>Monitoring &amp; Observability</strong></dt><dd><ul class="simple">
+<li><p><strong>Health Endpoints</strong>: <code class="docutils literal notranslate"><span class="pre">/health</span></code> for system monitoring</p></li>
+<li><p><strong>API Documentation</strong>: Auto-generated Swagger at <code class="docutils literal notranslate"><span class="pre">/docs</span></code></p></li>
+<li><p><strong>Error Tracking</strong>: Comprehensive error handling and logging</p></li>
+<li><p><strong>Performance Metrics</strong>: Response time and throughput monitoring</p></li>
 </ul>
 </dd>
 </dl>
 </section>
-<section id="benefits-of-beta-participation">
-<h2>Benefits of Beta Participation<a class="headerlink" href="#benefits-of-beta-participation" title="Link to this heading"></a></h2>
-<dl class="simple">
-<dt><strong>Early Access</strong></dt><dd><ul class="simple">
-<li><p>Experience cutting-edge onboarding technology</p></li>
-<li><p>Influence the development of future features</p></li>
-<li><p>Get priority support during the beta period</p></li>
-</ul>
+</section>
+<section id="api-endpoints-testing">
+<h2>API Endpoints &amp; Testing<a class="headerlink" href="#api-endpoints-testing" title="Link to this heading"></a></h2>
+<section id="core-api-endpoints">
+<h3>Core API Endpoints<a class="headerlink" href="#core-api-endpoints" title="Link to this heading"></a></h3>
+<dl>
+<dt><strong>Step-by-Step Onboarding Flow</strong></dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>POST /onboarding/step1          # Email collection
+POST /onboarding/step2          # Organization size
+POST /onboarding/step3_small    # Product stage (small organizations)
+POST /onboarding/step3_large    # Product scope (large organizations)
+POST /onboarding/step4          # Biggest challenge identification
+POST /onboarding/step5          # Team composition
+POST /onboarding/complete       # Final AI analysis
+POST /onboarding/select-recommendation  # User selection
+</pre></div>
+</div>
 </dd>
-<dt><strong>Enhanced Experience</strong></dt><dd><ul class="simple">
-<li><p>More personalized recommendations</p></li>
-<li><p>Direct feedback channel to the development team</p></li>
-<li><p>Opportunity to shape the final product</p></li>
-</ul>
+<dt><strong>Organization &amp; Analysis</strong></dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>POST /check-organization        # Real-time organization validation
+POST /analyze                   # BabbleBeaver AI analysis
+POST /babblebeaver/architecture # Architecture generation
+GET  /onboarding/status/{email} # Progress tracking
+</pre></div>
+</div>
 </dd>
-<dt><strong>Community Involvement</strong></dt><dd><ul class="simple">
-<li><p>Join the beta user community</p></li>
-<li><p>Share feedback and suggestions</p></li>
-<li><p>Participate in product development discussions</p></li>
-</ul>
+<dt><strong>Authentication &amp; Integration</strong></dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET  /auth/{provider}           # OAuth login (Google/GitHub)
+GET  /auth/callback/{provider}  # OAuth callback handling
+POST /create-buildly-account    # Labs API account creation
+POST /integrate-labs            # Complete Labs integration
+</pre></div>
+</div>
+</dd>
+<dt><strong>Development &amp; Testing</strong></dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET  /health                    # Health check endpoint
+POST /babblebeaver/test         # BabbleBeaver connectivity test
+GET  /docs                      # Interactive API documentation
+</pre></div>
+</div>
 </dd>
 </dl>
 </section>
-<section id="support-feedback">
-<h2>Support &amp; Feedback<a class="headerlink" href="#support-feedback" title="Link to this heading"></a></h2>
-<dl class="simple">
+<section id="example-api-usage">
+<h3>Example API Usage<a class="headerlink" href="#example-api-usage" title="Link to this heading"></a></h3>
+<dl>
+<dt><strong>Starting the Onboarding Process</strong></dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>POST /onboarding/step1
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@company.com&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>Organization Validation</strong></dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>POST /check-organization
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;organization_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TechCorp&quot;</span>
+<span class="p">}</span>
+
+<span class="err">Respo</span><span class="kc">nse</span><span class="p">:</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;exists&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;is_buildly&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Organization name available&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;proceed&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>AI Analysis Request</strong></dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>POST /analyze
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@company.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;company&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TechCorp&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;company_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;small_team&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;use_case&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;web_app&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;experience&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;intermediate&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>Architecture Generation</strong></dt><dd><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>POST /babblebeaver/architecture
+</pre></div>
+</div>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@company.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;application_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;e_commerce&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;application_details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Modern e-commerce platform with payments&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;selected_product&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Buildly Labs&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+</section>
+<section id="support-development">
+<h2>Support &amp; Development<a class="headerlink" href="#support-development" title="Link to this heading"></a></h2>
+<dl>
 <dt><strong>Getting Help</strong></dt><dd><ul class="simple">
-<li><p>Built-in help system within the onboarding flow</p></li>
-<li><p>AI assistant for immediate guidance</p></li>
-<li><p>Contact support for technical issues</p></li>
+<li><p><strong>Interactive Documentation</strong>: Complete API reference at <a class="reference external" href="http://localhost:8000/docs">http://localhost:8000/docs</a></p></li>
+<li><p><strong>GitHub Repository</strong>: <a class="reference external" href="https://github.com/Buildly-Labs/onboarding-service">https://github.com/Buildly-Labs/onboarding-service</a></p></li>
+<li><p><strong>Development Guide</strong>: Comprehensive setup and contribution documentation</p></li>
+<li><p><strong>Issue Tracking</strong>: Bug reports and feature requests via GitHub Issues</p></li>
 </ul>
 </dd>
-<dt><strong>Providing Feedback</strong></dt><dd><p>Beta users are encouraged to share:</p>
-<ul class="simple">
-<li><p>User experience feedback</p></li>
-<li><p>Suggestion for improvements</p></li>
-<li><p>Bug reports or technical issues</p></li>
-<li><p>Feature requests</p></li>
-</ul>
+<dt><strong>Contributing to Development</strong></dt><dd><ol class="arabic simple">
+<li><p>Fork the repository from GitHub</p></li>
+<li><p>Set up local development environment</p></li>
+<li><p>Make changes following the coding standards</p></li>
+<li><p>Add tests for new functionality</p></li>
+<li><p>Update relevant documentation</p></li>
+<li><p>Submit a pull request with detailed description</p></li>
+</ol>
 </dd>
-<dt><strong>Beta Community</strong></dt><dd><ul class="simple">
-<li><p>Access to beta user forums</p></li>
-<li><p>Regular updates on new features</p></li>
-<li><p>Early preview of upcoming enhancements</p></li>
-</ul>
+<dt><strong>Testing the Service</strong></dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Backend API testing</span>
+<span class="nb">cd</span><span class="w"> </span>backend
+python<span class="w"> </span>test_api.py
+
+<span class="c1"># Frontend testing</span>
+<span class="nb">cd</span><span class="w"> </span>frontend
+npm<span class="w"> </span><span class="nb">test</span>
+
+<span class="c1"># Integration testing</span>
+<span class="c1"># Complete the full onboarding flow at http://localhost:3000</span>
+</pre></div>
+</div>
 </dd>
 </dl>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>As this is a beta feature, functionality may change based on user feedback and testing. Please report any issues or suggestions to the development team.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The onboarding service is production-ready with comprehensive error handling, security measures, and scalability features. All integrations are fully functional and tested.</p>
 </div>
 </section>
 <section id="related-documentation">
 <h2>Related Documentation<a class="headerlink" href="#related-documentation" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="../quickstart.html"><span class="doc">Getting Started</span></a> - Account setup after onboarding</p></li>
-<li><p><a class="reference internal" href="registration.html"><span class="doc">Registration</span></a> - Standard registration process</p></li>
-<li><p><a class="reference internal" href="user_management.html"><span class="doc">User Management</span></a> - Team setup and management</p></li>
-<li><p><a class="reference internal" href="../user-guide/BUILDLY-USER-DOCUMENTATION.html"><span class="doc">📚 Buildly Product Labs - Complete User Documentation</span></a> - Complete user guide</p></li>
-</ul>
+<p><strong>Platform Integration</strong>
+- <a class="reference internal" href="../quickstart.html"><span class="doc">Getting Started</span></a> - Getting started after completing onboarding
+- <a class="reference internal" href="registration.html"><span class="doc">Registration</span></a> - Alternative registration methods
+- <a class="reference internal" href="user_management.html"><span class="doc">User Management</span></a> - Team setup and user administration
+- <a class="reference internal" href="../user-guide/BUILDLY-USER-DOCUMENTATION.html"><span class="doc">📚 Buildly Product Labs - Complete User Documentation</span></a> - Complete platform user guide
+- <a class="reference internal" href="../architecture.html"><span class="doc">Architecture</span></a> - Technical architecture and patterns</p>
+<p><strong>Developer Resources</strong>
+- <a class="reference internal" href="../developers/index.html"><span class="doc">For Developers</span></a> - Developer platform documentation
+- <a class="reference internal" href="ai_features.html"><span class="doc">AI Features &amp; BabbleBeaver Integration</span></a> - BabbleBeaver AI integration details
+- <a class="reference internal" href="../troubleshooting/index.html"><span class="doc">Troubleshooting Guide</span></a> - Common issues and solutions</p>
+<p><strong>Technical Integration</strong>
+- Labs API documentation for account management
+- Stripe integration guide for payment processing
+- HubSpot setup for CRM integration
+- BabbleBeaver AI API reference</p>
 </section>
 <section id="external-links">
 <h2>External Links<a class="headerlink" href="#external-links" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://labs-onboarding.buildly.io/">Buildly Labs Onboarding</a> - Start the onboarding process</p></li>
-<li><p><a class="reference external" href="https://buildly.io/">Buildly Main Platform</a> - Learn about all Buildly products</p></li>
-<li><p><a class="reference external" href="https://labs.buildly.io/">Buildly Labs</a> - Experimental features and tools</p></li>
-<li><p><a class="reference external" href="https://foundry.buildly.io/">Buildly Foundry</a> - Rapid development platform</p></li>
-</ul>
+<p><strong>Onboarding Service</strong>
+- <a class="reference external" href="https://labs-onboarding.buildly.io/">Buildly Labs Onboarding</a> - Start the intelligent onboarding process
+- <a class="reference external" href="https://github.com/Buildly-Labs/onboarding-service">Onboarding Service Repository</a> - Source code and documentation
+- <a class="reference external" href="https://labs-onboarding.buildly.io:8000/docs">API Documentation</a> - Interactive Swagger documentation</p>
+<p><strong>Buildly Ecosystem</strong>
+- <a class="reference external" href="https://labs.buildly.io/">Buildly Labs Platform</a> - Developer platform with AI-powered tools
+- <a class="reference external" href="https://foundry.buildly.io/">Buildly Foundry</a> - Startup acceleration program
+- <a class="reference external" href="https://buildly.io/enterprise">Buildly Enterprise</a> - Enterprise solutions
+- <a class="reference external" href="https://buildly.io/">Buildly Main Site</a> - Complete platform overview</p>
+<p><strong>Technical Resources</strong>
+- <a class="reference external" href="https://labs-babble.buildly.io/">BabbleBeaver AI</a> - AI analysis and recommendations
+- <a class="reference external" href="https://labs-api.buildly.io/">Labs API</a> - Core platform APIs
+- <a class="reference external" href="https://github.com/Buildly-Labs">GitHub Organization</a> - Open source repositories</p>
 </section>
 </section>
 
