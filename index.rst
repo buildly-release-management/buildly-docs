@@ -51,6 +51,7 @@ Quick Navigation
    :maxdepth: 2
    :caption: For Developers
 
+   architecture
    developers/index
 
 .. toctree::

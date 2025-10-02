@@ -57,7 +57,6 @@ After email verification:
 3. **Platform Tour**: Take the optional guided tour to familiarize yourself with key features
 
 Essential Setup
----------------
 
 Once logged in, complete these initial setup steps:
 
@@ -68,10 +67,8 @@ Once logged in, complete these initial setup steps:
 
 **2. Configure Notifications**
    - Go to Settings → Notifications
-   - Choose your preferred notification methods
    - Set up email digests and real-time alerts
 
-**3. Connect Integrations** (if available)
    - Link your calendar for scheduling
    - Connect project management tools
    - Set up any required third-party integrations
