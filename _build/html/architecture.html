@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architecture &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=29f8334c" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="For Developers" href="developers/index.html" />
+    <link rel="prev" title="Profile Settings" href="features/profile_settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#architecture-overview">Architecture Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#core-architectural-patterns">Core Architectural Patterns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api-gateway-pattern">1. API Gateway Pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#microservices-architecture">2. Microservices Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-mesh-pattern">3. Data Mesh Pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#centralized-authentication-authorization">4. Centralized Authentication &amp; Authorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-template-pattern">5. Workflow Template Pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-pattern-core-extensions">6. Module Pattern (Core Extensions)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment-architecture">Deployment Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#container-first-design">Container-First Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cloud-native-patterns">Cloud-Native Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#security-architecture">Security Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#defense-in-depth">Defense in Depth</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#performance-scalability">Performance &amp; Scalability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#horizontal-scaling">Horizontal Scaling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#monitoring-observability">Monitoring &amp; Observability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#three-pillars-of-observability">Three Pillars of Observability</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#development-workflow">Development Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ci-cd-pipeline">CI/CD Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#developer-experience">Developer Experience</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#future-architecture-evolution">Future Architecture Evolution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#emerging-patterns">Emerging Patterns</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started-for-developers">Getting Started for Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#related-documentation">Related Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developers/index.html">For Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting/index.html">Troubleshooting Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Architecture</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/architecture.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="architecture">
+<span id="id1"></span><h1>Architecture<a class="headerlink" href="#architecture" title="Link to this heading"></a></h1>
+<p>Buildly Product Labs is built on a modern, scalable microservices architecture that follows proven patterns for enterprise-grade applications. This page outlines the key architectural patterns and design principles that power the platform.</p>
+<nav class="contents local" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#architecture-overview" id="id2">Architecture Overview</a></p></li>
+<li><p><a class="reference internal" href="#core-architectural-patterns" id="id3">Core Architectural Patterns</a></p>
+<ul>
+<li><p><a class="reference internal" href="#api-gateway-pattern" id="id4">1. API Gateway Pattern</a></p></li>
+<li><p><a class="reference internal" href="#microservices-architecture" id="id5">2. Microservices Architecture</a></p></li>
+<li><p><a class="reference internal" href="#data-mesh-pattern" id="id6">3. Data Mesh Pattern</a></p></li>
+<li><p><a class="reference internal" href="#centralized-authentication-authorization" id="id7">4. Centralized Authentication &amp; Authorization</a></p></li>
+<li><p><a class="reference internal" href="#workflow-template-pattern" id="id8">5. Workflow Template Pattern</a></p></li>
+<li><p><a class="reference internal" href="#module-pattern-core-extensions" id="id9">6. Module Pattern (Core Extensions)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#deployment-architecture" id="id10">Deployment Architecture</a></p>
+<ul>
+<li><p><a class="reference internal" href="#container-first-design" id="id11">Container-First Design</a></p></li>
+<li><p><a class="reference internal" href="#cloud-native-patterns" id="id12">Cloud-Native Patterns</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#security-architecture" id="id13">Security Architecture</a></p>
+<ul>
+<li><p><a class="reference internal" href="#defense-in-depth" id="id14">Defense in Depth</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#performance-scalability" id="id15">Performance &amp; Scalability</a></p>
+<ul>
+<li><p><a class="reference internal" href="#horizontal-scaling" id="id16">Horizontal Scaling</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#monitoring-observability" id="id17">Monitoring &amp; Observability</a></p>
+<ul>
+<li><p><a class="reference internal" href="#three-pillars-of-observability" id="id18">Three Pillars of Observability</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#development-workflow" id="id19">Development Workflow</a></p>
+<ul>
+<li><p><a class="reference internal" href="#ci-cd-pipeline" id="id20">CI/CD Pipeline</a></p></li>
+<li><p><a class="reference internal" href="#developer-experience" id="id21">Developer Experience</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#future-architecture-evolution" id="id22">Future Architecture Evolution</a></p>
+<ul>
+<li><p><a class="reference internal" href="#emerging-patterns" id="id23">Emerging Patterns</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#getting-started-for-developers" id="id24">Getting Started for Developers</a></p></li>
+<li><p><a class="reference internal" href="#related-documentation" id="id25">Related Documentation</a></p></li>
+</ul>
+</nav>
+<section id="architecture-overview">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Architecture Overview</a><a class="headerlink" href="#architecture-overview" title="Link to this heading"></a></h2>
+<p>Buildly follows a <strong>component-driven microservices architecture</strong> that emphasizes modularity, scalability, and maintainability. The platform is designed around several core architectural patterns that work together to provide a robust foundation for product management workflows.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Architecture Diagram Coming Soon</strong>: A visual diagram showing the relationship between frontend, gateway, core services, and logic services will be added here.</p>
+</div>
+</section>
+<section id="core-architectural-patterns">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Core Architectural Patterns</a><a class="headerlink" href="#core-architectural-patterns" title="Link to this heading"></a></h2>
+<section id="api-gateway-pattern">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">1. API Gateway Pattern</a><a class="headerlink" href="#api-gateway-pattern" title="Link to this heading"></a></h3>
+<p><strong>Single Point of Entry</strong></p>
+<p>All client requests flow through a centralized API gateway that provides:</p>
+<ul class="simple">
+<li><p><strong>Unified API Surface</strong>: Single URL endpoint (<code class="docutils literal notranslate"><span class="pre">dev-api.myapp.io</span></code>)</p></li>
+<li><p><strong>Service Discovery</strong>: Automatic registration and discovery of backend services</p></li>
+<li><p><strong>Load Balancing</strong>: Intelligent request distribution across service instances</p></li>
+<li><p><strong>Rate Limiting</strong>: Protection against abuse and overload</p></li>
+<li><p><strong>API Versioning</strong>: Support for multiple API versions</p></li>
+</ul>
+<p><strong>Service Registration Flow</strong>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Frontend Application (dev-app.myapp.io)
+        ↓
+API Gateway (dev-api.myapp.io)
+        ↓
+Buildly Core + Logic Services
+        ↓
+- /documents → Documents Service
+- /crm → CRM Service
+- /appointments → Appointments Service
+</pre></div>
+</div>
+</section>
+<section id="microservices-architecture">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">2. Microservices Architecture</a><a class="headerlink" href="#microservices-architecture" title="Link to this heading"></a></h3>
+<p><strong>Logic Services</strong></p>
+<p>Buildly implements a pure microservices pattern where each business capability is implemented as an independent service:</p>
+<ul class="simple">
+<li><p><strong>Documents Service</strong>: File management and document workflows</p></li>
+<li><p><strong>CRM Service</strong>: Customer relationship management</p></li>
+<li><p><strong>Appointments Service</strong>: Scheduling and calendar management</p></li>
+<li><p><strong>Custom Services</strong>: Domain-specific business logic</p></li>
+</ul>
+<p><strong>Key Characteristics</strong>:</p>
+<ul class="simple">
+<li><p><strong>Independence</strong>: Each service can be developed, deployed, and scaled independently</p></li>
+<li><p><strong>OpenAPI Standard</strong>: All services follow OpenAPI/Swagger specifications</p></li>
+<li><p><strong>Database per Service</strong>: Each service owns its data store</p></li>
+<li><p><strong>Technology Agnostic</strong>: Services can use different programming languages and frameworks</p></li>
+</ul>
+</section>
+<section id="data-mesh-pattern">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">3. Data Mesh Pattern</a><a class="headerlink" href="#data-mesh-pattern" title="Link to this heading"></a></h3>
+<p><strong>Unified Data Layer</strong></p>
+<p>The Data Mesh pattern enables seamless data integration across distributed services:</p>
+<p><strong>Data Aggregation</strong>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Service 1 Data → UUID, Name, Type, Description
+Service 2 Data → UUID, Name, Type, Description
+Service 3 Data → UUID, Name, Type, Description
+        ↓
+Data Mesh (Buildly Core)
+        ↓
+Aggregated REST API Response
+</pre></div>
+</div>
+<p><strong>Benefits</strong>:</p>
+<ul class="simple">
+<li><p><strong>Cross-Service Joins</strong>: Query data across multiple services seamlessly</p></li>
+<li><p><strong>Data Consistency</strong>: Maintain referential integrity across service boundaries</p></li>
+<li><p><strong>Performance Optimization</strong>: Intelligent caching and query optimization</p></li>
+<li><p><strong>Schema Evolution</strong>: Handle data model changes gracefully</p></li>
+</ul>
+</section>
+<section id="centralized-authentication-authorization">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">4. Centralized Authentication &amp; Authorization</a><a class="headerlink" href="#centralized-authentication-authorization" title="Link to this heading"></a></h3>
+<p><strong>Single Sign-On (SSO)</strong></p>
+<p>Buildly Core manages authentication and authorization across all services:</p>
+<p><strong>Authentication Flow</strong>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>User Login → Buildly Core → JWT Token → All Services
+</pre></div>
+</div>
+<p><strong>Permission Model</strong>:</p>
+<ul class="simple">
+<li><p><strong>Role-Based Access Control (RBAC)</strong>: Default roles auto-created</p></li>
+<li><p><strong>Service-Level Permissions</strong>: Fine-grained access control per service</p></li>
+<li><p><strong>Cross-Service Authorization</strong>: Unified permission checks</p></li>
+<li><p><strong>User Management</strong>: Centralized user lifecycle management</p></li>
+</ul>
+</section>
+<section id="workflow-template-pattern">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">5. Workflow Template Pattern</a><a class="headerlink" href="#workflow-template-pattern" title="Link to this heading"></a></h3>
+<p><strong>Reusable Process Orchestration</strong></p>
+<p>Buildly implements configurable workflow templates that can be reused across services:</p>
+<p><strong>Template Structure</strong>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Workflow Template
+├── Level 1 → Related Level → Related Workflow
+└── Level 2 → Related Level 1 → Related Workflow 2
+</pre></div>
+</div>
+<p><strong>Capabilities</strong>:</p>
+<ul class="simple">
+<li><p><strong>Process Trees</strong>: Build complex multi-step workflows</p></li>
+<li><p><strong>Navigation Flows</strong>: Define user journey patterns</p></li>
+<li><p><strong>Cross-Service Workflows</strong>: Orchestrate processes across multiple services</p></li>
+<li><p><strong>Template Reusability</strong>: Share workflow patterns across projects</p></li>
+</ul>
+</section>
+<section id="module-pattern-core-extensions">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">6. Module Pattern (Core Extensions)</a><a class="headerlink" href="#module-pattern-core-extensions" title="Link to this heading"></a></h3>
+<p><strong>Pluggable Architecture</strong></p>
+<p>Buildly Core supports modules that run within the core application:</p>
+<ul class="simple">
+<li><p><strong>Connection Modules</strong>: Service integration and communication</p></li>
+<li><p><strong>Security Modules</strong>: Authentication and authorization extensions</p></li>
+<li><p><strong>Data Transport Modules</strong>: Message queuing and event processing</p></li>
+<li><p><strong>Partner Integration Modules</strong>: Third-party system connectors</p></li>
+</ul>
+</section>
+</section>
+<section id="deployment-architecture">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Deployment Architecture</a><a class="headerlink" href="#deployment-architecture" title="Link to this heading"></a></h2>
+<section id="container-first-design">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Container-First Design</a><a class="headerlink" href="#container-first-design" title="Link to this heading"></a></h3>
+<p>Buildly is designed for modern container orchestration platforms:</p>
+<p><strong>Kubernetes Deployment</strong>:</p>
+<ul class="simple">
+<li><p><strong>Namespace Isolation</strong>: Each application gets its own Kubernetes namespace</p></li>
+<li><p><strong>Pod Management</strong>: Automatic pod creation for Buildly Core and Logic Services</p></li>
+<li><p><strong>Service Mesh</strong>: Istio/Linkerd integration for service communication</p></li>
+<li><p><strong>Auto-Scaling</strong>: Horizontal pod autoscaling based on load</p></li>
+</ul>
+<p><strong>Database Strategy</strong>:</p>
+<ul class="simple">
+<li><p><strong>Database per Service</strong>: Each Logic Service has its own database</p></li>
+<li><p><strong>Cluster Management</strong>: Databases deployed in managed clusters</p></li>
+<li><p><strong>Backup &amp; Recovery</strong>: Automated backup strategies per service</p></li>
+<li><p><strong>Migration Support</strong>: Database schema evolution and migration tools</p></li>
+</ul>
+</section>
+<section id="cloud-native-patterns">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Cloud-Native Patterns</a><a class="headerlink" href="#cloud-native-patterns" title="Link to this heading"></a></h3>
+<p><strong>Infrastructure as Code</strong>:</p>
+<ul class="simple">
+<li><p><strong>Automated Provisioning</strong>: Infrastructure deployment via Terraform/CloudFormation</p></li>
+<li><p><strong>Environment Parity</strong>: Consistent environments from development to production</p></li>
+<li><p><strong>Blue-Green Deployments</strong>: Zero-downtime deployment strategies</p></li>
+<li><p><strong>Monitoring &amp; Observability</strong>: Integrated logging, metrics, and tracing</p></li>
+</ul>
+</section>
+</section>
+<section id="security-architecture">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Security Architecture</a><a class="headerlink" href="#security-architecture" title="Link to this heading"></a></h2>
+<section id="defense-in-depth">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Defense in Depth</a><a class="headerlink" href="#defense-in-depth" title="Link to this heading"></a></h3>
+<p><strong>Multiple Security Layers</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Network Security</strong>: VPC isolation, security groups, and network policies</p></li>
+<li><p><strong>API Security</strong>: OAuth 2.0, JWT tokens, and API rate limiting</p></li>
+<li><p><strong>Application Security</strong>: Input validation, output encoding, and CSRF protection</p></li>
+<li><p><strong>Data Security</strong>: Encryption at rest and in transit</p></li>
+<li><p><strong>Infrastructure Security</strong>: Container scanning and vulnerability management</p></li>
+</ol>
+<p><strong>Compliance &amp; Governance</strong>:</p>
+<ul class="simple">
+<li><p><strong>GDPR Compliance</strong>: Data privacy and user consent management</p></li>
+<li><p><strong>SOC 2 Type II</strong>: Security and availability controls</p></li>
+<li><p><strong>OWASP Top 10</strong>: Protection against common web vulnerabilities</p></li>
+<li><p><strong>Audit Logging</strong>: Comprehensive audit trails for compliance</p></li>
+</ul>
+</section>
+</section>
+<section id="performance-scalability">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Performance &amp; Scalability</a><a class="headerlink" href="#performance-scalability" title="Link to this heading"></a></h2>
+<section id="horizontal-scaling">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Horizontal Scaling</a><a class="headerlink" href="#horizontal-scaling" title="Link to this heading"></a></h3>
+<p><strong>Auto-Scaling Capabilities</strong>:</p>
+<ul class="simple">
+<li><p><strong>Load-Based Scaling</strong>: Automatic scaling based on CPU/memory usage</p></li>
+<li><p><strong>Queue-Based Scaling</strong>: Scale based on message queue depth</p></li>
+<li><p><strong>Predictive Scaling</strong>: ML-driven capacity planning</p></li>
+<li><p><strong>Multi-Region Deployment</strong>: Global distribution for low latency</p></li>
+</ul>
+<p><strong>Performance Optimization</strong>:</p>
+<ul class="simple">
+<li><p><strong>Caching Layers</strong>: Redis/Memcached for session and application caching</p></li>
+<li><p><strong>CDN Integration</strong>: Static asset delivery via CloudFront/CloudFlare</p></li>
+<li><p><strong>Database Optimization</strong>: Connection pooling and query optimization</p></li>
+<li><p><strong>Async Processing</strong>: Background job processing for long-running tasks</p></li>
+</ul>
+</section>
+</section>
+<section id="monitoring-observability">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Monitoring &amp; Observability</a><a class="headerlink" href="#monitoring-observability" title="Link to this heading"></a></h2>
+<section id="three-pillars-of-observability">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Three Pillars of Observability</a><a class="headerlink" href="#three-pillars-of-observability" title="Link to this heading"></a></h3>
+<p><strong>Metrics</strong>:</p>
+<ul class="simple">
+<li><p><strong>Application Metrics</strong>: Response times, throughput, error rates</p></li>
+<li><p><strong>Infrastructure Metrics</strong>: CPU, memory, disk, network utilization</p></li>
+<li><p><strong>Business Metrics</strong>: Feature usage, user engagement, conversion rates</p></li>
+</ul>
+<p><strong>Logging</strong>:</p>
+<ul class="simple">
+<li><p><strong>Structured Logging</strong>: JSON-formatted logs with correlation IDs</p></li>
+<li><p><strong>Centralized Logging</strong>: ELK/EFK stack for log aggregation</p></li>
+<li><p><strong>Log Retention</strong>: Configurable retention policies per environment</p></li>
+</ul>
+<p><strong>Tracing</strong>:</p>
+<ul class="simple">
+<li><p><strong>Distributed Tracing</strong>: OpenTracing/Jaeger for request flow visualization</p></li>
+<li><p><strong>Performance Profiling</strong>: APM tools for bottleneck identification</p></li>
+<li><p><strong>Error Tracking</strong>: Sentry/Rollbar for real-time error monitoring</p></li>
+</ul>
+</section>
+</section>
+<section id="development-workflow">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">Development Workflow</a><a class="headerlink" href="#development-workflow" title="Link to this heading"></a></h2>
+<section id="ci-cd-pipeline">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">CI/CD Pipeline</a><a class="headerlink" href="#ci-cd-pipeline" title="Link to this heading"></a></h3>
+<p><strong>Continuous Integration</strong>:</p>
+<ul class="simple">
+<li><p><strong>Automated Testing</strong>: Unit, integration, and end-to-end test suites</p></li>
+<li><p><strong>Code Quality</strong>: SonarQube/CodeClimate for static analysis</p></li>
+<li><p><strong>Security Scanning</strong>: Container and dependency vulnerability scanning</p></li>
+<li><p><strong>Build Automation</strong>: Docker image building and registry management</p></li>
+</ul>
+<p><strong>Continuous Deployment</strong>:</p>
+<ul class="simple">
+<li><p><strong>GitOps Workflow</strong>: Infrastructure and application deployment via Git</p></li>
+<li><p><strong>Environment Promotion</strong>: Automated promotion from dev → staging → production</p></li>
+<li><p><strong>Rollback Capabilities</strong>: One-click rollback to previous versions</p></li>
+<li><p><strong>Feature Flags</strong>: Gradual feature rollout and A/B testing</p></li>
+</ul>
+</section>
+<section id="developer-experience">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Developer Experience</a><a class="headerlink" href="#developer-experience" title="Link to this heading"></a></h3>
+<p><strong>Local Development</strong>:</p>
+<ul class="simple">
+<li><p><strong>Docker Compose</strong>: One-command local environment setup</p></li>
+<li><p><strong>Hot Reloading</strong>: Real-time code changes without restarts</p></li>
+<li><p><strong>Mock Services</strong>: Stub external dependencies for isolated testing</p></li>
+<li><p><strong>Development Tools</strong>: Integrated debugging and profiling tools</p></li>
+</ul>
+</section>
+</section>
+<section id="future-architecture-evolution">
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">Future Architecture Evolution</a><a class="headerlink" href="#future-architecture-evolution" title="Link to this heading"></a></h2>
+<section id="emerging-patterns">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Emerging Patterns</a><a class="headerlink" href="#emerging-patterns" title="Link to this heading"></a></h3>
+<p><strong>Planned Enhancements</strong>:</p>
+<ul class="simple">
+<li><p><strong>Event-Driven Architecture</strong>: Implement event sourcing and CQRS patterns</p></li>
+<li><p><strong>GraphQL Federation</strong>: Unified GraphQL schema across microservices</p></li>
+<li><p><strong>Serverless Functions</strong>: Edge computing for specialized workloads</p></li>
+<li><p><strong>AI/ML Pipeline</strong>: Integrated machine learning model deployment</p></li>
+</ul>
+<p><strong>Technology Roadmap</strong>:</p>
+<ul class="simple">
+<li><p><strong>Service Mesh</strong>: Advanced traffic management and security</p></li>
+<li><p><strong>Multi-Cloud</strong>: Avoid vendor lock-in with multi-cloud deployments</p></li>
+<li><p><strong>Edge Computing</strong>: Reduce latency with edge node deployment</p></li>
+<li><p><strong>Blockchain Integration</strong>: Immutable audit trails and smart contracts</p></li>
+</ul>
+</section>
+</section>
+<section id="getting-started-for-developers">
+<h2><a class="toc-backref" href="#id24" role="doc-backlink">Getting Started for Developers</a><a class="headerlink" href="#getting-started-for-developers" title="Link to this heading"></a></h2>
+<p><strong>Repository Structure</strong>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>buildly-ecosystem/
+├── buildly-core/          # Core gateway and auth service
+├── buildly-ui-angular/    # Frontend application framework
+├── logic-services/        # Business logic microservices
+│   ├── documents-service/
+│   ├── crm-service/
+│   └── appointments-service/
+└── infrastructure/        # Deployment and infrastructure code
+    ├── kubernetes/
+    ├── terraform/
+    └── docker/
+</pre></div>
+</div>
+<p><strong>Quick Start</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Clone Repositories</strong>: Get the core platform and desired logic services</p></li>
+<li><p><strong>Environment Setup</strong>: Configure local development environment with Docker</p></li>
+<li><p><strong>Service Development</strong>: Build new logic services using provided templates</p></li>
+<li><p><strong>Integration Testing</strong>: Test service integration with Buildly Core</p></li>
+<li><p><strong>Deployment</strong>: Deploy to Kubernetes cluster using provided manifests</p></li>
+</ol>
+</section>
+<section id="related-documentation">
+<h2><a class="toc-backref" href="#id25" role="doc-backlink">Related Documentation</a><a class="headerlink" href="#related-documentation" title="Link to this heading"></a></h2>
+<p>For more detailed information, see:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="developers/index.html"><span class="doc">For Developers</span></a> - Developer setup and contribution guidelines</p></li>
+<li><p><a class="reference internal" href="modules/index.html"><span class="doc">Modules</span></a> - API documentation for core modules</p></li>
+<li><p><a class="reference internal" href="troubleshooting/index.html"><span class="doc">Troubleshooting Guide</span></a> - Common architectural issues and solutions</p></li>
+<li><p><a class="reference external" href="https://github.com/buildlyio/buildly-core">Buildly Core Repository</a> - Core platform source code</p></li>
+<li><p><a class="reference external" href="https://github.com/buildlyio">Logic Services Examples</a> - Sample microservice implementations</p></li>
+</ul>
+<p><strong>External Resources</strong>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://microservices.io/patterns/">Microservices Patterns</a> - Industry best practices</p></li>
+<li><p><a class="reference external" href="https://swagger.io/specification/">OpenAPI Specification</a> - API design standards</p></li>
+<li><p><a class="reference external" href="https://kubernetes.io/docs/">Kubernetes Documentation</a> - Container orchestration</p></li>
+<li><p><a class="reference external" href="https://tools.ietf.org/html/rfc6749">OAuth 2.0 RFC</a> - Authentication standards</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="features/profile_settings.html" class="btn btn-neutral float-left" title="Profile Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="developers/index.html" class="btn btn-neutral float-right" title="For Developers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
