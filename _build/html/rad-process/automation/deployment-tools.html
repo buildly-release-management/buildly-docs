@@ -1,0 +1,310 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deployment Tools &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=29f8334c" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Future Enhancements" href="future-enhancements.html" />
+    <link rel="prev" title="Current Automation Capabilities" href="current-capabilities.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RAD Process</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RAD Process: A Replacement for Agile</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#rad-at-a-glance">RAD at a Glance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#core-principles">Core Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#babblebeaver-ai-that-amplifies-the-team">BabbleBeaver: AI That Amplifies the Team</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#automation-tools">Automation Tools</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="current-capabilities.html">Current Automation Capabilities</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Deployment Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#deployment-scripts">Deployment Scripts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#feature-flag-management">Feature Flag Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#monitoring-alerts">Monitoring &amp; Alerts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#continuous-deployment-pipeline">Continuous Deployment Pipeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="future-enhancements.html">Future Enhancements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#why-rad-not-capital-a-agile">Why RAD, Not Capital-A Agile?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-started-with-rad">Getting Started with RAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developers/index.html">For Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">RAD Process: A Replacement for Agile</a></li>
+      <li class="breadcrumb-item active">Deployment Tools</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/rad-process/automation/deployment-tools.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="deployment-tools">
+<span id="automation-deployment-tools"></span><h1>Deployment Tools<a class="headerlink" href="#deployment-tools" title="Link to this heading"></a></h1>
+<p>Buildly Labs provides automated deployment tools that enable continuous delivery and the adaptive cadence principle of RAD.</p>
+<section id="deployment-scripts">
+<h2>Deployment Scripts<a class="headerlink" href="#deployment-scripts" title="Link to this heading"></a></h2>
+<p><strong>AWS Deployment Automation</strong></p>
+<p>Located at <code class="docutils literal notranslate"><span class="pre">automation/deploy-aws.sh</span></code>, this script automates deployment to AWS infrastructure:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># Deploy to AWS with automated build, test, and deployment</span>
+
+./automation/deploy-aws.sh<span class="w"> </span>&lt;environment&gt;<span class="w"> </span>&lt;branch&gt;
+
+<span class="c1"># Examples:</span>
+./automation/deploy-aws.sh<span class="w"> </span>production<span class="w"> </span>main
+./automation/deploy-aws.sh<span class="w"> </span>staging<span class="w"> </span>develop
+./automation/deploy-aws.sh<span class="w"> </span>qa<span class="w"> </span>feature-branch
+</pre></div>
+</div>
+<p><strong>Features:</strong></p>
+<ul class="simple">
+<li><p>Automated build process</p></li>
+<li><p>Pre-deployment testing</p></li>
+<li><p>S3 bucket upload</p></li>
+<li><p>CloudFront cache invalidation</p></li>
+<li><p>Environment variable management</p></li>
+<li><p>Rollback capability</p></li>
+<li><p>Deployment notifications</p></li>
+</ul>
+<p><strong>General Deployment Script</strong></p>
+<p>Located at <code class="docutils literal notranslate"><span class="pre">automation/deploy.sh</span></code> for flexible deployment scenarios:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># Flexible deployment for various environments</span>
+
+./automation/deploy.sh<span class="w"> </span>&lt;environment&gt;<span class="w"> </span>&lt;options&gt;
+</pre></div>
+</div>
+<p><strong>Capabilities:</strong></p>
+<ul class="simple">
+<li><p>Database migrations</p></li>
+<li><p>Environment configuration</p></li>
+<li><p>Service orchestration</p></li>
+<li><p>Health checks</p></li>
+<li><p>Smoke testing</p></li>
+<li><p>Status reporting</p></li>
+</ul>
+</section>
+<section id="feature-flag-management">
+<h2>Feature Flag Management<a class="headerlink" href="#feature-flag-management" title="Link to this heading"></a></h2>
+<p><strong>Deployment Without Release</strong></p>
+<p>Deploy code safely with features disabled:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Deploy to production, feature disabled</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">featureFlags</span><span class="p">.</span><span class="nx">isEnabled</span><span class="p">(</span><span class="s1">&#39;new-payment-flow&#39;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">NewPaymentFlow</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">CurrentPaymentFlow</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Gradual Rollout</strong></p>
+<p>Control feature exposure:</p>
+<ul class="simple">
+<li><p>Enable for internal team first</p></li>
+<li><p>Gradual percentage-based rollout</p></li>
+<li><p>User segment targeting</p></li>
+<li><p>A/B testing support</p></li>
+<li><p>Instant rollback via flag toggle</p></li>
+</ul>
+</section>
+<section id="monitoring-alerts">
+<h2>Monitoring &amp; Alerts<a class="headerlink" href="#monitoring-alerts" title="Link to this heading"></a></h2>
+<p><strong>Deployment Monitoring</strong></p>
+<p>Automatic monitoring of deployments:</p>
+<ul class="simple">
+<li><p>Error rate tracking</p></li>
+<li><p>Performance metrics</p></li>
+<li><p>User impact assessment</p></li>
+<li><p>Automatic alerting</p></li>
+<li><p>Rollback triggers</p></li>
+</ul>
+<p><strong>Health Checks</strong></p>
+<p>Automated verification after deployment:</p>
+<ul class="simple">
+<li><p>API endpoint validation</p></li>
+<li><p>Database connectivity</p></li>
+<li><p>Third-party service checks</p></li>
+<li><p>Feature functionality tests</p></li>
+<li><p>Performance benchmarks</p></li>
+</ul>
+</section>
+<section id="continuous-deployment-pipeline">
+<h2>Continuous Deployment Pipeline<a class="headerlink" href="#continuous-deployment-pipeline" title="Link to this heading"></a></h2>
+<p><strong>Automated Flow:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Code Commit
+     ↓
+Automated Tests
+     ↓
+Build &amp; Package
+     ↓
+Deploy to Staging
+     ↓
+Automated Testing
+     ↓
+Manual Approval (optional)
+     ↓
+Deploy to Production
+     ↓
+Monitor &amp; Verify
+</pre></div>
+</div>
+<p><strong>Integration Points:</strong></p>
+<ul class="simple">
+<li><p>GitHub Actions / GitLab CI</p></li>
+<li><p>Automated testing frameworks</p></li>
+<li><p>Docker containerization</p></li>
+<li><p>Kubernetes orchestration</p></li>
+<li><p>Cloud platform APIs</p></li>
+<li><p>Monitoring services</p></li>
+</ul>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h2>
+<p><strong>Safe Deployments:</strong></p>
+<ol class="arabic simple">
+<li><p>Always deploy to staging first</p></li>
+<li><p>Run automated tests</p></li>
+<li><p>Use feature flags for new features</p></li>
+<li><p>Monitor metrics after deployment</p></li>
+<li><p>Have rollback plan ready</p></li>
+</ol>
+<p><strong>Automation Tips:</strong></p>
+<ul class="simple">
+<li><p>Keep deployment scripts in version control</p></li>
+<li><p>Test deployment process regularly</p></li>
+<li><p>Document deployment procedures</p></li>
+<li><p>Automate rollback procedures</p></li>
+<li><p>Monitor deployment metrics</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="current-capabilities.html"><span class="doc">Current Automation Capabilities</span></a> - All automation features</p></li>
+<li><p><a class="reference internal" href="../principles/adaptive-cadence.html"><span class="doc">Adaptive Cadence</span></a> - Ship when ready philosophy</p></li>
+<li><p><a class="reference internal" href="future-enhancements.html"><span class="doc">Future Enhancements</span></a> - Upcoming deployment features</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="current-capabilities.html" class="btn btn-neutral float-left" title="Current Automation Capabilities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="future-enhancements.html" class="btn btn-neutral float-right" title="Future Enhancements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

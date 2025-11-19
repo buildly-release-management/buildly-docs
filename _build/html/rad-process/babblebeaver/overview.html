@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BabbleBeaver Overview &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=29f8334c" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BabbleBeaver: Current Features" href="current-features.html" />
+    <link rel="prev" title="Adaptive Cadence" href="../principles/adaptive-cadence.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RAD Process</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RAD Process: A Replacement for Agile</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#rad-at-a-glance">RAD at a Glance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#core-principles">Core Principles</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#babblebeaver-ai-that-amplifies-the-team">BabbleBeaver: AI That Amplifies the Team</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">BabbleBeaver Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-babblebeaver">What is BabbleBeaver?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#core-philosophy">Core Philosophy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#key-capabilities">Key Capabilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-babblebeaver-learns">How BabbleBeaver Learns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#integration-with-rad-principles">Integration with RAD Principles</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-babblebeaver-interface">The BabbleBeaver Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getting-started-with-babblebeaver">Getting Started with BabbleBeaver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#best-practices">Best Practices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#privacy-security">Privacy &amp; Security</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-next">What’s Next?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="current-features.html">BabbleBeaver: Current Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coming-soon.html">BabbleBeaver: Coming Soon Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#automation-tools">Automation Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#why-rad-not-capital-a-agile">Why RAD, Not Capital-A Agile?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-started-with-rad">Getting Started with RAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developers/index.html">For Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">RAD Process: A Replacement for Agile</a></li>
+      <li class="breadcrumb-item active">BabbleBeaver Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/rad-process/babblebeaver/overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="babblebeaver-overview">
+<span id="id1"></span><h1>BabbleBeaver Overview<a class="headerlink" href="#babblebeaver-overview" title="Link to this heading"></a></h1>
+<p>BabbleBeaver is Buildly’s proprietary AI assistant that integrates seamlessly into the RAD process, acting as a collaborative layer rather than just a tool.</p>
+<section id="what-is-babblebeaver">
+<h2>What is BabbleBeaver?<a class="headerlink" href="#what-is-babblebeaver" title="Link to this heading"></a></h2>
+<p><strong>BabbleBeaver</strong> is an AI-powered team member that:</p>
+<ul class="simple">
+<li><p><strong>Plans</strong> - Helps decompose work and create realistic timelines</p></li>
+<li><p><strong>Surfaces Risk</strong> - Identifies blockers and potential issues early</p></li>
+<li><p><strong>Keeps Context</strong> - Links decisions to code and design</p></li>
+<li><p><strong>Enables Reflection</strong> - Turns daily signals into live retrospectives</p></li>
+<li><p><strong>Amplifies Teams</strong> - Automates repetition so humans focus on creativity</p></li>
+</ul>
+<p>Unlike generic AI assistants, BabbleBeaver is purpose-built for <strong>product management and software development</strong> within the RAD framework.</p>
+</section>
+<section id="core-philosophy">
+<h2>Core Philosophy<a class="headerlink" href="#core-philosophy" title="Link to this heading"></a></h2>
+<p><strong>AI as Collaboration, Not Automation</strong></p>
+<p>BabbleBeaver isn’t about replacing humans—it’s about amplifying them:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>BabbleBeaver Handles</strong></p></th>
+<th class="head"><p><strong>Humans Handle</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Data aggregation and analysis</p></td>
+<td><p>Strategic direction and vision</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pattern recognition</p></td>
+<td><p>Creative problem solving</p></td>
+</tr>
+<tr class="row-even"><td><p>Routine task management</p></td>
+<td><p>Complex decision making</p></td>
+</tr>
+<tr class="row-odd"><td><p>Progress tracking</p></td>
+<td><p>Stakeholder relationships</p></td>
+</tr>
+<tr class="row-even"><td><p>Risk detection</p></td>
+<td><p>Risk mitigation strategies</p></td>
+</tr>
+<tr class="row-odd"><td><p>Context preservation</p></td>
+<td><p>Context interpretation</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Transparent and Explainable</strong></p>
+<p>Every BabbleBeaver recommendation includes:</p>
+<ul class="simple">
+<li><p><strong>Why</strong> - The reasoning behind suggestions</p></li>
+<li><p><strong>How</strong> - The data and algorithms used</p></li>
+<li><p><strong>What</strong> - The expected impact and alternatives</p></li>
+<li><p><strong>Confidence</strong> - How certain the AI is about the recommendation</p></li>
+</ul>
+</section>
+<section id="key-capabilities">
+<h2>Key Capabilities<a class="headerlink" href="#key-capabilities" title="Link to this heading"></a></h2>
+<p><strong>1. Project Planning Intelligence</strong></p>
+<ul class="simple">
+<li><p>Realistic timeline generation based on historical data</p></li>
+<li><p>Dependency detection and critical path analysis</p></li>
+<li><p>Resource allocation recommendations</p></li>
+<li><p>Risk assessment and mitigation suggestions</p></li>
+</ul>
+<p><strong>2. Task Management</strong></p>
+<ul class="simple">
+<li><p>Automatic task categorization and prioritization</p></li>
+<li><p>Effort estimation using machine learning</p></li>
+<li><p>Progress prediction and completion forecasting</p></li>
+<li><p>Smart task assignment based on skills and capacity</p></li>
+</ul>
+<p><strong>3. Team Analytics</strong></p>
+<ul class="simple">
+<li><p>Workload balance monitoring and alerts</p></li>
+<li><p>Productivity pattern identification</p></li>
+<li><p>Skill gap analysis and training recommendations</p></li>
+<li><p>Collaboration insights and suggestions</p></li>
+</ul>
+<p><strong>4. Continuous Reflection</strong></p>
+<ul class="simple">
+<li><p>Real-time blocker detection</p></li>
+<li><p>Daily team pulse summaries</p></li>
+<li><p>Weekly pattern analysis</p></li>
+<li><p>Monthly deep-dive insights</p></li>
+</ul>
+<p><strong>5. Context Management</strong></p>
+<ul class="simple">
+<li><p>Decision tracking and linking</p></li>
+<li><p>Automatic context preservation</p></li>
+<li><p>Smart search across tools</p></li>
+<li><p>Knowledge base building</p></li>
+</ul>
+</section>
+<section id="how-babblebeaver-learns">
+<h2>How BabbleBeaver Learns<a class="headerlink" href="#how-babblebeaver-learns" title="Link to this heading"></a></h2>
+<p><strong>Continuous Improvement</strong></p>
+<p>BabbleBeaver gets smarter over time through:</p>
+<p><strong>Team Feedback</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Every AI suggestion includes:
+
+[👍 Helpful] [👎 Not Helpful] [Provide Details]
+
+Your feedback trains the AI to:
+- Better understand your team&#39;s preferences
+- Improve estimation accuracy
+- Refine recommendations
+- Adapt to your workflow
+</pre></div>
+</div>
+<p><strong>Historical Data Analysis</strong></p>
+<ul class="simple">
+<li><p>Completed task durations inform future estimates</p></li>
+<li><p>Decision outcomes improve future recommendations</p></li>
+<li><p>Team patterns shape workload predictions</p></li>
+<li><p>Code review times optimize process suggestions</p></li>
+</ul>
+<p><strong>External Benchmarks</strong></p>
+<p>BabbleBeaver incorporates:</p>
+<ul class="simple">
+<li><p>Industry best practices</p></li>
+<li><p>Anonymized data from other Buildly teams</p></li>
+<li><p>Academic research on team productivity</p></li>
+<li><p>Latest AI and ML advancements</p></li>
+</ul>
+<p><strong>Privacy-Preserving Learning</strong></p>
+<ul class="simple">
+<li><p>Your data stays private</p></li>
+<li><p>Only aggregated, anonymized patterns are shared</p></li>
+<li><p>You control what data BabbleBeaver can access</p></li>
+<li><p>Full transparency on data usage</p></li>
+</ul>
+</section>
+<section id="integration-with-rad-principles">
+<h2>Integration with RAD Principles<a class="headerlink" href="#integration-with-rad-principles" title="Link to this heading"></a></h2>
+<p>BabbleBeaver directly supports each RAD principle:</p>
+<p><strong>Flow Over Frameworks</strong></p>
+<ul class="simple">
+<li><p>Suggests optimal feature decomposition</p></li>
+<li><p>Predicts realistic completion timelines</p></li>
+<li><p>Identifies when to merge or split work</p></li>
+</ul>
+<p><strong>Automation as Collaboration</strong></p>
+<ul class="simple">
+<li><p>Handles repetitive tasks (reporting, tracking)</p></li>
+<li><p>Frees humans for creative work</p></li>
+<li><p>Learns from team decisions</p></li>
+</ul>
+<p><strong>Context Everywhere</strong></p>
+<ul class="simple">
+<li><p>Links decisions to code and designs</p></li>
+<li><p>Makes all context searchable</p></li>
+<li><p>Preserves institutional knowledge</p></li>
+</ul>
+<p><strong>Continuous Reflection</strong></p>
+<ul class="simple">
+<li><p>Provides real-time team insights</p></li>
+<li><p>Summarizes daily signals</p></li>
+<li><p>Generates micro-retrospectives</p></li>
+</ul>
+<p><strong>Transparency by Default</strong></p>
+<ul class="simple">
+<li><p>Explains all recommendations</p></li>
+<li><p>Shows confidence levels</p></li>
+<li><p>Allows overrides with feedback</p></li>
+</ul>
+<p><strong>Adaptive Cadence</strong></p>
+<ul class="simple">
+<li><p>Monitors feature readiness</p></li>
+<li><p>Suggests optimal release timing</p></li>
+<li><p>Tracks deployment metrics</p></li>
+</ul>
+</section>
+<section id="the-babblebeaver-interface">
+<h2>The BabbleBeaver Interface<a class="headerlink" href="#the-babblebeaver-interface" title="Link to this heading"></a></h2>
+<p><strong>Chat-Based Interaction</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>You: &quot;How is the mobile app project progressing?&quot;
+
+BabbleBeaver:
+📊 Mobile App v2 - Status Update
+
+Overall Progress: 67% complete (on track)
+
+Completed This Week:
+✅ Authentication flow (UI + Backend)
+✅ Profile settings page
+✅ 8 bug fixes from testing
+
+In Progress:
+🔄 Push notifications (80% complete, due in 2 days)
+🔄 Dark mode implementation (40% complete, due in 5 days)
+
+Upcoming:
+⏳ Payment integration (starts next week)
+⏳ Analytics dashboard
+
+Potential Issues:
+⚠️ Push notification testing delayed 1 day (vendor API issue)
+
+Predicted Completion: Feb 28 (high confidence: 85%)
+</pre></div>
+</div>
+<p><strong>Dashboard Widgets</strong></p>
+<p>BabbleBeaver insights appear throughout the platform:</p>
+<ul class="simple">
+<li><p>Team health scores on main dashboard</p></li>
+<li><p>Task suggestions in kanban boards</p></li>
+<li><p>Risk alerts on project pages</p></li>
+<li><p>Context links in code reviews</p></li>
+</ul>
+<p><strong>Proactive Notifications</strong></p>
+<p>BabbleBeaver alerts you when:</p>
+<ul class="simple">
+<li><p>Blockers are detected</p></li>
+<li><p>Timelines need adjustment</p></li>
+<li><p>Team balance is off</p></li>
+<li><p>Decisions need capturing</p></li>
+<li><p>Features are ready to ship</p></li>
+</ul>
+<p><strong>Natural Language Queries</strong></p>
+<p>Ask questions in plain English:</p>
+<ul class="simple">
+<li><p>“What should I work on next?”</p></li>
+<li><p>“Why is the backend team slower this week?”</p></li>
+<li><p>“When will the checkout feature be ready?”</p></li>
+<li><p>“Who has experience with GraphQL?”</p></li>
+</ul>
+</section>
+<section id="getting-started-with-babblebeaver">
+<h2>Getting Started with BabbleBeaver<a class="headerlink" href="#getting-started-with-babblebeaver" title="Link to this heading"></a></h2>
+<p><strong>Step 1: Enable AI Features</strong></p>
+<p>Navigate to: Settings → AI &amp; Automation</p>
+<ul class="simple">
+<li><p>Toggle BabbleBeaver integration ON</p></li>
+<li><p>Configure notification preferences</p></li>
+<li><p>Set data access permissions</p></li>
+<li><p>Review privacy settings</p></li>
+</ul>
+<p><strong>Step 2: Initial Setup</strong></p>
+<p>BabbleBeaver will:</p>
+<ul class="simple">
+<li><p>Analyze your existing projects</p></li>
+<li><p>Learn your team structure</p></li>
+<li><p>Understand your workflow</p></li>
+<li><p>Calibrate to your preferences</p></li>
+</ul>
+<p><strong>Step 3: Start Simple</strong></p>
+<p>Begin with basic interactions:</p>
+<ul class="simple">
+<li><p>Ask status questions</p></li>
+<li><p>Review daily summaries</p></li>
+<li><p>Try AI suggestions</p></li>
+<li><p>Provide feedback</p></li>
+</ul>
+<p><strong>Step 4: Expand Usage</strong></p>
+<p>As you get comfortable:</p>
+<ul class="simple">
+<li><p>Use advanced analytics</p></li>
+<li><p>Set up custom alerts</p></li>
+<li><p>Create automation rules</p></li>
+<li><p>Integrate with more tools</p></li>
+</ul>
+</section>
+<section id="best-practices">
+<h2>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h2>
+<p><strong>1. Trust but Verify</strong></p>
+<ul class="simple">
+<li><p>Review AI recommendations critically</p></li>
+<li><p>Apply human judgment to final decisions</p></li>
+<li><p>Override when you know better</p></li>
+<li><p>Provide feedback to improve accuracy</p></li>
+</ul>
+<p><strong>2. Provide Rich Context</strong></p>
+<p>Help BabbleBeaver help you:</p>
+<ul class="simple">
+<li><p>Write clear task descriptions</p></li>
+<li><p>Document decisions as you make them</p></li>
+<li><p>Link related items</p></li>
+<li><p>Update status regularly</p></li>
+</ul>
+<p><strong>3. Regular Engagement</strong></p>
+<p>Make BabbleBeaver part of your routine:</p>
+<ul class="simple">
+<li><p>Review morning summaries daily</p></li>
+<li><p>Ask questions when confused</p></li>
+<li><p>Check weekly insights</p></li>
+<li><p>Act on risk alerts promptly</p></li>
+</ul>
+<p><strong>4. Team Alignment</strong></p>
+<p>Ensure everyone uses BabbleBeaver:</p>
+<ul class="simple">
+<li><p>Train team on AI features</p></li>
+<li><p>Establish conventions for AI interaction</p></li>
+<li><p>Share successful patterns</p></li>
+<li><p>Discuss AI insights together</p></li>
+</ul>
+</section>
+<section id="privacy-security">
+<h2>Privacy &amp; Security<a class="headerlink" href="#privacy-security" title="Link to this heading"></a></h2>
+<p><strong>Data Protection</strong></p>
+<ul class="simple">
+<li><p>End-to-end encryption for all data</p></li>
+<li><p>SOC 2 Type II compliant infrastructure</p></li>
+<li><p>Regular security audits</p></li>
+<li><p>GDPR and privacy law compliance</p></li>
+</ul>
+<p><strong>Access Control</strong></p>
+<ul class="simple">
+<li><p>Role-based permissions for AI features</p></li>
+<li><p>Granular control over data access</p></li>
+<li><p>Audit logs for all AI actions</p></li>
+<li><p>Option to disable features</p></li>
+</ul>
+<p><strong>Transparency</strong></p>
+<ul class="simple">
+<li><p>Clear data usage policies</p></li>
+<li><p>Explanation of AI processing</p></li>
+<li><p>Right to export your data</p></li>
+<li><p>Ability to delete AI-generated insights</p></li>
+</ul>
+</section>
+<section id="what-s-next">
+<h2>What’s Next?<a class="headerlink" href="#what-s-next" title="Link to this heading"></a></h2>
+<p>Explore specific BabbleBeaver capabilities:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="current-features.html"><span class="doc">BabbleBeaver: Current Features</span></a> - Detailed guide to current AI features</p></li>
+<li><p><a class="reference internal" href="coming-soon.html"><span class="doc">BabbleBeaver: Coming Soon Features</span></a> - Upcoming enhancements and roadmap</p></li>
+</ul>
+<p>Learn how BabbleBeaver supports RAD principles:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../principles/automation-as-collaboration.html"><span class="doc">Automation as Collaboration</span></a> - AI in the workflow</p></li>
+<li><p><a class="reference internal" href="../principles/continuous-reflection.html"><span class="doc">Continuous Reflection</span></a> - Real-time insights</p></li>
+<li><p><a class="reference internal" href="../principles/transparency-by-default.html"><span class="doc">Transparency by Default</span></a> - Explainable AI</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../features/ai_features.html"><span class="doc">AI Features &amp; BabbleBeaver Integration</span></a> - Platform-wide AI features</p></li>
+<li><p><a class="reference internal" href="../automation/current-capabilities.html"><span class="doc">Current Automation Capabilities</span></a> - Automation tools</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../principles/adaptive-cadence.html" class="btn btn-neutral float-left" title="Adaptive Cadence" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="current-features.html" class="btn btn-neutral float-right" title="BabbleBeaver: Current Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAD Process: A Replacement for Agile &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=29f8334c" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Flow Over Frameworks" href="principles/flow-over-frameworks.html" />
+    <link rel="prev" title="Profile Settings" href="../features/profile_settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RAD Process</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RAD Process: A Replacement for Agile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rad-at-a-glance">RAD at a Glance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#core-principles">Core Principles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="principles/flow-over-frameworks.html">Flow Over Frameworks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="principles/automation-as-collaboration.html">Automation as Collaboration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="principles/context-everywhere.html">Context Everywhere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="principles/continuous-reflection.html">Continuous Reflection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="principles/transparency-by-default.html">Transparency by Default</a></li>
+<li class="toctree-l3"><a class="reference internal" href="principles/adaptive-cadence.html">Adaptive Cadence</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#babblebeaver-ai-that-amplifies-the-team">BabbleBeaver: AI That Amplifies the Team</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="babblebeaver/overview.html">BabbleBeaver Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="babblebeaver/current-features.html">BabbleBeaver: Current Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="babblebeaver/coming-soon.html">BabbleBeaver: Coming Soon Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#automation-tools">Automation Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="automation/current-capabilities.html">Current Automation Capabilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automation/deployment-tools.html">Deployment Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automation/future-enhancements.html">Future Enhancements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#why-rad-not-capital-a-agile">Why RAD, Not Capital-A Agile?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="why-rad/comparison.html">RAD vs. Capital-A Agile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="why-rad/references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started-with-rad">Getting Started with RAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">For Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">RAD Process: A Replacement for Agile</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rad-process/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rad-process-a-replacement-for-agile">
+<span id="rad-process"></span><h1>RAD Process: A Replacement for Agile<a class="headerlink" href="#rad-process-a-replacement-for-agile" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="../_images/buildly-labs-logo.png"><img alt="Buildly RAD Process" class="align-center" src="../_images/buildly-labs-logo.png" style="width: 400px;" />
+</a>
+<p><strong>RAD (Radical Adaptive Development)</strong> is Buildly’s evolution of Agile—automation-first, AI-assisted, and shaped for the real pace of modern software development.</p>
+<p><em>Flow over frameworks. Transparency over tickets. Outcomes over ceremonies.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Post-Agile • AI-Assisted • Continuous</strong></p>
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>I’ve stood on both sides of the stand-up circle: developer and Scrum Master. Agile rescued us from waterfall and big-up-front design—no question. But in an era of AI-assisted development, aggressive CI/CD, and component-driven architectures, fixed sprints and ritualized ceremonies often slow the actual flow of work.</p>
+<p>RAD keeps Agile’s spirit—continuous reflection and adaptation—and removes the drag.</p>
+<p>The RAD process is the smallest process that preserves clarity, alignment, and speed while leveraging modern tools and automation to enhance team productivity.</p>
+</section>
+<section id="rad-at-a-glance">
+<h2>RAD at a Glance<a class="headerlink" href="#rad-at-a-glance" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30.0%" />
+<col style="width: 70.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Aspect</strong></p></th>
+<th class="head"><p><strong>RAD Approach</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Cadence</strong></p></td>
+<td><p>Adaptive, continuous “radical intervals”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Planning</strong></p></td>
+<td><p>AI-assisted decomposition; ship when ready</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Documentation</strong></p></td>
+<td><p>Decision trace linked to code &amp; design</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Quality</strong></p></td>
+<td><p>CI, tests, feature flags, telemetry</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Governance</strong></p></td>
+<td><p>Transparency &amp; explainability by default</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="core-principles">
+<h2>Core Principles<a class="headerlink" href="#core-principles" title="Link to this heading"></a></h2>
+<p>The RAD process is built on six core principles that guide how modern teams work:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="principles/flow-over-frameworks.html">Flow Over Frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principles/automation-as-collaboration.html">Automation as Collaboration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principles/context-everywhere.html">Context Everywhere</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principles/continuous-reflection.html">Continuous Reflection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principles/transparency-by-default.html">Transparency by Default</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principles/adaptive-cadence.html">Adaptive Cadence</a></li>
+</ul>
+</div>
+</section>
+<section id="babblebeaver-ai-that-amplifies-the-team">
+<h2>BabbleBeaver: AI That Amplifies the Team<a class="headerlink" href="#babblebeaver-ai-that-amplifies-the-team" title="Link to this heading"></a></h2>
+<p>Inside <a class="reference external" href="https://labs.buildly.io/">Buildly Labs</a>, <strong>BabbleBeaver</strong> acts as a collaborative layer: planning, surfacing risk, keeping decisions attached to code, and turning daily signals into live retrospectives.</p>
+<p><strong>Key AI Capabilities:</strong></p>
+<ul class="simple">
+<li><p><strong>Project planning</strong>: realistic timelines, dependency detection, resource hints</p></li>
+<li><p><strong>Task intelligence</strong>: auto-categorization, effort estimation, progress prediction</p></li>
+<li><p><strong>Team analytics</strong>: load balance, productivity patterns, skill gap insights</p></li>
+<li><p><strong>Continuous reflection</strong>: summarized decisions and micro-retros in flow</p></li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="babblebeaver/overview.html">BabbleBeaver Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#what-is-babblebeaver">What is BabbleBeaver?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#core-philosophy">Core Philosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#key-capabilities">Key Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#how-babblebeaver-learns">How BabbleBeaver Learns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#integration-with-rad-principles">Integration with RAD Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#the-babblebeaver-interface">The BabbleBeaver Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#getting-started-with-babblebeaver">Getting Started with BabbleBeaver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#best-practices">Best Practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#privacy-security">Privacy &amp; Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/overview.html#what-s-next">What’s Next?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="babblebeaver/current-features.html">BabbleBeaver: Current Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/current-features.html#project-planning-management">Project Planning &amp; Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/current-features.html#team-analytics-insights">Team Analytics &amp; Insights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/current-features.html#continuous-monitoring-alerts">Continuous Monitoring &amp; Alerts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/current-features.html#natural-language-interface">Natural Language Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/current-features.html#context-knowledge-management">Context &amp; Knowledge Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/current-features.html#reporting-summaries">Reporting &amp; Summaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/current-features.html#quality-performance-monitoring">Quality &amp; Performance Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/current-features.html#integration-capabilities">Integration Capabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/current-features.html#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="babblebeaver/coming-soon.html">BabbleBeaver: Coming Soon Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#development-status-legend">Development Status Legend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#advanced-ai-planning">Advanced AI Planning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#enhanced-context-knowledge">Enhanced Context &amp; Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#intelligent-automation">Intelligent Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#advanced-analytics">Advanced Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#integration-enhancements">Integration Enhancements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#experimental-features">Experimental Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#beta-program">Beta Program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#feature-requests">Feature Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#roadmap-timeline">Roadmap &amp; Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="babblebeaver/coming-soon.html#stay-updated">Stay Updated</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="automation-tools">
+<h2>Automation Tools<a class="headerlink" href="#automation-tools" title="Link to this heading"></a></h2>
+<p>Buildly provides powerful automation capabilities that support the RAD process by reducing manual work and enabling continuous delivery.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="automation/current-capabilities.html">Current Automation Capabilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#workflow-automation">Workflow Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#github-gitlab-integration">GitHub/GitLab Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#continuous-integration-deployment">Continuous Integration/Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#automated-reporting">Automated Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#slack-integration">Slack Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#documentation-automation">Documentation Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#quality-automation">Quality Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#deployment-automation">Deployment Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#time-tracking-automation">Time Tracking Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#integration-apis">Integration APIs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#custom-automation-rules">Custom Automation Rules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/current-capabilities.html#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automation/deployment-tools.html">Deployment Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="automation/deployment-tools.html#deployment-scripts">Deployment Scripts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/deployment-tools.html#feature-flag-management">Feature Flag Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/deployment-tools.html#monitoring-alerts">Monitoring &amp; Alerts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/deployment-tools.html#continuous-deployment-pipeline">Continuous Deployment Pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/deployment-tools.html#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="automation/future-enhancements.html">Future Enhancements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="automation/future-enhancements.html#intelligent-deployment">Intelligent Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/future-enhancements.html#enhanced-testing-automation">Enhanced Testing Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/future-enhancements.html#infrastructure-automation">Infrastructure Automation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="automation/future-enhancements.html#workflow-enhancements">Workflow Enhancements</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="why-rad-not-capital-a-agile">
+<h2>Why RAD, Not Capital-A Agile?<a class="headerlink" href="#why-rad-not-capital-a-agile" title="Link to this heading"></a></h2>
+<p>Agile was right for a pre-AI, pre-automation era. RAD keeps the values—collaboration, responsiveness, continuous improvement—and removes the ceremony. It’s how teams work now.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="why-rad/comparison.html">RAD vs. Capital-A Agile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="why-rad/references.html">References</a></li>
+</ul>
+</div>
+</section>
+<section id="getting-started-with-rad">
+<h2>Getting Started with RAD<a class="headerlink" href="#getting-started-with-rad" title="Link to this heading"></a></h2>
+<p>Ready to implement the RAD process with your team? Here’s how to get started:</p>
+<ol class="arabic simple">
+<li><p><strong>Set up Buildly Labs</strong> - Create your account at <a class="reference external" href="https://labs.buildly.io/">labs.buildly.io</a></p></li>
+<li><p><strong>Enable BabbleBeaver</strong> - Activate AI features in your project settings</p></li>
+<li><p><strong>Configure automation</strong> - Set up CI/CD pipelines and deployment tools</p></li>
+<li><p><strong>Adopt radical intervals</strong> - Replace fixed sprints with adaptive work cycles</p></li>
+<li><p><strong>Enable continuous reflection</strong> - Use AI-powered retrospectives and insights</p></li>
+</ol>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../features/ai_features.html"><span class="doc">AI Features &amp; BabbleBeaver Integration</span></a> - Detailed AI Features Documentation</p></li>
+<li><p><a class="reference internal" href="../quickstart.html"><span class="doc">Getting Started</span></a> - Quick Start Guide for Buildly Labs</p></li>
+<li><p><a class="reference internal" href="babblebeaver/current-features.html"><span class="doc">BabbleBeaver: Current Features</span></a> - Current BabbleBeaver Capabilities</p></li>
+</ul>
+</div>
+</section>
+<section id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading"></a></h2>
+<p><strong>Articles &amp; Books:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.buildly.io/articles/time-to-kill-agile.html">Time to Kill Agile</a> - Why we need to move beyond traditional Agile</p></li>
+<li><p><a class="reference external" href="https://www.apress.com/gp/book/9781484294933">Radical Therapy for Software Teams</a> - Book by Buildly’s founder</p></li>
+</ul>
+<p><strong>External References:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pragdave.me/blog/2014/03/04/time-to-kill-agile.html">Dave Thomas — “Time to Kill Agile”</a></p></li>
+<li><p><a class="reference external" href="https://hbr.org/2021/04/have-we-taken-agile-too-far">Harvard Business Review — “Have We Taken Agile Too Far?”</a></p></li>
+<li><p><a class="reference external" href="https://techbeacon.com/app-dev-testing/end-agile-why-agile-should-be-replaced">TechBeacon — “The End of Agile”</a></p></li>
+</ul>
+<p><strong>Buildly Platform:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.buildly.io/">Buildly Homepage</a></p></li>
+<li><p><a class="reference external" href="https://labs.buildly.io/">Buildly Labs Platform</a></p></li>
+<li><p><a class="reference external" href="https://docs.buildly.io/">Complete Documentation</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The RAD process is continuously evolving based on real-world usage and feedback from development teams. We regularly update our practices and tools to reflect the latest in AI-assisted development and automation capabilities.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../features/profile_settings.html" class="btn btn-neutral float-left" title="Profile Settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="principles/flow-over-frameworks.html" class="btn btn-neutral float-right" title="Flow Over Frameworks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

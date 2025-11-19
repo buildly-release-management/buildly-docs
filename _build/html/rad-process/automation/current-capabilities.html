@@ -1,0 +1,788 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Current Automation Capabilities &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=29f8334c" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Deployment Tools" href="deployment-tools.html" />
+    <link rel="prev" title="BabbleBeaver: Coming Soon Features" href="../babblebeaver/coming-soon.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RAD Process</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RAD Process: A Replacement for Agile</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#rad-at-a-glance">RAD at a Glance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#core-principles">Core Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#babblebeaver-ai-that-amplifies-the-team">BabbleBeaver: AI That Amplifies the Team</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#automation-tools">Automation Tools</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Current Automation Capabilities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#workflow-automation">Workflow Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#github-gitlab-integration">GitHub/GitLab Integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#continuous-integration-deployment">Continuous Integration/Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#automated-reporting">Automated Reporting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#slack-integration">Slack Integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#documentation-automation">Documentation Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quality-automation">Quality Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deployment-automation">Deployment Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#time-tracking-automation">Time Tracking Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#integration-apis">Integration APIs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-automation-rules">Custom Automation Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="deployment-tools.html">Deployment Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="future-enhancements.html">Future Enhancements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#why-rad-not-capital-a-agile">Why RAD, Not Capital-A Agile?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-started-with-rad">Getting Started with RAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developers/index.html">For Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">RAD Process: A Replacement for Agile</a></li>
+      <li class="breadcrumb-item active">Current Automation Capabilities</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/rad-process/automation/current-capabilities.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="current-automation-capabilities">
+<span id="automation-current-capabilities"></span><h1>Current Automation Capabilities<a class="headerlink" href="#current-automation-capabilities" title="Link to this heading"></a></h1>
+<p>Buildly Labs provides robust automation capabilities that support the RAD process by reducing manual work, accelerating delivery, and enabling continuous improvement.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>✅ <strong>All features on this page are currently available</strong> in Buildly Product Labs.</p>
+</div>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The automation capabilities in Buildly Labs are designed to:</p>
+<ul class="simple">
+<li><p><strong>Reduce manual overhead</strong> - Eliminate repetitive project management tasks</p></li>
+<li><p><strong>Accelerate delivery</strong> - Enable continuous integration and deployment</p></li>
+<li><p><strong>Improve quality</strong> - Automated testing and validation</p></li>
+<li><p><strong>Preserve context</strong> - Automatic documentation and decision tracking</p></li>
+<li><p><strong>Enable insights</strong> - Real-time monitoring and analytics</p></li>
+</ul>
+</section>
+<section id="workflow-automation">
+<h2>Workflow Automation<a class="headerlink" href="#workflow-automation" title="Link to this heading"></a></h2>
+<p><strong>Automated Task Management</strong></p>
+<p>Buildly Labs automatically manages common task operations:</p>
+<p><strong>Auto-Categorization</strong></p>
+<p>Tasks are automatically categorized by:</p>
+<ul class="simple">
+<li><p>Type (feature, bug, improvement, tech debt)</p></li>
+<li><p>Priority (based on business value and urgency)</p></li>
+<li><p>Complexity (estimated effort and risk)</p></li>
+<li><p>Team assignment (based on skills and capacity)</p></li>
+</ul>
+<p><strong>Status Tracking</strong></p>
+<p>Automatic status updates based on:</p>
+<ul class="simple">
+<li><p>Code commits linked to tasks</p></li>
+<li><p>Pull request status</p></li>
+<li><p>Review completion</p></li>
+<li><p>Deployment success</p></li>
+<li><p>Testing results</p></li>
+</ul>
+<p><strong>Example Flow:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Task Created: &quot;Implement user authentication&quot;
+
+↓ Auto-categorized as: Feature, High Priority, Backend
+↓ Auto-assigned to: @mike (backend expertise, 65% capacity)
+
+Developer creates branch → Status: In Progress
+↓
+First commit pushed → Status: Coding
+↓
+Pull request opened → Status: In Review
+↓
+Tests pass → Label: Tests Passing
+↓
+PR approved → Status: Ready to Merge
+↓
+Merged to main → Status: Merged
+↓
+Deployed to staging → Status: In Staging
+↓
+QA sign-off → Status: Ready for Production
+↓
+Deployed to production → Status: Completed
+
+All status changes automatic based on integrations
+</pre></div>
+</div>
+<p><strong>Notification Automation</strong></p>
+<p>Smart notifications reduce noise while keeping teams informed:</p>
+<p><strong>Intelligent Filtering</strong></p>
+<p>Notifications sent only when:</p>
+<ul class="simple">
+<li><p>Blockers are detected</p></li>
+<li><p>Tasks are assigned or reassigned</p></li>
+<li><p>Reviews are requested from you</p></li>
+<li><p>Deadlines are approaching</p></li>
+<li><p>Dependencies complete</p></li>
+<li><p>Critical issues arise</p></li>
+</ul>
+<p><strong>Digest Mode</strong></p>
+<p>Instead of constant interruptions:</p>
+<ul class="simple">
+<li><p>Daily summary of team activity</p></li>
+<li><p>Weekly progress reports</p></li>
+<li><p>Monthly analytics and trends</p></li>
+<li><p>On-demand status updates</p></li>
+</ul>
+<p><strong>Multi-Channel Delivery</strong></p>
+<p>Notifications via:</p>
+<ul class="simple">
+<li><p>In-app notifications</p></li>
+<li><p>Email (with customizable frequency)</p></li>
+<li><p>Slack messages</p></li>
+<li><p>Mobile push (coming soon)</p></li>
+</ul>
+</section>
+<section id="github-gitlab-integration">
+<h2>GitHub/GitLab Integration<a class="headerlink" href="#github-gitlab-integration" title="Link to this heading"></a></h2>
+<p><strong>Automated Code Linking</strong></p>
+<p>Every commit and PR automatically links to tasks:</p>
+<p><strong>Branch Naming Convention</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># When you create branch with task ID:</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/TASK-123-user-auth
+
+<span class="c1"># Buildly automatically:</span>
+<span class="c1"># - Links all commits to task TASK-123</span>
+<span class="c1"># - Updates task status to &quot;In Progress&quot;</span>
+<span class="c1"># - Shows commits in task timeline</span>
+</pre></div>
+</div>
+<p><strong>Commit Messages</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implement JWT validation #TASK-123&quot;</span>
+
+<span class="c1"># Buildly:</span>
+<span class="c1"># - Links commit to task</span>
+<span class="c1"># - Adds commit to task activity feed</span>
+<span class="c1"># - Updates last activity timestamp</span>
+</pre></div>
+</div>
+<p><strong>Pull Request Integration</strong></p>
+<p>When PR is opened:</p>
+<ul class="simple">
+<li><p>Automatically links to referenced tasks</p></li>
+<li><p>Updates task status</p></li>
+<li><p>Posts PR link in task comments</p></li>
+<li><p>Tracks review progress</p></li>
+<li><p>Monitors CI/CD status</p></li>
+<li><p>Sends notifications to stakeholders</p></li>
+</ul>
+<p><strong>Code Review Automation</strong></p>
+<ul class="simple">
+<li><p>Auto-request reviews based on code ownership</p></li>
+<li><p>Remind reviewers of pending PRs</p></li>
+<li><p>Track review time metrics</p></li>
+<li><p>Alert when reviews are overdue</p></li>
+<li><p>Celebrate when reviews are completed</p></li>
+</ul>
+</section>
+<section id="continuous-integration-deployment">
+<h2>Continuous Integration/Deployment<a class="headerlink" href="#continuous-integration-deployment" title="Link to this heading"></a></h2>
+<p><strong>CI/CD Pipeline Integration</strong></p>
+<p>Buildly Labs integrates with popular CI/CD tools:</p>
+<p><strong>GitHub Actions</strong></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Automatic status updates from workflow</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CI/CD Pipeline</span>
+
+<span class="nt">on</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">pull_request</span><span class="p p-Indicator">]</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">test</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run tests</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm test</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Update Buildly Status</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no"># Buildly webhook automatically called</span>
+<span class="w">          </span><span class="no"># Task status updated based on test results</span>
+</pre></div>
+</div>
+<p><strong>GitLab CI</strong></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># .gitlab-ci.yml</span>
+<span class="nt">stages</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+
+<span class="nt">test</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm test</span>
+<span class="w">  </span><span class="nt">after_script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">curl -X POST $BUILDLY_WEBHOOK</span><span class="w"> </span><span class="c1"># Auto-update task</span>
+</pre></div>
+</div>
+<p><strong>Deployment Tracking</strong></p>
+<p>Automatic tracking of:</p>
+<ul class="simple">
+<li><p>Build status (success/failure)</p></li>
+<li><p>Test results (pass/fail/skip)</p></li>
+<li><p>Code coverage metrics</p></li>
+<li><p>Deployment environment (staging/production)</p></li>
+<li><p>Deployment timestamp</p></li>
+<li><p>Deployed version/commit</p></li>
+<li><p>Rollback events</p></li>
+</ul>
+<p><strong>Example Dashboard:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Deployment History - Mobile App v2
+
+Production:
+✅ v2.1.3 - Deployed 2 hours ago (commit abc123)
+   - 94% test coverage
+   - All checks passed
+   - No rollbacks
+
+Staging:
+✅ v2.2.0 - Deployed 15 minutes ago (commit def456)
+   - 96% test coverage
+   - Currently in QA testing
+   - 2 features behind feature flags
+
+Development:
+🔄 v2.2.1 - Building now...
+   - 3 new commits since staging
+   - Running integration tests
+</pre></div>
+</div>
+</section>
+<section id="automated-reporting">
+<h2>Automated Reporting<a class="headerlink" href="#automated-reporting" title="Link to this heading"></a></h2>
+<p><strong>Status Reports</strong></p>
+<p>Auto-generated reports at multiple levels:</p>
+<p><strong>Daily Standup Reports</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Daily Report - Team Alpha - Jan 15, 2025
+
+Completed Yesterday:
+✅ User authentication (Mike)
+✅ Profile settings UI (Sarah)
+✅ 3 bug fixes (Jessica)
+
+Today&#39;s Plan:
+🎯 OAuth integration (Mike)
+🎯 Mobile responsive design (Sarah)
+🎯 Test automation (Jessica)
+
+Blockers:
+⚠️ Waiting on API credentials (affecting Mike)
+
+[Posted to #team-alpha Slack channel]
+</pre></div>
+</div>
+<p><strong>Weekly Progress Reports</strong></p>
+<p>Automatically generated every Monday:</p>
+<ul class="simple">
+<li><p>Tasks completed vs. planned</p></li>
+<li><p>Velocity trends</p></li>
+<li><p>Quality metrics</p></li>
+<li><p>Team capacity utilization</p></li>
+<li><p>Upcoming milestones</p></li>
+<li><p>Risk assessment</p></li>
+</ul>
+<p><strong>Sprint/Cycle Summaries</strong></p>
+<p>At end of each cycle:</p>
+<ul class="simple">
+<li><p>Goal completion percentage</p></li>
+<li><p>Detailed task breakdown</p></li>
+<li><p>Team performance analysis</p></li>
+<li><p>Process improvement suggestions</p></li>
+<li><p>Carry-over items</p></li>
+<li><p>Retrospective insights</p></li>
+</ul>
+<p><strong>Custom Reports</strong></p>
+<p>Create automated reports for:</p>
+<ul class="simple">
+<li><p>Executive summaries</p></li>
+<li><p>Stakeholder updates</p></li>
+<li><p>Client status reports</p></li>
+<li><p>Department reviews</p></li>
+<li><p>Board presentations</p></li>
+</ul>
+</section>
+<section id="slack-integration">
+<h2>Slack Integration<a class="headerlink" href="#slack-integration" title="Link to this heading"></a></h2>
+<p><strong>Automated Updates</strong></p>
+<p>Buildly posts to Slack automatically:</p>
+<p><strong>Team Channels</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#engineering channel
+
+🚀 Deployment Notification
+Mobile App v2.1.3 deployed to production
+
+Changes:
+- Fixed payment processing bug
+- Improved load time by 20%
+- Updated user profile design
+
+Deployed by: @sarah
+Status: All systems green ✅
+</pre></div>
+</div>
+<p><strong>Personal Notifications</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Buildly APP  10:23 AM
+
+📋 Task assigned to you:
+&quot;Implement search functionality&quot;
+
+Priority: High
+Estimated: 2 days
+Due: Jan 20
+
+[View Task] [Accept] [Delegate]
+</pre></div>
+</div>
+<p><strong>Decision Capture</strong></p>
+<p>BabbleBeaver detects decisions in Slack:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#tech-leads channel
+
+[Long discussion about database choice]
+
+Buildly APP  2:45 PM
+
+🤖 I detected a decision in this thread.
+
+Decision: &quot;Use PostgreSQL for main database&quot;
+Participants: @sarah, @mike, @alex
+
+Would you like me to:
+[Create Decision Record] [Link to Tasks] [Ignore]
+</pre></div>
+</div>
+<p><strong>Command Interface</strong></p>
+<p>Interact with Buildly via Slack:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>You: /buildly status mobile-app
+
+Buildly APP:
+📊 Mobile App v2 Status
+Progress: 67% complete
+Timeline: On track for Jan 31
+Team: 4 developers
+Blockers: 1 (API credentials)
+
+[View Details] [Show Tasks] [Get Report]
+</pre></div>
+</div>
+</section>
+<section id="documentation-automation">
+<h2>Documentation Automation<a class="headerlink" href="#documentation-automation" title="Link to this heading"></a></h2>
+<p><strong>Auto-Generated Documentation</strong></p>
+<p>Buildly automatically maintains documentation:</p>
+<p><strong>API Documentation</strong></p>
+<ul class="simple">
+<li><p>Generated from code comments</p></li>
+<li><p>Updated on every deployment</p></li>
+<li><p>Includes examples and schemas</p></li>
+<li><p>Versioned automatically</p></li>
+<li><p>Searchable and interactive</p></li>
+</ul>
+<p><strong>Decision Records</strong></p>
+<p>Automatic Architecture Decision Records (ADRs):</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ADR-015: Switch to GraphQL for Mobile API
+
+Status: Accepted
+Date: 2025-01-15
+Deciders: @sarah, @mike, @team-leads
+
+Context:
+[Auto-extracted from Slack discussion and meeting notes]
+
+Decision:
+Use GraphQL instead of REST for mobile API v2
+
+Consequences:
+[Auto-populated from team input]
+
+Linked Tasks: TASK-234, TASK-235
+Linked PRs: #567, #589
+
+[Auto-generated and maintained by Buildly]
+</pre></div>
+</div>
+<p><strong>Changelog Generation</strong></p>
+<p>Automatic changelog from commits and PRs:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Changelog - v2.1.3 (2025-01-15)
+
+## Features
+- Add OAuth social login (#567)
+- Implement dark mode support (#589)
+
+## Bug Fixes
+- Fix payment processing timeout (#543)
+- Resolve profile image upload issue (#551)
+
+## Improvements
+- Optimize database queries (20% faster) (#534)
+- Update UI design system (#578)
+
+[Auto-generated from commits and PR descriptions]
+</pre></div>
+</div>
+</section>
+<section id="quality-automation">
+<h2>Quality Automation<a class="headerlink" href="#quality-automation" title="Link to this heading"></a></h2>
+<p><strong>Automated Testing</strong></p>
+<p>Integration with testing frameworks:</p>
+<ul class="simple">
+<li><p>Run tests on every commit</p></li>
+<li><p>Track test coverage trends</p></li>
+<li><p>Identify flaky tests</p></li>
+<li><p>Monitor test execution time</p></li>
+<li><p>Alert on coverage drops</p></li>
+</ul>
+<p><strong>Code Quality Checks</strong></p>
+<p>Automatic quality analysis:</p>
+<ul class="simple">
+<li><p>Linting and formatting</p></li>
+<li><p>Type checking</p></li>
+<li><p>Security vulnerability scanning</p></li>
+<li><p>Dependency updates</p></li>
+<li><p>License compliance</p></li>
+<li><p>Code duplication detection</p></li>
+</ul>
+<p><strong>Example Quality Report:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Quality Report - PR #567
+
+Tests: ✅ All 247 tests passing
+Coverage: ✅ 94% (↑ 2% from main)
+Lint: ✅ No issues
+Types: ✅ No errors
+Security: ⚠️ 1 low-severity issue found
+
+Recommendation: Review security issue before merging
+
+[View Details] [Fix Security Issue] [Override]
+</pre></div>
+</div>
+</section>
+<section id="deployment-automation">
+<h2>Deployment Automation<a class="headerlink" href="#deployment-automation" title="Link to this heading"></a></h2>
+<p><strong>Automated Deployment Scripts</strong></p>
+<p>Buildly includes deployment automation:</p>
+<p><strong>AWS Deployment</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># automation/deploy-aws.sh</span>
+<span class="c1"># Automatic deployment to AWS</span>
+
+./deploy-aws.sh<span class="w"> </span>production
+
+<span class="c1"># Automatically:</span>
+<span class="c1"># - Builds application</span>
+<span class="c1"># - Runs tests</span>
+<span class="c1"># - Uploads to S3</span>
+<span class="c1"># - Invalidates CloudFront cache</span>
+<span class="c1"># - Updates task statuses</span>
+<span class="c1"># - Sends notifications</span>
+</pre></div>
+</div>
+<p><strong>General Deployment</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># automation/deploy.sh</span>
+<span class="c1"># Flexible deployment script</span>
+
+./deploy.sh<span class="w"> </span>staging<span class="w"> </span>feature-branch
+
+<span class="c1"># Automatically:</span>
+<span class="c1"># - Creates deployment environment</span>
+<span class="c1"># - Runs migrations</span>
+<span class="c1"># - Deploys application</span>
+<span class="c1"># - Runs smoke tests</span>
+<span class="c1"># - Updates Buildly status</span>
+</pre></div>
+</div>
+<p><strong>Rollback Automation</strong></p>
+<p>One-click rollback:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Deployment Monitor - Production
+
+⚠️ Error rate spike detected (5x normal)
+
+Current deployment: v2.1.4 (10 minutes ago)
+Previous stable: v2.1.3
+
+Recommended Action: Rollback
+
+[Auto-Rollback] [Investigate] [Ignore]
+
+Auto-rollback will:
+1. Revert to v2.1.3
+2. Notify team
+3. Create incident report
+4. Schedule post-mortem
+</pre></div>
+</div>
+</section>
+<section id="time-tracking-automation">
+<h2>Time Tracking Automation<a class="headerlink" href="#time-tracking-automation" title="Link to this heading"></a></h2>
+<p><strong>Automatic Time Logging</strong></p>
+<p>Buildly tracks time without manual entry:</p>
+<ul class="simple">
+<li><p>Time from task start to completion</p></li>
+<li><p>Time in each status (coding, review, testing)</p></li>
+<li><p>Active coding time (from commits)</p></li>
+<li><p>Review time (from PR data)</p></li>
+<li><p>Deployment time</p></li>
+</ul>
+<p><strong>Example Timeline:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Task: &quot;Implement user authentication&quot;
+Total time: 3.5 days
+
+Timeline:
+Jan 12, 9:00 AM  - Task created and assigned
+Jan 12, 10:30 AM - First commit (started coding)
+Jan 13, 4:00 PM  - Last commit (coding complete)
+Jan 13, 4:30 PM  - PR opened (in review)
+Jan 14, 11:00 AM - PR approved (review complete)
+Jan 14, 2:00 PM  - Merged and deployed
+
+Breakdown:
+- Coding: 1.5 days
+- Review: 0.5 days
+- Deployment: 0.25 days
+- Total: 2.25 active days (1.25 days idle time)
+</pre></div>
+</div>
+</section>
+<section id="integration-apis">
+<h2>Integration APIs<a class="headerlink" href="#integration-apis" title="Link to this heading"></a></h2>
+<p><strong>Webhook Automation</strong></p>
+<p>Trigger Buildly actions from external tools:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Webhook endpoint</span>
+<span class="nx">POST</span><span class="w"> </span><span class="nx">https</span><span class="o">:</span><span class="c1">//api.buildly.io/webhooks/tasks</span>
+
+<span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;event&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;deployment.success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;environment&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;version&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;v2.1.4&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;tasks&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;TASK-123&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;TASK-124&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1">// Buildly automatically:</span>
+<span class="c1">// - Updates task statuses</span>
+<span class="c1">// - Sends notifications</span>
+<span class="c1">// - Updates dashboards</span>
+</pre></div>
+</div>
+<p><strong>REST API</strong></p>
+<p>Automate Buildly operations:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Python example: Auto-create tasks from tickets</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="n">buildly_api</span> <span class="o">=</span> <span class="s2">&quot;https://api.buildly.io&quot;</span>
+
+<span class="c1"># Get support tickets</span>
+<span class="n">tickets</span> <span class="o">=</span> <span class="n">get_support_tickets</span><span class="p">()</span>
+
+<span class="c1"># Auto-create tasks in Buildly</span>
+<span class="k">for</span> <span class="n">ticket</span> <span class="ow">in</span> <span class="n">tickets</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">ticket</span><span class="o">.</span><span class="n">priority</span> <span class="o">==</span> <span class="s2">&quot;high&quot;</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">buildly_api</span><span class="si">}</span><span class="s2">/tasks&quot;</span><span class="p">,</span>
+            <span class="n">json</span><span class="o">=</span><span class="p">{</span>
+                <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="n">ticket</span><span class="o">.</span><span class="n">title</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">ticket</span><span class="o">.</span><span class="n">description</span><span class="p">,</span>
+                <span class="s2">&quot;priority&quot;</span><span class="p">:</span> <span class="s2">&quot;high&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;support_ticket&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;external_id&quot;</span><span class="p">:</span> <span class="n">ticket</span><span class="o">.</span><span class="n">id</span>
+            <span class="p">},</span>
+            <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">API_KEY</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="custom-automation-rules">
+<h2>Custom Automation Rules<a class="headerlink" href="#custom-automation-rules" title="Link to this heading"></a></h2>
+<p><strong>Configurable Workflows</strong></p>
+<p>Create custom automation rules:</p>
+<p><strong>Example Rules:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Rule: &quot;Auto-assign urgent bugs&quot;
+
+Trigger: New task created with label &quot;bug&quot; and priority &quot;urgent&quot;
+Conditions: Created during business hours
+Actions:
+  1. Assign to on-call engineer
+  2. Send Slack notification to #engineering
+  3. Set due date to same day
+  4. Add to &quot;Urgent Fixes&quot; board
+
+---
+
+Rule: &quot;Stale PR reminder&quot;
+
+Trigger: PR open for &gt; 48 hours without review
+Conditions: Not in draft mode
+Actions:
+  1. @mention requested reviewers in PR
+  2. Send Slack reminder to reviewers
+  3. Escalate to team lead if &gt; 72 hours
+
+---
+
+Rule: &quot;Celebrate deployments&quot;
+
+Trigger: Successful production deployment
+Actions:
+  1. Post to #wins Slack channel
+  2. Update team dashboard
+  3. Send kudos to contributors
+  4. Add to monthly achievements log
+</pre></div>
+</div>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<p><strong>Enable Automation Features:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Navigate to</strong> Settings → Automation</p></li>
+<li><p><strong>Connect integrations</strong> (GitHub, Slack, etc.)</p></li>
+<li><p><strong>Configure webhooks</strong> for CI/CD</p></li>
+<li><p><strong>Set up notification preferences</strong></p></li>
+<li><p><strong>Create custom automation rules</strong></p></li>
+</ol>
+<p><strong>Best Practices:</strong></p>
+<ul class="simple">
+<li><p>Start with basic integrations (GitHub, Slack)</p></li>
+<li><p>Enable automatic status updates</p></li>
+<li><p>Use smart notifications (digest mode)</p></li>
+<li><p>Create custom rules gradually</p></li>
+<li><p>Monitor automation effectiveness</p></li>
+<li><p>Adjust based on team feedback</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="deployment-tools.html"><span class="doc">Deployment Tools</span></a> - Detailed deployment automation</p></li>
+<li><p><a class="reference internal" href="future-enhancements.html"><span class="doc">Future Enhancements</span></a> - Upcoming automation features</p></li>
+<li><p><a class="reference internal" href="../principles/automation-as-collaboration.html"><span class="doc">Automation as Collaboration</span></a> - Automation philosophy</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../babblebeaver/coming-soon.html" class="btn btn-neutral float-left" title="BabbleBeaver: Coming Soon Features" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="deployment-tools.html" class="btn btn-neutral float-right" title="Deployment Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

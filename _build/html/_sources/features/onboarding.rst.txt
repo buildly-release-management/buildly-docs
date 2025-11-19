@@ -392,7 +392,10 @@ Example API Usage
        "organization_name": "TechCorp"
      }
      
-     Response:
+  **Response:**
+  
+  .. code-block:: json
+
      {
        "exists": false,
        "is_buildly": false,

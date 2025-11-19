@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAD vs. Capital-A Agile &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=29f8334c" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="References" href="references.html" />
+    <link rel="prev" title="Future Enhancements" href="../automation/future-enhancements.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RAD Process</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RAD Process: A Replacement for Agile</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#rad-at-a-glance">RAD at a Glance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#core-principles">Core Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#babblebeaver-ai-that-amplifies-the-team">BabbleBeaver: AI That Amplifies the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#automation-tools">Automation Tools</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#why-rad-not-capital-a-agile">Why RAD, Not Capital-A Agile?</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">RAD vs. Capital-A Agile</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-agile-revolution">The Agile Revolution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-changed">What Changed?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rad-vs-traditional-agile">RAD vs. Traditional Agile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#key-philosophical-differences">Key Philosophical Differences</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#when-agile-works-better">When Agile Works Better</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-concerns-addressed">Common Concerns Addressed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-path-forward">The Path Forward</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#real-team-testimonials">Real Team Testimonials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-bottom-line">The Bottom Line</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-started-with-rad">Getting Started with RAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developers/index.html">For Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">RAD Process: A Replacement for Agile</a></li>
+      <li class="breadcrumb-item active">RAD vs. Capital-A Agile</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/rad-process/why-rad/comparison.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rad-vs-capital-a-agile">
+<span id="why-rad-comparison"></span><h1>RAD vs. Capital-A Agile<a class="headerlink" href="#rad-vs-capital-a-agile" title="Link to this heading"></a></h1>
+<p>Why RAD is the evolution Agile needs for the AI era.</p>
+<section id="the-agile-revolution">
+<h2>The Agile Revolution<a class="headerlink" href="#the-agile-revolution" title="Link to this heading"></a></h2>
+<p>Agile was right for its time. In 2001, the Agile Manifesto rescued software development from:</p>
+<ul class="simple">
+<li><p>Months-long waterfall planning</p></li>
+<li><p>Big upfront design</p></li>
+<li><p>Late-stage integration nightmares</p></li>
+<li><p>Rigid, unchangeable requirements</p></li>
+<li><p>Slow feedback loops</p></li>
+</ul>
+<p><strong>Agile’s Core Values Still Matter:</strong></p>
+<ul class="simple">
+<li><p>Individuals and interactions over processes and tools ✓</p></li>
+<li><p>Working software over comprehensive documentation ✓</p></li>
+<li><p>Customer collaboration over contract negotiation ✓</p></li>
+<li><p>Responding to change over following a plan ✓</p></li>
+</ul>
+</section>
+<section id="what-changed">
+<h2>What Changed?<a class="headerlink" href="#what-changed" title="Link to this heading"></a></h2>
+<p>Since 2001, the software development landscape transformed:</p>
+<p><strong>Technology Evolution</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40.0%" />
+<col style="width: 30.0%" />
+<col style="width: 30.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Capability</strong></p></th>
+<th class="head"><p><strong>2001 (Agile)</strong></p></th>
+<th class="head"><p><strong>2025 (RAD)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Deployment</p></td>
+<td><p>Manual, risky, rare</p></td>
+<td><p>Automated, safe, continuous</p></td>
+</tr>
+<tr class="row-odd"><td><p>Testing</p></td>
+<td><p>Mostly manual</p></td>
+<td><p>Fully automated</p></td>
+</tr>
+<tr class="row-even"><td><p>Integration</p></td>
+<td><p>Weekly/monthly</p></td>
+<td><p>On every commit</p></td>
+</tr>
+<tr class="row-odd"><td><p>Monitoring</p></td>
+<td><p>Limited</p></td>
+<td><p>Real-time, comprehensive</p></td>
+</tr>
+<tr class="row-even"><td><p>AI Assistance</p></td>
+<td><p>None</p></td>
+<td><p>Pervasive</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cloud Infrastructure</p></td>
+<td><p>Rare</p></td>
+<td><p>Standard</p></td>
+</tr>
+<tr class="row-even"><td><p>Feature Flags</p></td>
+<td><p>Uncommon</p></td>
+<td><p>Built-in</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Problem: Agile Industrial Complex</strong></p>
+<p>What started as lightweight values became heavyweight process:</p>
+<ul class="simple">
+<li><p><strong>Certification industry</strong> - Multiple competing frameworks (Scrum, SAFe, LeSS)</p></li>
+<li><p><strong>Mandatory ceremonies</strong> - Daily standups, planning, reviews, retros</p></li>
+<li><p><strong>Role proliferation</strong> - Scrum Masters, Product Owners, Agile Coaches</p></li>
+<li><p><strong>Rigid frameworks</strong> - 2-week sprints regardless of work type</p></li>
+<li><p><strong>Process over principles</strong> - Following rules instead of adapting</p></li>
+</ul>
+<blockquote class="pull-quote">
+<div><p><em>“Agile has become the thing it sought to replace.”</em></p>
+</div></blockquote>
+</section>
+<section id="rad-vs-traditional-agile">
+<h2>RAD vs. Traditional Agile<a class="headerlink" href="#rad-vs-traditional-agile" title="Link to this heading"></a></h2>
+<section id="direct-comparison">
+<h3>Direct Comparison<a class="headerlink" href="#direct-comparison" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 35.0%" />
+<col style="width: 40.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Aspect</strong></p></th>
+<th class="head"><p><strong>Traditional Agile</strong></p></th>
+<th class="head"><p><strong>RAD (Radical Adaptive Development)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Work Cycles</strong></p></td>
+<td><p>Fixed 2-week sprints</p></td>
+<td><p>Adaptive radical intervals (match real work)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Planning</strong></p></td>
+<td><p>Sprint planning ceremonies (4+ hours)</p></td>
+<td><p>Continuous, AI-assisted decomposition</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Estimation</strong></p></td>
+<td><p>Planning poker, manual</p></td>
+<td><p>AI-powered, data-driven</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Standups</strong></p></td>
+<td><p>Daily 15-minute meetings</p></td>
+<td><p>Async updates + optional sync (2x/week)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Retrospectives</strong></p></td>
+<td><p>End of sprint</p></td>
+<td><p>Continuous reflection with AI insights</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Documentation</strong></p></td>
+<td><p>Often neglected</p></td>
+<td><p>Automated, context-preserved</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Deployment</strong></p></td>
+<td><p>Sprint end (every 2 weeks)</p></td>
+<td><p>Continuous (multiple times daily)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Metrics</strong></p></td>
+<td><p>Velocity, burndown charts</p></td>
+<td><p>Real-time insights, predictive analytics</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Quality</strong></p></td>
+<td><p>Manual testing focus</p></td>
+<td><p>Automated testing, CI/CD</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Adaptation</strong></p></td>
+<td><p>At retrospectives</p></td>
+<td><p>Real-time, data-driven</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="time-comparison">
+<h3>Time Comparison<a class="headerlink" href="#time-comparison" title="Link to this heading"></a></h3>
+<p><strong>How Teams Spend Time:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Traditional Agile (2-week sprint):
+
+Meetings &amp; Ceremonies:
+- Sprint planning: 4 hours
+- Daily standups: 2.5 hours (15 min × 10 days)
+- Sprint review: 2 hours
+- Sprint retrospective: 1.5 hours
+- Backlog grooming: 2 hours
+TOTAL: 12 hours of meetings
+
+RAD (2-week cycle):
+
+Collaboration:
+- Async daily updates: 1.5 hours (5 min × 10 days)
+- Team sync (2× week): 1 hour (30 min × 2)
+- Continuous planning: 1 hour (integrated into work)
+- Micro-retros: 0.5 hours (review AI insights)
+TOTAL: 4 hours
+
+Time saved: 8 hours per person per 2 weeks
+For 5-person team: 40 hours = 1 full work week
+</pre></div>
+</div>
+</section>
+</section>
+<section id="key-philosophical-differences">
+<h2>Key Philosophical Differences<a class="headerlink" href="#key-philosophical-differences" title="Link to this heading"></a></h2>
+<p><strong>1. Process Philosophy</strong></p>
+<dl class="simple">
+<dt><strong>Agile:</strong></dt><dd><p>“Follow the framework. If it’s not working, you’re not doing it right.”</p>
+</dd>
+<dt><strong>RAD:</strong></dt><dd><p>“Adapt the process to your context. The smallest process that works.”</p>
+</dd>
+</dl>
+<p><strong>2. Role of AI</strong></p>
+<dl class="simple">
+<dt><strong>Agile:</strong></dt><dd><p>AI is not part of the original framework. Teams add it on top.</p>
+</dd>
+<dt><strong>RAD:</strong></dt><dd><p>AI is integral. Automation handles repetition, humans handle creativity.</p>
+</dd>
+</dl>
+<p><strong>3. Deployment Mindset</strong></p>
+<dl class="simple">
+<dt><strong>Agile:</strong></dt><dd><p>“Potentially shippable increment” (but often not actually shipped)</p>
+</dd>
+<dt><strong>RAD:</strong></dt><dd><p>“Ship when ready” (actually deployed, with feature flags)</p>
+</dd>
+</dl>
+<p><strong>4. Reflection Timing</strong></p>
+<dl class="simple">
+<dt><strong>Agile:</strong></dt><dd><p>Reflection happens at scheduled retrospectives</p>
+</dd>
+<dt><strong>RAD:</strong></dt><dd><p>Reflection is continuous, AI surfaces insights in real-time</p>
+</dd>
+</dl>
+<p><strong>5. Documentation</strong></p>
+<dl class="simple">
+<dt><strong>Agile:</strong></dt><dd><p>“Working software over comprehensive documentation” (often becomes no documentation)</p>
+</dd>
+<dt><strong>RAD:</strong></dt><dd><p>Context is preserved automatically, documentation is generated</p>
+</dd>
+</dl>
+</section>
+<section id="when-agile-works-better">
+<h2>When Agile Works Better<a class="headerlink" href="#when-agile-works-better" title="Link to this heading"></a></h2>
+<p><strong>RAD isn’t for everyone.</strong> Traditional Agile may be better if:</p>
+<ul class="simple">
+<li><p>Your team is <strong>very small</strong> (2-3 people) - overhead of tooling may exceed benefits</p></li>
+<li><p>You have <strong>no automation</strong> infrastructure - build CI/CD first</p></li>
+<li><p>Your <strong>deployment is complex</strong> - fix deployment before adopting continuous flow</p></li>
+<li><p><strong>Regulatory constraints</strong> require extensive documentation upfront</p></li>
+<li><p>Your <strong>team resists change</strong> - Agile is familiar and comfortable</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>RAD works best for teams that have already mastered basic Agile practices and are ready to evolve.</p>
+</div>
+</section>
+<section id="common-concerns-addressed">
+<h2>Common Concerns Addressed<a class="headerlink" href="#common-concerns-addressed" title="Link to this heading"></a></h2>
+<p><strong>“Won’t less structure lead to chaos?”</strong></p>
+<p>No. RAD provides structure through:</p>
+<ul class="simple">
+<li><p>Clear principles (not rigid rules)</p></li>
+<li><p>Automated tracking (visible progress)</p></li>
+<li><p>Continuous feedback (real-time course correction)</p></li>
+<li><p>AI guidance (data-driven decisions)</p></li>
+</ul>
+<p><strong>“How do we coordinate without standups?”</strong></p>
+<p>RAD replaces daily meetings with:</p>
+<ul class="simple">
+<li><p>Async status updates (5 minutes)</p></li>
+<li><p>AI-generated team pulse</p></li>
+<li><p>Proactive blocker alerts</p></li>
+<li><p>2× weekly team syncs for complex topics</p></li>
+</ul>
+<p><strong>“What about accountability?”</strong></p>
+<p>RAD increases accountability through:</p>
+<ul class="simple">
+<li><p>Transparent metrics (visible to all)</p></li>
+<li><p>Automatic progress tracking</p></li>
+<li><p>Context preservation (decisions are traceable)</p></li>
+<li><p>Data-driven insights (no hiding issues)</p></li>
+</ul>
+<p><strong>“Isn’t this just Kanban?”</strong></p>
+<p>RAD borrows from Kanban but adds:</p>
+<ul class="simple">
+<li><p>AI-powered intelligence</p></li>
+<li><p>Automated context management</p></li>
+<li><p>Predictive analytics</p></li>
+<li><p>Integrated deployment automation</p></li>
+</ul>
+</section>
+<section id="the-path-forward">
+<h2>The Path Forward<a class="headerlink" href="#the-path-forward" title="Link to this heading"></a></h2>
+<p><strong>Evolution, Not Revolution</strong></p>
+<p>You don’t need to abandon Agile overnight. RAD is an evolution:</p>
+<p><strong>Phase 1: Add Automation</strong></p>
+<ul class="simple">
+<li><p>Set up CI/CD pipeline</p></li>
+<li><p>Automate testing</p></li>
+<li><p>Enable feature flags</p></li>
+<li><p>Integrate tools (GitHub, Slack)</p></li>
+</ul>
+<p><strong>Phase 2: Reduce Ceremony</strong></p>
+<ul class="simple">
+<li><p>Try async standups</p></li>
+<li><p>Shorten planning sessions</p></li>
+<li><p>Enable AI-assisted estimation</p></li>
+<li><p>Review meeting necessity</p></li>
+</ul>
+<p><strong>Phase 3: Embrace Flow</strong></p>
+<ul class="simple">
+<li><p>Variable-length cycles</p></li>
+<li><p>Ship when ready (not on schedule)</p></li>
+<li><p>Continuous reflection</p></li>
+<li><p>Real-time adaptation</p></li>
+</ul>
+<p><strong>Phase 4: Full RAD</strong></p>
+<ul class="simple">
+<li><p>AI-powered planning</p></li>
+<li><p>Automated context management</p></li>
+<li><p>Continuous deployment</p></li>
+<li><p>Transparent, data-driven decisions</p></li>
+</ul>
+</section>
+<section id="real-team-testimonials">
+<h2>Real Team Testimonials<a class="headerlink" href="#real-team-testimonials" title="Link to this heading"></a></h2>
+<blockquote class="pull-quote">
+<div><p><em>“We cut meeting time by 60% and shipped 40% more features in the same timeframe.”</em></p>
+<p class="attribution">—Sarah Chen, Engineering Lead</p>
+</div></blockquote>
+<blockquote class="pull-quote">
+<div><p><em>“The AI estimates are actually more accurate than our planning poker sessions, and they take seconds instead of hours.”</em></p>
+<p class="attribution">—Mike Rodriguez, Senior Developer</p>
+</div></blockquote>
+<blockquote class="pull-quote">
+<div><p><em>“I was skeptical about dropping our sprint structure, but the adaptive flow just makes more sense. We ship when things are ready, not when the calendar says.”</em></p>
+<p class="attribution">—Jessica Park, Product Manager</p>
+</div></blockquote>
+</section>
+<section id="the-bottom-line">
+<h2>The Bottom Line<a class="headerlink" href="#the-bottom-line" title="Link to this heading"></a></h2>
+<p>Agile was revolutionary in 2001. But the world has changed:</p>
+<ul class="simple">
+<li><p><strong>AI</strong> can handle what humans used to do</p></li>
+<li><p><strong>Automation</strong> makes continuous deployment safe</p></li>
+<li><p><strong>Modern tools</strong> enable real-time collaboration</p></li>
+<li><p><strong>Feature flags</strong> decouple deployment from release</p></li>
+</ul>
+<p>RAD keeps Agile’s values while removing the drag of outdated practices.</p>
+<p><strong>The choice:</strong></p>
+<ul class="simple">
+<li><p>Keep doing Agile because it’s familiar</p></li>
+<li><p>Evolve to RAD because it’s effective</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="references.html"><span class="doc">References</span></a> - Academic and industry perspectives on post-Agile</p></li>
+<li><p><a class="reference internal" href="../index.html"><span class="doc">RAD Process: A Replacement for Agile</span></a> - RAD Process overview</p></li>
+<li><p><a class="reference external" href="https://www.buildly.io/articles/time-to-kill-agile.html">Time to Kill Agile</a> - Buildly’s perspective</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../automation/future-enhancements.html" class="btn btn-neutral float-left" title="Future Enhancements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="references.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

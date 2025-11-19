@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Context Everywhere &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=29f8334c" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Continuous Reflection" href="continuous-reflection.html" />
+    <link rel="prev" title="Automation as Collaboration" href="automation-as-collaboration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../features/index.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../features/user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RAD Process</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RAD Process: A Replacement for Agile</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#rad-at-a-glance">RAD at a Glance</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#core-principles">Core Principles</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="flow-over-frameworks.html">Flow Over Frameworks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="automation-as-collaboration.html">Automation as Collaboration</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Context Everywhere</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-context-problem">The Context Problem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-rad-approach-context-as-infrastructure">The RAD Approach: Context as Infrastructure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-context-flows-in-buildly-labs">How Context Flows in Buildly Labs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#current-context-features">Current Context Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#practical-benefits">Practical Benefits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#context-in-action-a-user-story">Context in Action: A User Story</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#coming-soon-enhanced-context-features">Coming Soon: Enhanced Context Features</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#best-practices-for-context-management">Best Practices for Context Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-power-of-preserved-context">The Power of Preserved Context</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="continuous-reflection.html">Continuous Reflection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transparency-by-default.html">Transparency by Default</a></li>
+<li class="toctree-l3"><a class="reference internal" href="adaptive-cadence.html">Adaptive Cadence</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#babblebeaver-ai-that-amplifies-the-team">BabbleBeaver: AI That Amplifies the Team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#automation-tools">Automation Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#why-rad-not-capital-a-agile">Why RAD, Not Capital-A Agile?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-started-with-rad">Getting Started with RAD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developers/index.html">For Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">Troubleshooting Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">RAD Process: A Replacement for Agile</a></li>
+      <li class="breadcrumb-item active">Context Everywhere</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/rad-process/principles/context-everywhere.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="context-everywhere">
+<span id="id1"></span><h1>Context Everywhere<a class="headerlink" href="#context-everywhere" title="Link to this heading"></a></h1>
+<p>Unify decisions, designs, and code. Buildly Labs links Slack, Figma, and repos so the “why” travels with the “what.”</p>
+<section id="the-context-problem">
+<h2>The Context Problem<a class="headerlink" href="#the-context-problem" title="Link to this heading"></a></h2>
+<p>In traditional development workflows, critical context gets scattered across multiple tools:</p>
+<ul class="simple">
+<li><p><strong>Design decisions</strong> are buried in Figma comments</p></li>
+<li><p><strong>Technical discussions</strong> happen in Slack threads that disappear</p></li>
+<li><p><strong>Code rationale</strong> exists only in PR descriptions (if you’re lucky)</p></li>
+<li><p><strong>Product requirements</strong> live in separate documents</p></li>
+<li><p><strong>User feedback</strong> is fragmented across support tickets</p></li>
+</ul>
+<p><strong>The Result:</strong> Developers waste hours hunting for context, leading to:</p>
+<ul class="simple">
+<li><p>Duplicated effort</p></li>
+<li><p>Inconsistent implementations</p></li>
+<li><p>Poor technical decisions</p></li>
+<li><p>Lost institutional knowledge</p></li>
+<li><p>Slow onboarding for new team members</p></li>
+</ul>
+</section>
+<section id="the-rad-approach-context-as-infrastructure">
+<h2>The RAD Approach: Context as Infrastructure<a class="headerlink" href="#the-rad-approach-context-as-infrastructure" title="Link to this heading"></a></h2>
+<p>RAD treats context not as documentation, but as a <strong>first-class citizen</strong> of the development process.</p>
+<p><strong>Core Principle:</strong> Every decision, design, and line of code should carry its context—the “why” behind the “what.”</p>
+</section>
+<section id="how-context-flows-in-buildly-labs">
+<h2>How Context Flows in Buildly Labs<a class="headerlink" href="#how-context-flows-in-buildly-labs" title="Link to this heading"></a></h2>
+<p><strong>Unified Context Layer</strong></p>
+<p>Buildly Labs creates a connected layer across your tools:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Slack Conversation
+     ↓
+Product Decision
+     ↓
+Figma Design
+     ↓
+Issue/Task in Buildly
+     ↓
+Code Commit
+     ↓
+Deployed Feature
+</pre></div>
+</div>
+<p>At every step, context is preserved and accessible.</p>
+<p><strong>1. Chat → Decision Tracking</strong></p>
+<p>When important decisions happen in Slack:</p>
+<ul class="simple">
+<li><p>BabbleBeaver detects decision-making conversations</p></li>
+<li><p>Prompts team to capture the decision</p></li>
+<li><p>Automatically links to relevant tasks/features</p></li>
+<li><p>Makes decisions searchable and traceable</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Slack Thread: &quot;Should we use GraphQL or REST for the new API?&quot;
+
+↓ BabbleBeaver suggests:
+
+&quot;I detected an architecture decision. Should I:
+- Create a decision record?
+- Link to the API development task?
+- Notify the team leads?&quot;
+</pre></div>
+</div>
+<p><strong>2. Design → Implementation</strong></p>
+<p>Figma designs link directly to development tasks:</p>
+<ul class="simple">
+<li><p>Design specs appear in task descriptions</p></li>
+<li><p>Developers see latest mockups in context</p></li>
+<li><p>Design changes trigger notifications</p></li>
+<li><p>Implementation status visible to designers</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Figma Update: &quot;Login screen revised - added social auth buttons&quot;
+
+↓ Automatically updates:
+
+Task: &quot;Implement login screen&quot;
+- Linked design: ✅ Updated 2 hours ago
+- Dev status: 🟡 In progress
+- Notification sent to: @frontend-team
+</pre></div>
+</div>
+<p><strong>3. Code → Knowledge</strong></p>
+<p>Code commits carry context automatically:</p>
+<ul class="simple">
+<li><p>Linked to originating task/feature</p></li>
+<li><p>Connected to design decisions</p></li>
+<li><p>Tagged with relevant discussions</p></li>
+<li><p>Searchable by intent, not just keywords</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Commit: &quot;Implement exponential backoff for API retries&quot;
+
+↓ Context automatically attached:
+
+- Task: &quot;Improve API reliability&quot;
+- Discussion: Slack thread about timeout issues
+- Decision: &quot;Use exponential backoff pattern&quot;
+- Referenced by: 3 related tasks
+</pre></div>
+</div>
+</section>
+<section id="current-context-features">
+<h2>Current Context Features<a class="headerlink" href="#current-context-features" title="Link to this heading"></a></h2>
+<p><strong>Available Now in Buildly Labs:</strong></p>
+<p><strong>Intelligent Linking</strong></p>
+<ul class="simple">
+<li><p>Automatic detection of related items across tools</p></li>
+<li><p>Bi-directional links between tasks, designs, and code</p></li>
+<li><p>Context suggestions as you work</p></li>
+<li><p>Smart search across all connected content</p></li>
+</ul>
+<p><strong>Decision Logs</strong></p>
+<ul class="simple">
+<li><p>Capture architectural and product decisions</p></li>
+<li><p>Link decisions to affected code and features</p></li>
+<li><p>Track decision outcomes and impact</p></li>
+<li><p>Search historical decisions by topic</p></li>
+</ul>
+<p><strong>Integration Hub</strong></p>
+<p>Currently integrated:</p>
+<ul class="simple">
+<li><p>✅ <strong>GitHub/GitLab</strong> - Code and pull requests</p></li>
+<li><p>✅ <strong>Slack</strong> - Team communications</p></li>
+<li><p>✅ <strong>Figma</strong> - Design files and comments</p></li>
+<li><p>✅ <strong>Jira/Linear</strong> - External project management (import)</p></li>
+</ul>
+<p><strong>Context-Aware Search</strong></p>
+<p>Search by:</p>
+<ul class="simple">
+<li><p>Natural language queries (“Why did we choose MongoDB?”)</p></li>
+<li><p>Semantic similarity (finds related context)</p></li>
+<li><p>Time ranges (“Decisions made last quarter”)</p></li>
+<li><p>People (“What did Sarah decide about the API?”)</p></li>
+</ul>
+<p><strong>Context Visualization</strong></p>
+<ul class="simple">
+<li><p>Timeline view of related events</p></li>
+<li><p>Dependency graphs showing connections</p></li>
+<li><p>Context trails showing decision evolution</p></li>
+<li><p>Impact analysis for changes</p></li>
+</ul>
+</section>
+<section id="practical-benefits">
+<h2>Practical Benefits<a class="headerlink" href="#practical-benefits" title="Link to this heading"></a></h2>
+<p><strong>For Developers</strong></p>
+<ul class="simple">
+<li><p><strong>Faster onboarding</strong> - New team members find context quickly</p></li>
+<li><p><strong>Better decisions</strong> - See past reasoning before making changes</p></li>
+<li><p><strong>Less interruption</strong> - Find answers without asking teammates</p></li>
+<li><p><strong>Clearer PRs</strong> - Context flows from task to code automatically</p></li>
+</ul>
+<p><strong>For Product Managers</strong></p>
+<ul class="simple">
+<li><p><strong>Traceability</strong> - Track features from idea to deployment</p></li>
+<li><p><strong>Impact analysis</strong> - Understand ripple effects of changes</p></li>
+<li><p><strong>Status visibility</strong> - See progress without status meetings</p></li>
+<li><p><strong>Decision history</strong> - Reference past choices and outcomes</p></li>
+</ul>
+<p><strong>For Designers</strong></p>
+<ul class="simple">
+<li><p><strong>Implementation tracking</strong> - Know what’s been built vs. designed</p></li>
+<li><p><strong>Context awareness</strong> - Understand technical constraints</p></li>
+<li><p><strong>Feedback loops</strong> - See how designs perform in production</p></li>
+<li><p><strong>Handoff clarity</strong> - Specs and context travel together</p></li>
+</ul>
+</section>
+<section id="context-in-action-a-user-story">
+<h2>Context in Action: A User Story<a class="headerlink" href="#context-in-action-a-user-story" title="Link to this heading"></a></h2>
+<p><strong>Traditional Approach:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Week 1:
+- PM: Creates ticket &quot;Add dark mode&quot;
+- Designer: Creates Figma mockups
+- Developer: Asks in Slack &quot;Where are the specs?&quot;
+
+Week 2:
+- Developer: Finds old Figma link in chat history
+- Developer: Builds feature based on outdated mockup
+- Designer: &quot;Why didn&#39;t you use the new design?&quot;
+
+Week 3:
+- Developer: Rebuilds with correct design
+- QA: &quot;Why does dark mode work this way?&quot;
+- Developer: &quot;I don&#39;t remember, let me check...&quot;
+
+Total: 3 weeks, lots of frustration
+</pre></div>
+</div>
+<p><strong>RAD Approach with Context:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Day 1:
+- PM: Creates feature &quot;Add dark mode&quot; in Buildly
+- Designer: Links Figma file to feature
+- BabbleBeaver: Suggests task breakdown with design context
+
+Day 2:
+- Developer: Opens task, sees current design specs inline
+- Developer: Implements feature with full context
+- Designer: Gets notification when implementation starts
+
+Day 3:
+- QA: Reviews feature, sees design rationale and decisions
+- Developer: Ships feature with context preserved
+- Future developer: Can easily understand the implementation
+
+Total: 3 days, complete context trail
+</pre></div>
+</div>
+</section>
+<section id="coming-soon-enhanced-context-features">
+<h2>Coming Soon: Enhanced Context Features<a class="headerlink" href="#coming-soon-enhanced-context-features" title="Link to this heading"></a></h2>
+<p><strong>🚀 In Development:</strong></p>
+<p><strong>AI-Powered Context Synthesis</strong></p>
+<ul class="simple">
+<li><p>Automatic summarization of long discussion threads</p></li>
+<li><p>Context suggestions based on code changes</p></li>
+<li><p>Proactive linking of related decisions</p></li>
+<li><p>Smart context recommendations in PRs</p></li>
+</ul>
+<p><strong>Video/Meeting Integration</strong></p>
+<ul class="simple">
+<li><p>Transcription of technical discussions</p></li>
+<li><p>Key decision extraction from meetings</p></li>
+<li><p>Automatic linking to affected tasks</p></li>
+<li><p>Searchable meeting archives</p></li>
+</ul>
+<p><strong>Code → Documentation Generation</strong></p>
+<ul class="simple">
+<li><p>Auto-generate docs from code + context</p></li>
+<li><p>Update docs when context changes</p></li>
+<li><p>Maintain architecture decision records (ADRs)</p></li>
+<li><p>Create knowledge base from past decisions</p></li>
+</ul>
+<p><strong>Context Analytics</strong></p>
+<ul class="simple">
+<li><p>Identify knowledge gaps in documentation</p></li>
+<li><p>Detect missing context for tasks</p></li>
+<li><p>Suggest when to capture decisions</p></li>
+<li><p>Measure context quality over time</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See <a class="reference internal" href="../babblebeaver/coming-soon.html"><span class="doc">BabbleBeaver: Coming Soon Features</span></a> for timelines on upcoming context features.</p>
+</div>
+</section>
+<section id="best-practices-for-context-management">
+<h2>Best Practices for Context Management<a class="headerlink" href="#best-practices-for-context-management" title="Link to this heading"></a></h2>
+<p><strong>1. Capture Decisions When They Happen</strong></p>
+<p>Don’t wait for documentation sprints:</p>
+<ul class="simple">
+<li><p>Record decisions as they’re made</p></li>
+<li><p>Include who, what, why, and alternatives considered</p></li>
+<li><p>Link to affected code and designs</p></li>
+<li><p>Tag for easy discovery later</p></li>
+</ul>
+<p><strong>2. Connect the Dots</strong></p>
+<p>Always link related items:</p>
+<ul class="simple">
+<li><p>Tasks → Designs</p></li>
+<li><p>Code → Decisions</p></li>
+<li><p>Discussions → Features</p></li>
+<li><p>Bugs → Root cause analysis</p></li>
+</ul>
+<p><strong>3. Make Context Searchable</strong></p>
+<p>Use consistent:</p>
+<ul class="simple">
+<li><p>Naming conventions</p></li>
+<li><p>Tags and labels</p></li>
+<li><p>Descriptive titles</p></li>
+<li><p>Keywords in descriptions</p></li>
+</ul>
+<p><strong>4. Review and Refine</strong></p>
+<p>Regularly:</p>
+<ul class="simple">
+<li><p>Update outdated context</p></li>
+<li><p>Archive obsolete decisions</p></li>
+<li><p>Improve discoverability</p></li>
+<li><p>Fill context gaps</p></li>
+</ul>
+</section>
+<section id="the-power-of-preserved-context">
+<h2>The Power of Preserved Context<a class="headerlink" href="#the-power-of-preserved-context" title="Link to this heading"></a></h2>
+<p>When context travels with code:</p>
+<ul class="simple">
+<li><p><strong>Faster debugging</strong> - Understand why code was written this way</p></li>
+<li><p><strong>Better refactoring</strong> - Know what constraints to respect</p></li>
+<li><p><strong>Informed architecture</strong> - Learn from past decisions</p></li>
+<li><p><strong>Institutional memory</strong> - Survive team turnover</p></li>
+<li><p><strong>Confident changes</strong> - Modify code with full understanding</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="transparency-by-default.html"><span class="doc">Transparency by Default</span></a> - How context enables transparency</p></li>
+<li><p><a class="reference internal" href="continuous-reflection.html"><span class="doc">Continuous Reflection</span></a> - Using context for retrospectives</p></li>
+<li><p><a class="reference internal" href="../babblebeaver/overview.html"><span class="doc">BabbleBeaver Overview</span></a> - AI tools that manage context</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="automation-as-collaboration.html" class="btn btn-neutral float-left" title="Automation as Collaboration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="continuous-reflection.html" class="btn btn-neutral float-right" title="Continuous Reflection" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

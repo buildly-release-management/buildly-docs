@@ -49,6 +49,12 @@ Quick Navigation
 
 .. toctree::
    :maxdepth: 2
+   :caption: RAD Process
+
+   rad-process/index
+
+.. toctree::
+   :maxdepth: 2
    :caption: For Developers
 
    architecture
