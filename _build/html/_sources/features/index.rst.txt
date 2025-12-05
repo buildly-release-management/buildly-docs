@@ -9,6 +9,7 @@ Features
 
     onboarding
     ai_features
+    forge_marketplace
     login
     registration
     user_management
@@ -21,6 +22,7 @@ Buildly Product Labs provides comprehensive features for user onboarding, AI-pow
 
 - **Platform Onboarding (Beta)** - AI-powered guided setup for new organizations
 - **AI Features & BabbleBeaver** - Intelligent automation and smart assistance throughout your workflow
+- **Buildly Forge Marketplace** - Open source application marketplace with time-limited commercial licenses
 - **User Authentication** - Secure login and session management
 - **Account Registration** - Self-service and invitation-based account creation
 - **User Management** - Administrative tools for team and permission management

@@ -41,6 +41,7 @@ Quick Navigation
    :caption: Features
 
    features/index
+   features/forge_marketplace
    features/ai_features
    features/login
    features/registration

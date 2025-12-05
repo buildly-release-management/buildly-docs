@@ -1,0 +1,807 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buildly Forge Marketplace &mdash; Buildly Product Labs Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=29f8334c" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Login" href="login.html" />
+    <link rel="prev" title="AI Features &amp; BabbleBeaver Integration" href="ai_features.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #0C5595" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Buildly Product Labs
+              <img src="../_static/buildly-labs-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding.html">Platform Onboarding (Beta)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user-guide/BUILDLY-USER-DOCUMENTATION.html">📚 Buildly Product Labs - Complete User Documentation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Features</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Features</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Buildly Forge Marketplace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-buildly-forge">What is Buildly Forge?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-the-licensing-works">How the Licensing Works</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#time-limited-commercial-license">Time-Limited Commercial License</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-open-source-conversion">Automatic Open Source Conversion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#why-pay-for-open-source">Why Pay for Open Source?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#supporting-quality-development">Supporting Quality Development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#community-benefits">Community Benefits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#business-value">Business Value</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment-options">Deployment Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#multiple-deployment-options">🚀 Multiple Deployment Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#docker-deployment">🐳 Docker Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#github-pages">📄 GitHub Pages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kubernetes">☸️ Kubernetes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#buildly-core-integration">⚡ Buildly Core Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#free-vs-paid-deployment-support">Free vs. Paid Deployment Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-local-and-deploy-yourself">Build Local and Deploy Yourself</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#community-support-model">Community Support Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-the-community-supports-forge">How the Community Supports Forge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#developer-support-for-customers">Developer Support for Customers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#finding-applications-on-buildly-forge">Finding Applications on Buildly Forge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started-with-buildly-forge">Getting Started with Buildly Forge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#benefits-summary">Benefits Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ai_features.html">AI Features &amp; BabbleBeaver Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="login.html">Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registration.html">Registration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="profile_settings.html">Profile Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_management.html">User Management</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RAD Process</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rad-process/index.html">RAD Process: A Replacement for Agile</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">For Developers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developers/index.html">For Developers</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Troubleshooting</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Contributing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing to Buildly Product Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #0C5595" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Buildly Product Labs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Features</a></li>
+      <li class="breadcrumb-item active">Buildly Forge Marketplace</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/features/forge_marketplace.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="buildly-forge-marketplace">
+<span id="forge-marketplace"></span><h1>Buildly Forge Marketplace<a class="headerlink" href="#buildly-forge-marketplace" title="Link to this heading"></a></h1>
+<p>🔨 <strong>Buildly Forge</strong> is a revolutionary marketplace for open source applications that bridges the gap between traditional shareware and fully open source software. Located at <a class="reference external" href="https://collab.buildly.io/forge">collab.buildly.io/forge</a>, the Forge empowers developers to monetize their work while ensuring long-term community ownership.</p>
+<section id="what-is-buildly-forge">
+<h2>What is Buildly Forge?<a class="headerlink" href="#what-is-buildly-forge" title="Link to this heading"></a></h2>
+<p>Buildly Forge is a unique marketplace where developers can publish and sell open source applications with <strong>time-limited commercial licenses</strong> that automatically convert to full open source after 2 years. This innovative model creates a sustainable ecosystem that benefits both creators and the community.</p>
+<p><strong>Key Characteristics:</strong></p>
+<ul class="simple">
+<li><p>🏪 <strong>Marketplace for Open Source Apps</strong> - Discover, purchase, and deploy ready-to-use applications</p></li>
+<li><p>📜 <strong>Pseudo-Commercial Licensing</strong> - Initial commercial license with guaranteed open source conversion</p></li>
+<li><p>⏰ <strong>2-Year Conversion Timeline</strong> - All apps become fully open source after 24 months</p></li>
+<li><p>💰 <strong>Fair Compensation</strong> - Support developers who create quality open source tools</p></li>
+<li><p>🌍 <strong>Community-Driven</strong> - Build a sustainable open source ecosystem together</p></li>
+</ul>
+</section>
+<section id="how-the-licensing-works">
+<h2>How the Licensing Works<a class="headerlink" href="#how-the-licensing-works" title="Link to this heading"></a></h2>
+<section id="time-limited-commercial-license">
+<h3>Time-Limited Commercial License<a class="headerlink" href="#time-limited-commercial-license" title="Link to this heading"></a></h3>
+<p>When you purchase an application on Buildly Forge, you receive a <strong>lifetime commercial license</strong> that includes:</p>
+<dl class="simple">
+<dt>✅ <strong>Full Usage Rights</strong></dt><dd><ul class="simple">
+<li><p>Deploy and use the application indefinitely</p></li>
+<li><p>Unlimited installations and users</p></li>
+<li><p>Access to updates and patches during the commercial period</p></li>
+<li><p>Commercial use without restrictions</p></li>
+</ul>
+</dd>
+<dt>✅ <strong>Source Code Access</strong></dt><dd><ul class="simple">
+<li><p>Immediate access to complete source code</p></li>
+<li><p>Ability to modify for internal use</p></li>
+<li><p>Bug fixes and feature customization</p></li>
+<li><p>Integration with your existing systems</p></li>
+</ul>
+</dd>
+<dt>✅ <strong>Support &amp; Updates</strong></dt><dd><ul class="simple">
+<li><p>Regular security updates and patches</p></li>
+<li><p>Bug fixes and performance improvements</p></li>
+<li><p>Documentation and implementation guides</p></li>
+<li><p>Community forum access</p></li>
+</ul>
+</dd>
+<dt>🔒 <strong>Commercial Period Restrictions</strong> (0-24 months)</dt><dd><ul class="simple">
+<li><p>Source code cannot be publicly redistributed</p></li>
+<li><p>Modified versions cannot be sold or shared publicly</p></li>
+<li><p>Must maintain attribution to original creators</p></li>
+<li><p>Cannot create competing commercial offerings</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="automatic-open-source-conversion">
+<h3>Automatic Open Source Conversion<a class="headerlink" href="#automatic-open-source-conversion" title="Link to this heading"></a></h3>
+<p>After 2 years, the application <strong>automatically transitions</strong> to full open source:</p>
+<dl class="simple">
+<dt>🎉 <strong>Full Open Source Rights</strong></dt><dd><ul class="simple">
+<li><p>Released under a standard open source license (typically MIT or Apache 2.0)</p></li>
+<li><p>Complete freedom to modify, fork, and redistribute</p></li>
+<li><p>Can be used as foundation for new projects</p></li>
+<li><p>Contribute improvements back to the community</p></li>
+<li><p>No ongoing fees or restrictions</p></li>
+</ul>
+</dd>
+<dt>📈 <strong>Your Lifetime License Continues</strong></dt><dd><ul class="simple">
+<li><p>All benefits of your original purchase remain</p></li>
+<li><p>Priority support may continue (depending on developer offering)</p></li>
+<li><p>Access to premium features or service tiers</p></li>
+<li><p>Special pricing on future products from the developer</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Example Timeline:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Month 0:  Purchase &quot;Amazing App v1.0&quot; - Commercial license active
+Month 6:  Receive updates to v1.5 - Still under commercial license
+Month 12: Upgrade to v2.0 - Commercial license continues
+Month 18: Minor updates to v2.3 - Nearing open source transition
+Month 24: 🎊 Automatic conversion to open source!
+          - All versions become MIT/Apache licensed
+          - Your lifetime license benefits continue
+          - Community can now fork and contribute
+</pre></div>
+</div>
+</section>
+</section>
+<section id="why-pay-for-open-source">
+<h2>Why Pay for Open Source?<a class="headerlink" href="#why-pay-for-open-source" title="Link to this heading"></a></h2>
+<section id="supporting-quality-development">
+<h3>Supporting Quality Development<a class="headerlink" href="#supporting-quality-development" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt><strong>Sustainable Open Source</strong></dt><dd><p>Open source doesn’t mean free to create. Developers invest significant time, expertise, and resources into building quality applications. Your purchase:</p>
+<ul class="simple">
+<li><p>💼 <strong>Funds Development</strong> - Enables developers to work full-time on open source projects</p></li>
+<li><p>🔬 <strong>Ensures Quality</strong> - Professional development standards and thorough testing</p></li>
+<li><p>🛡️ <strong>Guarantees Support</strong> - Dedicated teams for bug fixes and security updates</p></li>
+<li><p>🚀 <strong>Drives Innovation</strong> - Resources to build advanced features and capabilities</p></li>
+<li><p>📚 <strong>Creates Documentation</strong> - Comprehensive guides, tutorials, and examples</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Better Than Traditional Models</strong></p>
+<blockquote>
+<div><dl class="simple">
+<dt>❌ Traditional Closed Source:</dt><dd><ul class="simple">
+<li><p>No access to source code</p></li>
+<li><p>Vendor lock-in forever</p></li>
+<li><p>Uncertain future if company fails</p></li>
+<li><p>No community contributions</p></li>
+<li><p>Opaque security and privacy</p></li>
+</ul>
+</dd>
+<dt>❌ Free Open Source:</dt><dd><ul class="simple">
+<li><p>Often abandoned or unmaintained</p></li>
+<li><p>No guaranteed support</p></li>
+<li><p>Slower development cycles</p></li>
+<li><p>Limited professional documentation</p></li>
+<li><p>Sustainability challenges</p></li>
+</ul>
+</dd>
+<dt>✅ Buildly Forge Model:</dt><dd><ul class="simple">
+<li><p>Source code access from day one</p></li>
+<li><p>Professional support during commercial period</p></li>
+<li><p>Guaranteed open source conversion</p></li>
+<li><p>Active development and maintenance</p></li>
+<li><p>Best of both worlds!</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="community-benefits">
+<h3>Community Benefits<a class="headerlink" href="#community-benefits" title="Link to this heading"></a></h3>
+<dl>
+<dt><strong>Growing the Commons</strong></dt><dd><p>Every purchase on Buildly Forge contributes to the future open source ecosystem:</p>
+<dl class="simple">
+<dt>🌱 <strong>Building the Future</strong></dt><dd><ul class="simple">
+<li><p>Your payment today becomes free software tomorrow</p></li>
+<li><p>Creates a pipeline of well-maintained open source tools</p></li>
+<li><p>Reduces reliance on corporate-controlled software</p></li>
+<li><p>Builds digital commons for future generations</p></li>
+</ul>
+</dd>
+<dt>🤝 <strong>Strengthening Community</strong></dt><dd><ul class="simple">
+<li><p>Sustainable funding model for open source developers</p></li>
+<li><p>Encourages professional-quality open source development</p></li>
+<li><p>Creates incentive for thorough documentation</p></li>
+<li><p>Attracts talented developers to open source work</p></li>
+</ul>
+</dd>
+<dt>💪 <strong>Long-Term Value</strong></dt><dd><ul class="simple">
+<li><p>Applications remain useful after conversion</p></li>
+<li><p>Community can maintain and extend after 2 years</p></li>
+<li><p>No risk of project abandonment</p></li>
+<li><p>Guaranteed ROI through eventual open source release</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="business-value">
+<h3>Business Value<a class="headerlink" href="#business-value" title="Link to this heading"></a></h3>
+<p><strong>Enterprise Benefits</strong></p>
+<blockquote>
+<div><dl class="simple">
+<dt>📊 <strong>Predictable Costs</strong></dt><dd><ul class="simple">
+<li><p>One-time payment vs. ongoing subscriptions</p></li>
+<li><p>Lifetime access eliminates recurring fees</p></li>
+<li><p>Budget-friendly for long-term planning</p></li>
+<li><p>No surprise price increases</p></li>
+</ul>
+</dd>
+<dt>🔐 <strong>Security &amp; Control</strong></dt><dd><ul class="simple">
+<li><p>Full source code access for security audits</p></li>
+<li><p>Can fix critical bugs internally if needed</p></li>
+<li><p>No dependency on vendor for security patches</p></li>
+<li><p>Customize for compliance requirements</p></li>
+</ul>
+</dd>
+<dt>⚡ <strong>Future-Proof Investment</strong></dt><dd><ul class="simple">
+<li><p>Will become open source - ultimate exit strategy</p></li>
+<li><p>No vendor lock-in risk</p></li>
+<li><p>Community support after conversion</p></li>
+<li><p>Protects long-term business continuity</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+<section id="deployment-options">
+<h2>Deployment Options<a class="headerlink" href="#deployment-options" title="Link to this heading"></a></h2>
+<p>Buildly Forge applications offer flexible deployment to match your needs and technical capabilities:</p>
+<section id="multiple-deployment-options">
+<h3>🚀 Multiple Deployment Options<a class="headerlink" href="#multiple-deployment-options" title="Link to this heading"></a></h3>
+<p>Deploy as standalone Docker container, GitHub Pages site, Kubernetes app, or with Buildly Core integration.</p>
+<section id="docker-deployment">
+<h4>🐳 Docker Deployment<a class="headerlink" href="#docker-deployment" title="Link to this heading"></a></h4>
+<p><strong>Easiest way to get started</strong> - Run applications in isolated containers.</p>
+<dl class="simple">
+<dt><strong>Best For:</strong></dt><dd><ul class="simple">
+<li><p>Quick development and testing</p></li>
+<li><p>Single-server deployments</p></li>
+<li><p>Small to medium applications</p></li>
+<li><p>Teams familiar with Docker</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Deployment Process:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download from Forge</span>
+docker<span class="w"> </span>pull<span class="w"> </span>forge.buildly.io/username/amazing-app:latest
+
+<span class="c1"># Run with configuration</span>
+docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">DATABASE_URL</span><span class="o">=</span>postgresql://...<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-v<span class="w"> </span>/data:/app/data<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>forge.buildly.io/username/amazing-app:latest
+
+<span class="c1"># Access at http://localhost:8080</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Included Support:</strong></dt><dd><ul class="simple">
+<li><p>Pre-configured Docker images</p></li>
+<li><p>Environment variable documentation</p></li>
+<li><p>Volume mount examples</p></li>
+<li><p>Docker Compose files for complex setups</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="github-pages">
+<h4>📄 GitHub Pages<a class="headerlink" href="#github-pages" title="Link to this heading"></a></h4>
+<p><strong>Perfect for static sites and JAMstack apps</strong> - Deploy directly to GitHub Pages.</p>
+<dl class="simple">
+<dt><strong>Best For:</strong></dt><dd><ul class="simple">
+<li><p>Documentation sites</p></li>
+<li><p>Marketing pages</p></li>
+<li><p>Static web applications</p></li>
+<li><p>Content-focused projects</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Deployment Process:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone from Forge</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://forge.buildly.io/username/amazing-app.git
+<span class="nb">cd</span><span class="w"> </span>amazing-app
+
+<span class="c1"># Configure and deploy</span>
+npm<span class="w"> </span>install
+npm<span class="w"> </span>run<span class="w"> </span>build
+
+<span class="c1"># Push to GitHub Pages</span>
+git<span class="w"> </span>subtree<span class="w"> </span>push<span class="w"> </span>--prefix<span class="w"> </span>dist<span class="w"> </span>origin<span class="w"> </span>gh-pages
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Included Support:</strong></dt><dd><ul class="simple">
+<li><p>GitHub Actions workflows</p></li>
+<li><p>Build configuration</p></li>
+<li><p>Custom domain setup guides</p></li>
+<li><p>CDN optimization</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="kubernetes">
+<h4>☸️ Kubernetes<a class="headerlink" href="#kubernetes" title="Link to this heading"></a></h4>
+<p><strong>Enterprise-grade orchestration</strong> - Deploy scalable, resilient applications.</p>
+<dl class="simple">
+<dt><strong>Best For:</strong></dt><dd><ul class="simple">
+<li><p>Production workloads</p></li>
+<li><p>High-availability requirements</p></li>
+<li><p>Microservices architectures</p></li>
+<li><p>Large-scale deployments</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Deployment Process:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download Kubernetes manifests</span>
+kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>https://forge.buildly.io/username/amazing-app/k8s/
+
+<span class="c1"># Or use Helm chart</span>
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>buildly-forge<span class="w"> </span>https://forge.buildly.io/charts
+helm<span class="w"> </span>install<span class="w"> </span>amazing-app<span class="w"> </span>buildly-forge/amazing-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span>database.host<span class="o">=</span>postgres.example.com<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--set<span class="w"> </span><span class="nv">replicas</span><span class="o">=</span><span class="m">3</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Included Support:</strong></dt><dd><ul class="simple">
+<li><p>Kubernetes manifests (Deployments, Services, Ingress)</p></li>
+<li><p>Helm charts for easy installation</p></li>
+<li><p>Auto-scaling configurations</p></li>
+<li><p>Health checks and monitoring setup</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="buildly-core-integration">
+<h4>⚡ Buildly Core Integration<a class="headerlink" href="#buildly-core-integration" title="Link to this heading"></a></h4>
+<p><strong>Seamless integration</strong> - Deploy as part of the Buildly ecosystem.</p>
+<dl class="simple">
+<dt><strong>Best For:</strong></dt><dd><ul class="simple">
+<li><p>Multi-service architectures</p></li>
+<li><p>Complex workflow requirements</p></li>
+<li><p>API orchestration</p></li>
+<li><p>Unified authentication and permissions</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Deployment Process:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add to Buildly Core instance</span>
+buildly-cli<span class="w"> </span>add-service<span class="w"> </span>amazing-app
+
+<span class="c1"># Configure through Buildly UI or API</span>
+buildly-cli<span class="w"> </span>configure<span class="w"> </span>amazing-app<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--enable-sso<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--connect-to-core
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Included Support:</strong></dt><dd><ul class="simple">
+<li><p>Buildly Core connector modules</p></li>
+<li><p>OAuth/SSO integration</p></li>
+<li><p>Unified data layer access</p></li>
+<li><p>Workflow engine integration</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="free-vs-paid-deployment-support">
+<h3>Free vs. Paid Deployment Support<a class="headerlink" href="#free-vs-paid-deployment-support" title="Link to this heading"></a></h3>
+<p><strong>🆓 Free - DIY Deployment</strong></p>
+<dl class="simple">
+<dt>Included with every purchase:</dt><dd><ul class="simple">
+<li><p>Complete documentation and guides</p></li>
+<li><p>Docker images and deployment configs</p></li>
+<li><p>Community forum support</p></li>
+<li><p>Example configurations and tutorials</p></li>
+<li><p>GitHub issues for bugs and questions</p></li>
+</ul>
+</dd>
+<dt><strong>Best for teams with:</strong></dt><dd><ul class="simple">
+<li><p>DevOps experience</p></li>
+<li><p>Time to troubleshoot</p></li>
+<li><p>Standard deployment requirements</p></li>
+<li><p>Internal infrastructure expertise</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>💰 Paid - Professional Deployment Assistance</strong></p>
+<p>Optional paid services for hassle-free deployment:</p>
+<dl class="simple">
+<dt><strong>Starter Support</strong> ($199-$499 one-time)</dt><dd><ul class="simple">
+<li><p>Video call walkthrough of deployment</p></li>
+<li><p>Review your infrastructure requirements</p></li>
+<li><p>Configuration assistance</p></li>
+<li><p>Basic troubleshooting support</p></li>
+<li><p>Email support for 30 days</p></li>
+</ul>
+</dd>
+<dt><strong>Managed Deployment</strong> ($999-$2,499 one-time)</dt><dd><ul class="simple">
+<li><p>Complete deployment setup</p></li>
+<li><p>Infrastructure configuration</p></li>
+<li><p>Performance optimization</p></li>
+<li><p>Security hardening</p></li>
+<li><p>90 days of priority support</p></li>
+</ul>
+</dd>
+<dt><strong>Enterprise Deployment</strong> (Custom pricing)</dt><dd><ul class="simple">
+<li><p>Multi-region deployment</p></li>
+<li><p>High-availability setup</p></li>
+<li><p>Custom integrations</p></li>
+<li><p>Dedicated support team</p></li>
+<li><p>SLA guarantees</p></li>
+<li><p>Ongoing maintenance options</p></li>
+</ul>
+</dd>
+<dt><strong>Best for teams that:</strong></dt><dd><ul class="simple">
+<li><p>Need deployment urgency</p></li>
+<li><p>Lack internal DevOps resources</p></li>
+<li><p>Have complex requirements</p></li>
+<li><p>Want guaranteed success</p></li>
+<li><p>Prefer to focus on their core business</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="build-local-and-deploy-yourself">
+<h3>Build Local and Deploy Yourself<a class="headerlink" href="#build-local-and-deploy-yourself" title="Link to this heading"></a></h3>
+<p><strong>Complete Freedom</strong></p>
+<p>All Forge applications include everything you need to build and deploy independently:</p>
+<dl class="simple">
+<dt>✅ <strong>Source Code</strong></dt><dd><ul class="simple">
+<li><p>Complete, commented source code</p></li>
+<li><p>Build scripts and tooling</p></li>
+<li><p>Development environment setup</p></li>
+<li><p>Testing suites</p></li>
+</ul>
+</dd>
+<dt>✅ <strong>Documentation</strong></dt><dd><ul class="simple">
+<li><p>Architecture overview</p></li>
+<li><p>Development setup guide</p></li>
+<li><p>Deployment instructions</p></li>
+<li><p>Configuration reference</p></li>
+</ul>
+</dd>
+<dt>✅ <strong>Infrastructure as Code</strong></dt><dd><ul class="simple">
+<li><p>Terraform modules</p></li>
+<li><p>Ansible playbooks</p></li>
+<li><p>Docker Compose files</p></li>
+<li><p>CI/CD pipeline examples</p></li>
+</ul>
+</dd>
+<dt>✅ <strong>No Vendor Lock-In</strong></dt><dd><ul class="simple">
+<li><p>Deploy anywhere (AWS, Azure, GCP, on-premise)</p></li>
+<li><p>Modify to fit your infrastructure</p></li>
+<li><p>Integrate with existing systems</p></li>
+<li><p>Full control over hosting environment</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="community-support-model">
+<h2>Community Support Model<a class="headerlink" href="#community-support-model" title="Link to this heading"></a></h2>
+<section id="how-the-community-supports-forge">
+<h3>How the Community Supports Forge<a class="headerlink" href="#how-the-community-supports-forge" title="Link to this heading"></a></h3>
+<p><strong>Active Marketplace Community</strong></p>
+<dl class="simple">
+<dt>🗣️ <strong>Community Forums</strong></dt><dd><ul class="simple">
+<li><p>Dedicated discussion boards for each application</p></li>
+<li><p>Share configurations and deployment strategies</p></li>
+<li><p>Help troubleshoot common issues</p></li>
+<li><p>Request features and improvements</p></li>
+</ul>
+</dd>
+<dt>👥 <strong>User Groups</strong></dt><dd><ul class="simple">
+<li><p>Regular meetups and webinars</p></li>
+<li><p>Share best practices and use cases</p></li>
+<li><p>Collaborate on integrations</p></li>
+<li><p>Network with other users</p></li>
+</ul>
+</dd>
+<dt>📖 <strong>Community Documentation</strong></dt><dd><ul class="simple">
+<li><p>User-contributed guides and tutorials</p></li>
+<li><p>Real-world deployment examples</p></li>
+<li><p>Integration patterns and recipes</p></li>
+<li><p>Troubleshooting wikis</p></li>
+</ul>
+</dd>
+<dt>💻 <strong>Code Contributions</strong></dt><dd><ul class="simple">
+<li><p>Report bugs and issues</p></li>
+<li><p>Submit feature requests</p></li>
+<li><p>Contribute pull requests (after open source conversion)</p></li>
+<li><p>Help maintain and improve applications</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="developer-support-for-customers">
+<h3>Developer Support for Customers<a class="headerlink" href="#developer-support-for-customers" title="Link to this heading"></a></h3>
+<p><strong>During Commercial Period (0-24 months)</strong></p>
+<dl class="simple">
+<dt>🎯 <strong>Professional Support</strong></dt><dd><ul class="simple">
+<li><p>Bug fixes and security patches</p></li>
+<li><p>Regular updates and improvements</p></li>
+<li><p>Email support (response times vary by developer)</p></li>
+<li><p>Documentation updates</p></li>
+</ul>
+</dd>
+<dt>📊 <strong>Development Roadmap</strong></dt><dd><ul class="simple">
+<li><p>Public feature roadmap</p></li>
+<li><p>Customer input on priorities</p></li>
+<li><p>Transparent development process</p></li>
+<li><p>Regular release schedule</p></li>
+</ul>
+</dd>
+<dt>🔧 <strong>Custom Development</strong></dt><dd><ul class="simple">
+<li><p>Optional paid custom features</p></li>
+<li><p>Integration assistance</p></li>
+<li><p>Performance optimization</p></li>
+<li><p>Training and consulting</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>After Open Source Conversion (24+ months)</strong></p>
+<dl class="simple">
+<dt>🌍 <strong>Community Maintenance</strong></dt><dd><ul class="simple">
+<li><p>Original developer may continue maintaining</p></li>
+<li><p>Community can fork and maintain independently</p></li>
+<li><p>Commercial support may still be available</p></li>
+<li><p>Ecosystem of service providers may emerge</p></li>
+</ul>
+</dd>
+<dt>💪 <strong>Long-Term Sustainability</strong></dt><dd><ul class="simple">
+<li><p>Healthy ecosystem of contributors</p></li>
+<li><p>Multiple support options</p></li>
+<li><p>Reduced dependency on single vendor</p></li>
+<li><p>Continuous community improvement</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+<section id="finding-applications-on-buildly-forge">
+<h2>Finding Applications on Buildly Forge<a class="headerlink" href="#finding-applications-on-buildly-forge" title="Link to this heading"></a></h2>
+<p><strong>Browse by Category</strong></p>
+<dl class="simple">
+<dt>🏗️ <strong>Development Tools</strong></dt><dd><ul class="simple">
+<li><p>API gateways and management</p></li>
+<li><p>Code generation tools</p></li>
+<li><p>Testing frameworks</p></li>
+<li><p>CI/CD components</p></li>
+</ul>
+</dd>
+<dt>📊 <strong>Business Applications</strong></dt><dd><ul class="simple">
+<li><p>CRM and customer management</p></li>
+<li><p>Project management tools</p></li>
+<li><p>Analytics dashboards</p></li>
+<li><p>Reporting systems</p></li>
+</ul>
+</dd>
+<dt>🔐 <strong>Security &amp; Authentication</strong></dt><dd><ul class="simple">
+<li><p>OAuth providers</p></li>
+<li><p>Identity management</p></li>
+<li><p>API security tools</p></li>
+<li><p>Audit and compliance</p></li>
+</ul>
+</dd>
+<dt>🎨 <strong>Frontend Components</strong></dt><dd><ul class="simple">
+<li><p>UI component libraries</p></li>
+<li><p>Admin dashboards</p></li>
+<li><p>Design systems</p></li>
+<li><p>Mobile app templates</p></li>
+</ul>
+</dd>
+<dt>🔌 <strong>Integrations &amp; Connectors</strong></dt><dd><ul class="simple">
+<li><p>Third-party API connectors</p></li>
+<li><p>Data sync tools</p></li>
+<li><p>Webhook processors</p></li>
+<li><p>ETL pipelines</p></li>
+</ul>
+</dd>
+<dt><strong>Search and Filter</strong></dt><dd><ul class="simple">
+<li><p>By programming language</p></li>
+<li><p>By deployment type</p></li>
+<li><p>By license type</p></li>
+<li><p>By price range</p></li>
+<li><p>By popularity or ratings</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="getting-started-with-buildly-forge">
+<h2>Getting Started with Buildly Forge<a class="headerlink" href="#getting-started-with-buildly-forge" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Step 1: Explore the Marketplace</strong></dt><dd><p>Visit <a class="reference external" href="https://collab.buildly.io/forge">collab.buildly.io/forge</a> and browse available applications.</p>
+</dd>
+<dt><strong>Step 2: Review Application Details</strong></dt><dd><ul class="simple">
+<li><p>Read descriptions and features</p></li>
+<li><p>Check deployment requirements</p></li>
+<li><p>Review pricing and licensing</p></li>
+<li><p>Read user reviews and ratings</p></li>
+</ul>
+</dd>
+<dt><strong>Step 3: Purchase or Try</strong></dt><dd><ul class="simple">
+<li><p>Many apps offer free trials or demos</p></li>
+<li><p>Purchase with credit card or enterprise billing</p></li>
+<li><p>Instant access to downloads and documentation</p></li>
+</ul>
+</dd>
+<dt><strong>Step 4: Choose Deployment Option</strong></dt><dd><ul class="simple">
+<li><p>Evaluate your technical capabilities</p></li>
+<li><p>Select deployment method (Docker, K8s, etc.)</p></li>
+<li><p>Decide if you want deployment assistance</p></li>
+</ul>
+</dd>
+<dt><strong>Step 5: Deploy and Use</strong></dt><dd><ul class="simple">
+<li><p>Follow deployment guides</p></li>
+<li><p>Configure for your environment</p></li>
+<li><p>Get support from community or developer</p></li>
+<li><p>Start building value</p></li>
+</ul>
+</dd>
+<dt><strong>Step 6: Stay Engaged</strong></dt><dd><ul class="simple">
+<li><p>Join community discussions</p></li>
+<li><p>Provide feedback to developers</p></li>
+<li><p>Share your use cases</p></li>
+<li><p>Contribute back when apps become open source</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="benefits-summary">
+<h2>Benefits Summary<a class="headerlink" href="#benefits-summary" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>For Purchasers:</strong></dt><dd><p>✅ Professional-quality applications with support
+✅ Source code access from day one
+✅ Guaranteed open source conversion
+✅ Lifetime license with no recurring fees
+✅ Multiple deployment options
+✅ Optional professional deployment help
+✅ Active community support</p>
+</dd>
+<dt><strong>For Developers:</strong></dt><dd><p>✅ Sustainable revenue for open source work
+✅ Professional platform for distribution
+✅ Built-in customer base
+✅ Automatic marketing and discovery
+✅ Fair compensation model
+✅ Contributes to open source commons</p>
+</dd>
+<dt><strong>For the Community:</strong></dt><dd><p>✅ Pipeline of well-maintained open source tools
+✅ Professional development standards
+✅ Comprehensive documentation
+✅ Sustainable open source ecosystem
+✅ Growing digital commons
+✅ Reduced corporate software dependency</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Buildly Forge represents a new model for sustainable open source development. By purchasing applications, you’re not just getting a tool—you’re investing in the future of open source software.</p>
+</div>
+<hr class="docutils" />
+<p><strong>Ready to explore Buildly Forge?</strong></p>
+<p>Visit <a class="reference external" href="https://collab.buildly.io/forge">collab.buildly.io/forge</a> to discover amazing open source applications! 🚀</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ai_features.html" class="btn btn-neutral float-left" title="AI Features &amp; BabbleBeaver Integration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="login.html" class="btn btn-neutral float-right" title="Login" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Buildly Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
