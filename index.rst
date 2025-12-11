@@ -56,6 +56,52 @@ Quick Navigation
 
 .. toctree::
    :maxdepth: 2
+   :caption: Frontend Development
+
+   frontend/index
+   design/responsive
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Backend Development
+
+   backend/api-development
+   backend/database
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Deployment
+
+   deployment/docker
+
+.. toctree::
+   :maxdepth: 2
+   :caption: AI & Machine Learning
+
+   ai/ml-pipelines
+   ai/model-deployment
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Marketing
+
+   marketing/content-strategy
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Product Management
+
+   product/developer-tools
+   product/user-research
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Development Workflows
+
+   development/github-workflows
+
+.. toctree::
+   :maxdepth: 2
    :caption: For Developers
 
    architecture
