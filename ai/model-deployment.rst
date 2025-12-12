@@ -150,6 +150,11 @@ Resources
 - ONNX Runtime
 - Seldon Core
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - AI model deployment and MLOps tutorials
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - Production ML system guides
+
 **Next Steps:**
 
 - :doc:`/ai/ml-pipelines` - Building ML pipelines

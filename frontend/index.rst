@@ -962,6 +962,11 @@ Next Steps
 - `Material-UI Documentation <https://mui.com/>`_
 - `Buildly React Template Repository <https://github.com/buildlyio/buildly-react-template>`_
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - Frontend development tutorials and demos
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - Additional frontend development guides
+
 **Community:**
 
 - Join the Buildly Slack community

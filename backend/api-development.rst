@@ -710,5 +710,10 @@ Next Steps
 - `Django REST Framework <https://www.django-rest-framework.org/>`_
 - `OAuth 2.0 <https://oauth.net/2/>`_
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - API development tutorials and Django REST Framework guides
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - Backend development patterns
+
 .. note::
    This guide covers the essentials. Check Buildly Core's GitHub repository for advanced patterns and examples.

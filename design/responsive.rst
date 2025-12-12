@@ -681,5 +681,10 @@ Resources
 - MDN Responsive Design Guide
 - Google Web Fundamentals
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - Responsive design tutorials and best practices
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - Mobile-first design patterns
+
 .. note::
    Continuously test your responsive designs on real devices and various browsers to ensure the best user experience.

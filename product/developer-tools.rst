@@ -339,6 +339,11 @@ Resources
 - UserTesting for research
 - Notion/Confluence for documentation
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - Product management for developer tools tutorials
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - Developer tool strategy and planning
+
 **Further Reading:**
 
 - Product Management for Developer Tools

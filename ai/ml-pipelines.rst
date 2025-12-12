@@ -151,6 +151,11 @@ Resources
 - `TensorFlow Guide <https://www.tensorflow.org/>`_
 - `MLflow <https://mlflow.org/>`_
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - AI and machine learning integration tutorials
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - ML pipeline development guides
+
 **Next Steps:**
 
 - :doc:`/ai/model-deployment` - Deploying ML models

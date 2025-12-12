@@ -341,6 +341,11 @@ Resources
 - Dovetail for analysis
 - Optimal Workshop for information architecture
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - User research methods and interview techniques
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - UX research for developer tools
+
 **Further Reading:**
 
 - "The User Experience Team of One" by Leah Buley

@@ -526,6 +526,11 @@ Resources
 - `GitHub Actions <https://github.com/features/actions>`_
 - `Buildly Contributing Guide <https://github.com/buildlyio/buildly-core/blob/main/CONTRIBUTING.md>`_
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - GitHub workflows and CI/CD tutorials
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - Git best practices and collaboration workflows
+
 **Tools:**
 
 - GitHub CLI

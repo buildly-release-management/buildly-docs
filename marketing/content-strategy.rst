@@ -273,6 +273,11 @@ Resources
 - Plausible/Google Analytics
 - Buffer/Hootsuite for social media
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - Content marketing strategies and tutorials
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - Developer marketing best practices
+
 **Further Reading:**
 
 - Content Marketing Institute

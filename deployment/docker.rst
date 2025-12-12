@@ -762,5 +762,10 @@ Next Steps
 - :doc:`/frontend/index` - Frontend containerization
 - Docker Documentation
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - Docker deployment tutorials and container orchestration
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - Production deployment strategies
+
 .. note::
    For production deployments, consider using Kubernetes or Docker Swarm for orchestration and scaling.

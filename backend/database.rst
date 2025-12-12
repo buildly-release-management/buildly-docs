@@ -715,5 +715,10 @@ Next Steps
 - :doc:`/deployment/docker` - Database deployment
 - Django ORM Documentation
 
+**Video Resources:**
+
+- `Buildly YouTube Channel <https://www.youtube.com/@buildlyio>`_ - Database design and Django ORM tutorials
+- `OpenBuild YouTube Channel <https://www.youtube.com/@openbuild7609>`_ - Database optimization and best practices
+
 .. note::
    For production deployments, always use PostgreSQL with proper indexing and optimization strategies.

@@ -59,7 +59,6 @@ Quick Navigation
    :caption: For Developers
 
    architecture
-   developers/index
    frontend/index
    design/responsive
    backend/api-development
